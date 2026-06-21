@@ -1,0 +1,1248 @@
+bundle_id,qid,evaluation_question,run01,run02,run03,run04,run05,run06,run07,run08,run09
+creativity_0000,Q01,What specific AI tools does this participant mention using in their work?,A,A,A,A,A,A,A,A,A
+creativity_0000,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+creativity_0000,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",B,B,B,B,A,B,B,B,A
+creativity_0000,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",B,B,B,B,B,B,B,B,B
+creativity_0000,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",C,C,C,C,C,C,C,C,C
+creativity_0000,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",C,C,C,C,C,C,C,C,C
+creativity_0000,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+creativity_0000,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,A,A,A,A,A,A,A,A,A
+creativity_0000,Q09,"What concerns does this participant raise about how AI performs on their work tasks â its accuracy, reliability, or the quality of its output?",C,C,C,C,C,C,C,C,C
+creativity_0000,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",C,C,C,C,C,C,C,C,C
+creativity_0000,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,C,C,C,C,C,C,C,C,C
+creativity_0000,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",C,C,C,C,C,C,C,C,C
+creativity_0000,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+creativity_0000,Q14,Does this participant express concern about AI displacing their job or profession?,B,B,B,B,A,B,B,B,B
+creativity_0000,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",C,C,C,C,C,C,C,C,C
+creativity_0000,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,C,C,C,C,C,C,C,C,C
+creativity_0000,Q17,How does this participant envision their personal use of AI evolving in the next few years?,A,A,A,A,A,A,A,A,A
+creativity_0000,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",A,A,A,A,A,A,A,A,A
+creativity_0000,Q19,What AI capabilities does this participant wish existed but don't yet?,C,C,C,B,B,B,B,B,C
+creativity_0000,Q20,"What is this participant's overall stance toward AI in their work â enthusiastic, cautious, conflicted, resistant, or other?",B,B,B,B,B,B,B,B,B
+creativity_0000,Q21,What is this participant's occupation or job role?,A,A,A,A,A,A,A,A,A
+creativity_0000,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",A,A,A,A,A,A,A,A,B
+creativity_0000,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",C,C,C,C,C,C,C,C,C
+creativity_0000,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",C,C,C,C,C,C,C,C,C
+creativity_0000,Q25,How has this participant's way of using AI changed from when they first started until now?,C,C,C,C,C,C,C,C,C
+creativity_0001,Q01,What specific AI tools does this participant mention using in their work?,A,A,A,A,A,A,A,A,A
+creativity_0001,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+creativity_0001,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",A,A,A,A,A,A,A,A,A
+creativity_0001,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,A,A,A,A,A,A,A
+creativity_0001,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",C,C,C,C,C,C,C,C,C
+creativity_0001,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",C,C,C,C,C,B,C,B,C
+creativity_0001,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+creativity_0001,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,A,A,A,A,A,A,A,A,A
+creativity_0001,Q09,"What concerns does this participant raise about how AI performs on their work tasks â its accuracy, reliability, or the quality of its output?",C,B,C,B,B,B,C,B,B
+creativity_0001,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",C,C,C,B,C,B,C,B,C
+creativity_0001,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,C,C,C,C,C,C,B,B,C
+creativity_0001,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",C,C,C,C,C,C,C,C,C
+creativity_0001,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+creativity_0001,Q14,Does this participant express concern about AI displacing their job or profession?,B,B,B,B,B,B,B,B,B
+creativity_0001,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",A,A,A,A,A,A,A,A,A
+creativity_0001,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,C,C,C,C,C,C,C,C,C
+creativity_0001,Q17,How does this participant envision their personal use of AI evolving in the next few years?,B,A,A,A,A,A,A,A,A
+creativity_0001,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",A,A,A,A,A,A,A,A,A
+creativity_0001,Q19,What AI capabilities does this participant wish existed but don't yet?,A,A,A,A,A,A,A,A,A
+creativity_0001,Q20,"What is this participant's overall stance toward AI in their work â enthusiastic, cautious, conflicted, resistant, or other?",A,A,A,A,A,A,A,A,A
+creativity_0001,Q21,What is this participant's occupation or job role?,A,A,A,A,A,A,A,A,A
+creativity_0001,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",A,A,A,A,A,A,A,A,A
+creativity_0001,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",C,C,C,C,C,C,C,C,C
+creativity_0001,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",C,C,C,C,B,B,C,B,B
+creativity_0001,Q25,How has this participant's way of using AI changed from when they first started until now?,C,C,C,C,C,C,C,C,C
+creativity_0011,Q01,What specific AI tools does this participant mention using in their work?,C,B,C,B,B,C,C,A,C
+creativity_0011,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+creativity_0011,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",A,A,A,A,A,A,A,A,A
+creativity_0011,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",B,B,B,A,B,A,B,A,B
+creativity_0011,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",B,B,B,A,B,B,A,A,B
+creativity_0011,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",A,A,B,A,A,A,A,A,A
+creativity_0011,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+creativity_0011,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,A,A,A,A,A,A,A,A,A
+creativity_0011,Q09,"What concerns does this participant raise about how AI performs on their work tasks â its accuracy, reliability, or the quality of its output?",A,A,B,A,B,B,A,A,A
+creativity_0011,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",B,B,B,B,B,B,B,B,B
+creativity_0011,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,C,C,C,C,B,C,C,C,B
+creativity_0011,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",C,C,C,C,C,C,C,C,C
+creativity_0011,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+creativity_0011,Q14,Does this participant express concern about AI displacing their job or profession?,B,B,B,A,B,B,A,B,B
+creativity_0011,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",C,B,B,B,B,B,B,B,C
+creativity_0011,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,A,A,B,A,A,A,A,B,A
+creativity_0011,Q17,How does this participant envision their personal use of AI evolving in the next few years?,A,A,A,A,A,A,A,A,A
+creativity_0011,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",A,A,A,A,A,A,A,A,A
+creativity_0011,Q19,What AI capabilities does this participant wish existed but don't yet?,A,A,A,A,A,A,A,A,A
+creativity_0011,Q20,"What is this participant's overall stance toward AI in their work â enthusiastic, cautious, conflicted, resistant, or other?",A,A,A,A,A,A,A,A,A
+creativity_0011,Q21,What is this participant's occupation or job role?,A,A,A,A,A,A,A,A,A
+creativity_0011,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",B,B,C,C,C,B,B,B,B
+creativity_0011,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",A,A,A,A,A,A,A,A,A
+creativity_0011,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",C,C,C,C,C,C,C,C,C
+creativity_0011,Q25,How has this participant's way of using AI changed from when they first started until now?,C,C,C,C,C,C,C,C,C
+creativity_0016,Q01,What specific AI tools does this participant mention using in their work?,C,C,C,C,C,C,C,C,C
+creativity_0016,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+creativity_0016,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,A,A,A,A,A,A,A
+creativity_0016,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",C,C,C,C,C,C,C,C,C
+creativity_0016,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",C,C,C,C,C,C,C,C,C
+creativity_0016,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+creativity_0016,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,A,A,A,A,A,A,A,A,A
+creativity_0016,Q09,"What concerns does this participant raise about how AI performs on their work tasks — its accuracy, reliability, or the quality of its output?",A,A,A,B,A,A,A,A,A
+creativity_0016,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",A,A,A,A,A,A,A,A,A
+creativity_0016,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,B,C,C,C,C,C,C,C,C
+creativity_0016,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",C,C,C,C,C,C,C,C,C
+creativity_0016,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+creativity_0016,Q14,Does this participant express concern about AI displacing their job or profession?,B,B,B,C,B,B,B,B,B
+creativity_0016,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",A,A,A,A,A,A,A,A,A
+creativity_0016,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,C,C,C,C,C,C,C,C,C
+creativity_0016,Q17,How does this participant envision their personal use of AI evolving in the next few years?,A,A,A,A,A,A,A,A,A
+creativity_0016,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",A,A,A,A,A,A,A,A,A
+creativity_0016,Q19,What AI capabilities does this participant wish existed but don't yet?,C,C,C,C,C,C,C,C,C
+creativity_0016,Q20,"What is this participant's overall stance toward AI in their work — enthusiastic, cautious, conflicted, resistant, or other?",A,A,A,A,A,A,A,A,A
+creativity_0016,Q21,What is this participant's occupation or job role?,A,A,A,A,A,A,A,A,A
+creativity_0016,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",B,B,B,B,B,B,B,B,B
+creativity_0016,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",B,B,B,B,B,B,B,B,B
+creativity_0016,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",C,C,C,C,C,C,C,C,C
+creativity_0016,Q25,How has this participant's way of using AI changed from when they first started until now?,C,C,C,C,C,C,C,C,C
+creativity_0039,Q01,What specific AI tools does this participant mention using in their work?,C,C,C,C,C,C,C,C,C
+creativity_0039,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+creativity_0039,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",A,A,A,A,A,A,A,A,A
+creativity_0039,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,A,A,A,A,A,A,A
+creativity_0039,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",C,C,C,C,C,C,C,C,C
+creativity_0039,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",C,C,C,C,C,C,C,C,C
+creativity_0039,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+creativity_0039,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,A,A,A,A,A,A,A,A,A
+creativity_0039,Q09,"What concerns does this participant raise about how AI performs on their work tasks â its accuracy, reliability, or the quality of its output?",B,A,B,B,B,B,A,B,B
+creativity_0039,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",B,B,C,B,B,C,B,B,C
+creativity_0039,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,C,B,C,C,C,C,C,C,C
+creativity_0039,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",C,C,C,C,C,C,C,C,C
+creativity_0039,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+creativity_0039,Q14,Does this participant express concern about AI displacing their job or profession?,B,B,B,B,B,B,B,B,B
+creativity_0039,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",A,A,A,A,A,A,A,A,A
+creativity_0039,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,C,C,C,C,C,C,C,C,C
+creativity_0039,Q17,How does this participant envision their personal use of AI evolving in the next few years?,A,A,A,A,A,A,A,A,A
+creativity_0039,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",A,A,A,A,A,A,A,A,A
+creativity_0039,Q19,What AI capabilities does this participant wish existed but don't yet?,C,C,C,C,C,C,C,C,C
+creativity_0039,Q20,"What is this participant's overall stance toward AI in their work â enthusiastic, cautious, conflicted, resistant, or other?",A,A,A,A,A,A,A,A,A
+creativity_0039,Q21,What is this participant's occupation or job role?,A,A,A,A,A,A,A,A,A
+creativity_0039,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",B,A,B,B,A,A,A,A,B
+creativity_0039,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",C,C,C,C,C,C,C,C,C
+creativity_0039,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",C,C,C,C,C,C,C,C,C
+creativity_0039,Q25,How has this participant's way of using AI changed from when they first started until now?,C,C,C,C,C,B,C,C,C
+creativity_0047,Q01,What specific AI tools does this participant mention using in their work?,C,C,C,B,B,C,B,B,C
+creativity_0047,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+creativity_0047,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",A,A,A,A,A,A,A,A,A
+creativity_0047,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,A,A,A,A,A,A,A
+creativity_0047,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",C,C,C,C,C,C,C,C,C
+creativity_0047,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",B,B,A,A,A,A,A,A,A
+creativity_0047,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+creativity_0047,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,B,B,A,A,A,A,A,A,A
+creativity_0047,Q09,"What concerns does this participant raise about how AI performs on their work tasks â its accuracy, reliability, or the quality of its output?",B,B,B,B,B,B,B,B,B
+creativity_0047,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",C,C,C,C,C,C,C,C,C
+creativity_0047,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,C,C,C,C,C,C,C,C,C
+creativity_0047,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",C,C,C,C,C,C,C,C,C
+creativity_0047,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+creativity_0047,Q14,Does this participant express concern about AI displacing their job or profession?,B,B,B,B,B,B,B,A,B
+creativity_0047,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",A,A,A,A,A,A,A,A,A
+creativity_0047,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,C,C,C,C,C,C,C,C,C
+creativity_0047,Q17,How does this participant envision their personal use of AI evolving in the next few years?,A,A,A,A,A,A,A,A,A
+creativity_0047,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",B,B,B,A,B,A,A,B,A
+creativity_0047,Q19,What AI capabilities does this participant wish existed but don't yet?,C,C,C,C,C,C,C,C,C
+creativity_0047,Q20,"What is this participant's overall stance toward AI in their work â enthusiastic, cautious, conflicted, resistant, or other?",A,A,A,A,A,A,A,A,A
+creativity_0047,Q21,What is this participant's occupation or job role?,A,A,A,A,A,A,A,A,A
+creativity_0047,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",B,B,A,A,A,A,A,A,A
+creativity_0047,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",C,C,C,C,C,C,C,C,C
+creativity_0047,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",B,C,B,B,B,C,B,B,B
+creativity_0047,Q25,How has this participant's way of using AI changed from when they first started until now?,C,C,C,C,C,C,C,C,C
+creativity_0048,Q01,What specific AI tools does this participant mention using in their work?,C,C,C,C,C,C,C,C,C
+creativity_0048,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+creativity_0048,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",A,A,A,A,A,A,A,A,A
+creativity_0048,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,A,A,A,A,A,A,A
+creativity_0048,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",C,C,C,C,C,C,C,C,C
+creativity_0048,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",C,C,C,C,C,C,C,C,B
+creativity_0048,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+creativity_0048,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,A,A,A,A,A,A,A,A,A
+creativity_0048,Q09,"What concerns does this participant raise about how AI performs on their work tasks â its accuracy, reliability, or the quality of its output?",C,C,C,C,C,C,C,C,C
+creativity_0048,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",C,C,C,C,C,C,C,C,C
+creativity_0048,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,C,C,C,C,C,C,C,C,C
+creativity_0048,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",C,C,C,C,C,C,C,C,C
+creativity_0048,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+creativity_0048,Q14,Does this participant express concern about AI displacing their job or profession?,A,A,A,A,B,B,B,B,A
+creativity_0048,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",B,A,B,B,A,A,A,A,A
+creativity_0048,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,C,C,C,C,C,C,C,C,C
+creativity_0048,Q17,How does this participant envision their personal use of AI evolving in the next few years?,A,A,A,A,A,A,A,A,A
+creativity_0048,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",A,A,A,A,B,B,B,A,B
+creativity_0048,Q19,What AI capabilities does this participant wish existed but don't yet?,A,B,B,A,A,A,A,B,A
+creativity_0048,Q20,"What is this participant's overall stance toward AI in their work â enthusiastic, cautious, conflicted, resistant, or other?",B,A,A,A,B,A,A,A,A
+creativity_0048,Q21,What is this participant's occupation or job role?,A,A,A,A,A,A,A,A,A
+creativity_0048,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",A,B,B,B,B,B,B,B,B
+creativity_0048,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",C,C,C,C,C,C,C,C,C
+creativity_0048,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",C,C,C,B,C,C,C,C,C
+creativity_0048,Q25,How has this participant's way of using AI changed from when they first started until now?,C,C,C,C,C,C,C,C,C
+creativity_0077,Q01,What specific AI tools does this participant mention using in their work?,A,A,A,A,A,A,A,A,A
+creativity_0077,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+creativity_0077,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",A,A,A,A,A,A,A,A,A
+creativity_0077,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",B,B,B,B,B,B,B,B,B
+creativity_0077,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",B,B,B,B,B,B,B,B,C
+creativity_0077,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",B,B,B,B,B,B,B,B,B
+creativity_0077,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,B,C,B,B,B,C,C,C
+creativity_0077,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,A,A,A,A,A,A,A,A,A
+creativity_0077,Q09,"What concerns does this participant raise about how AI performs on their work tasks â its accuracy, reliability, or the quality of its output?",A,A,A,A,A,A,A,A,A
+creativity_0077,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",B,A,B,A,A,B,A,B,B
+creativity_0077,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,C,C,C,C,C,C,C,C,C
+creativity_0077,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",C,C,C,C,C,C,C,C,C
+creativity_0077,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+creativity_0077,Q14,Does this participant express concern about AI displacing their job or profession?,B,B,C,B,B,B,B,B,B
+creativity_0077,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",C,C,C,C,C,C,C,C,C
+creativity_0077,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,C,C,C,C,C,C,C,C,C
+creativity_0077,Q17,How does this participant envision their personal use of AI evolving in the next few years?,A,A,A,A,A,A,A,A,A
+creativity_0077,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",A,A,A,A,A,A,A,A,A
+creativity_0077,Q19,What AI capabilities does this participant wish existed but don't yet?,A,A,A,A,A,A,A,A,A
+creativity_0077,Q20,"What is this participant's overall stance toward AI in their work â enthusiastic, cautious, conflicted, resistant, or other?",A,A,A,A,A,B,A,A,A
+creativity_0077,Q21,What is this participant's occupation or job role?,A,A,A,A,A,A,A,A,A
+creativity_0077,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",A,A,A,A,A,A,A,A,A
+creativity_0077,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",B,B,B,B,B,B,B,B,B
+creativity_0077,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",C,C,C,C,C,C,B,C,C
+creativity_0077,Q25,How has this participant's way of using AI changed from when they first started until now?,C,C,C,C,C,C,C,C,C
+creativity_0090,Q01,What specific AI tools does this participant mention using in their work?,A,A,A,A,A,A,A,A,A
+creativity_0090,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+creativity_0090,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",A,A,A,A,A,A,A,A,A
+creativity_0090,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,A,A,A,A,A,A,A
+creativity_0090,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",C,C,C,C,C,B,C,C,C
+creativity_0090,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",C,C,C,C,C,C,C,C,C
+creativity_0090,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+creativity_0090,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,A,A,A,B,B,A,A,A,A
+creativity_0090,Q09,"What concerns does this participant raise about how AI performs on their work tasks â its accuracy, reliability, or the quality of its output?",B,A,A,A,A,B,A,A,A
+creativity_0090,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",B,A,A,A,A,A,A,A,A
+creativity_0090,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,B,B,B,C,B,B,B,B,B
+creativity_0090,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",C,C,C,C,C,C,C,C,C
+creativity_0090,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+creativity_0090,Q14,Does this participant express concern about AI displacing their job or profession?,A,A,A,A,A,A,A,A,A
+creativity_0090,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",B,A,A,A,A,A,A,A,A
+creativity_0090,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,C,C,C,C,C,C,C,C,C
+creativity_0090,Q17,How does this participant envision their personal use of AI evolving in the next few years?,A,A,B,B,B,A,B,A,A
+creativity_0090,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",A,A,A,A,A,B,A,A,A
+creativity_0090,Q19,What AI capabilities does this participant wish existed but don't yet?,A,A,A,A,A,A,A,A,A
+creativity_0090,Q20,"What is this participant's overall stance toward AI in their work â enthusiastic, cautious, conflicted, resistant, or other?",A,A,A,A,A,A,A,A,A
+creativity_0090,Q21,What is this participant's occupation or job role?,A,A,A,A,A,A,A,A,A
+creativity_0090,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",C,C,C,C,C,B,B,C,B
+creativity_0090,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",B,A,A,B,A,A,A,A,A
+creativity_0090,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",C,C,C,C,C,C,C,C,C
+creativity_0090,Q25,How has this participant's way of using AI changed from when they first started until now?,C,C,C,C,C,C,C,C,C
+creativity_0114,Q01,What specific AI tools does this participant mention using in their work?,B,C,C,B,B,C,B,B,C
+creativity_0114,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+creativity_0114,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",A,A,A,A,A,A,A,A,A
+creativity_0114,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",B,B,B,B,B,B,B,B,B
+creativity_0114,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",C,C,C,C,C,C,C,C,C
+creativity_0114,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",C,C,B,C,C,C,C,C,C
+creativity_0114,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+creativity_0114,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,A,A,A,A,A,A,A,A,A
+creativity_0114,Q09,"What concerns does this participant raise about how AI performs on their work tasks — its accuracy, reliability, or the quality of its output?",A,A,A,A,A,A,A,A,A
+creativity_0114,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",B,C,C,B,B,B,C,B,C
+creativity_0114,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,C,C,C,C,C,C,C,C,C
+creativity_0114,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",C,C,C,C,C,C,C,C,C
+creativity_0114,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+creativity_0114,Q14,Does this participant express concern about AI displacing their job or profession?,A,A,A,A,A,A,A,A,A
+creativity_0114,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",B,B,B,B,C,B,C,B,B
+creativity_0114,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,C,C,C,C,C,C,C,C,C
+creativity_0114,Q17,How does this participant envision their personal use of AI evolving in the next few years?,A,A,A,A,A,A,A,A,A
+creativity_0114,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",B,B,C,B,B,C,B,B,C
+creativity_0114,Q19,What AI capabilities does this participant wish existed but don't yet?,C,C,C,C,C,C,C,C,C
+creativity_0114,Q20,"What is this participant's overall stance toward AI in their work — enthusiastic, cautious, conflicted, resistant, or other?",A,A,A,A,A,A,A,A,A
+creativity_0114,Q21,What is this participant's occupation or job role?,A,A,A,A,A,A,A,A,A
+creativity_0114,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",A,A,A,A,A,A,A,A,A
+creativity_0114,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",C,C,C,C,C,C,C,C,C
+creativity_0114,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",C,B,C,C,C,C,B,C,C
+creativity_0114,Q25,How has this participant's way of using AI changed from when they first started until now?,C,C,C,C,C,C,C,C,C
+science_0004,Q01,What specific AI tools does this participant mention using in their work?,C,C,C,C,C,C,C,C,C
+science_0004,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+science_0004,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",A,B,B,B,B,B,B,B,A
+science_0004,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,A,A,A,A,A,A,A
+science_0004,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",A,A,A,A,A,A,A,A,A
+science_0004,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",A,A,A,A,A,A,A,A,A
+science_0004,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",B,B,B,B,B,B,B,B,B
+science_0004,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,B,B,B,C,B,B,C,B,B
+science_0004,Q09,"What concerns does this participant raise about how AI performs on their work tasks â its accuracy, reliability, or the quality of its output?",A,A,A,A,A,A,A,A,A
+science_0004,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",B,B,B,B,B,B,B,B,B
+science_0004,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,B,B,B,B,B,B,B,B,B
+science_0004,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",C,C,C,C,C,C,C,C,C
+science_0004,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+science_0004,Q14,Does this participant express concern about AI displacing their job or profession?,C,C,C,C,C,C,C,C,C
+science_0004,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",B,B,B,B,B,B,B,B,B
+science_0004,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,C,C,C,C,C,C,C,C,C
+science_0004,Q17,How does this participant envision their personal use of AI evolving in the next few years?,C,C,B,C,C,C,C,C,C
+science_0004,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",C,C,C,C,C,C,C,C,C
+science_0004,Q19,What AI capabilities does this participant wish existed but don't yet?,A,A,A,A,A,A,A,A,A
+science_0004,Q20,"What is this participant's overall stance toward AI in their work â enthusiastic, cautious, conflicted, resistant, or other?",A,B,B,B,B,B,B,B,A
+science_0004,Q21,What is this participant's occupation or job role?,B,A,B,A,B,B,A,B,A
+science_0004,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",A,A,A,A,A,A,A,A,A
+science_0004,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",B,B,B,B,C,B,B,B,B
+science_0004,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",B,B,B,B,B,B,B,A,B
+science_0004,Q25,How has this participant's way of using AI changed from when they first started until now?,A,A,B,B,A,B,A,A,A
+science_0022,Q01,What specific AI tools does this participant mention using in their work?,B,B,B,B,B,B,B,B,B
+science_0022,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+science_0022,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,A,A,A,A,A,A,A
+science_0022,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",C,C,C,C,C,C,C,C,C
+science_0022,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",A,A,A,A,A,A,A,A,A
+science_0022,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+science_0022,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,B,B,B,B,B,B,B,B,B
+science_0022,Q09,"What concerns does this participant raise about how AI performs on their work tasks â its accuracy, reliability, or the quality of its output?",A,B,B,B,B,A,B,B,B
+science_0022,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",B,B,C,C,B,B,B,B,B
+science_0022,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,C,C,C,C,C,C,C,C,C
+science_0022,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",C,C,C,C,C,C,C,C,C
+science_0022,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+science_0022,Q14,Does this participant express concern about AI displacing their job or profession?,C,C,C,C,C,C,C,C,C
+science_0022,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",B,A,B,B,B,A,B,B,B
+science_0022,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,C,C,C,C,C,C,C,C,C
+science_0022,Q17,How does this participant envision their personal use of AI evolving in the next few years?,B,B,B,B,B,B,B,B,B
+science_0022,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",C,C,C,C,C,C,C,C,C
+science_0022,Q19,What AI capabilities does this participant wish existed but don't yet?,A,A,A,A,A,A,A,A,A
+science_0022,Q20,"What is this participant's overall stance toward AI in their work â enthusiastic, cautious, conflicted, resistant, or other?",B,A,B,B,B,A,B,B,A
+science_0022,Q21,What is this participant's occupation or job role?,A,A,A,A,A,A,B,A,A
+science_0022,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",B,B,C,C,C,C,B,C,C
+science_0022,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",B,C,C,C,C,C,C,C,C
+science_0022,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",C,C,C,C,C,C,C,C,C
+science_0022,Q25,How has this participant's way of using AI changed from when they first started until now?,C,C,C,C,C,C,C,C,C
+science_0024,Q01,What specific AI tools does this participant mention using in their work?,B,B,C,C,C,C,C,C,A
+science_0024,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+science_0024,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",B,A,B,A,B,B,B,A,A
+science_0024,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,A,A,A,A,A,A,A
+science_0024,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",B,B,B,B,B,B,B,C,B
+science_0024,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",A,A,A,A,A,A,A,A,A
+science_0024,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+science_0024,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,C,B,C,B,B,C,B,C,B
+science_0024,Q09,"What concerns does this participant raise about how AI performs on their work tasks â its accuracy, reliability, or the quality of its output?",A,A,A,A,A,A,A,A,A
+science_0024,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",C,C,C,C,C,C,C,C,B
+science_0024,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,C,C,C,C,C,C,C,C,C
+science_0024,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",C,C,C,C,C,C,C,C,C
+science_0024,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+science_0024,Q14,Does this participant express concern about AI displacing their job or profession?,C,B,B,B,B,B,B,B,B
+science_0024,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",A,A,A,A,A,A,A,A,A
+science_0024,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,C,C,C,C,C,C,C,C,C
+science_0024,Q17,How does this participant envision their personal use of AI evolving in the next few years?,C,C,C,C,C,C,C,C,C
+science_0024,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",A,A,A,A,A,A,A,A,A
+science_0024,Q19,What AI capabilities does this participant wish existed but don't yet?,A,A,A,A,A,A,A,A,A
+science_0024,Q20,"What is this participant's overall stance toward AI in their work â enthusiastic, cautious, conflicted, resistant, or other?",B,A,B,B,B,B,B,B,B
+science_0024,Q21,What is this participant's occupation or job role?,A,A,A,B,B,B,B,A,A
+science_0024,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",C,C,C,C,C,C,C,C,C
+science_0024,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",C,C,C,C,C,C,C,C,C
+science_0024,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",C,C,C,C,C,C,C,C,C
+science_0024,Q25,How has this participant's way of using AI changed from when they first started until now?,C,C,C,C,C,C,C,C,C
+science_0041,Q01,What specific AI tools does this participant mention using in their work?,B,B,B,B,B,C,B,B,C
+science_0041,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+science_0041,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",A,A,A,A,A,A,A,A,A
+science_0041,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,A,A,A,A,A,A,A
+science_0041,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",A,A,A,A,A,A,A,A,A
+science_0041,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",A,A,A,A,A,A,A,A,A
+science_0041,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+science_0041,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,A,A,A,A,A,A,A,A,A
+science_0041,Q09,"What concerns does this participant raise about how AI performs on their work tasks â its accuracy, reliability, or the quality of its output?",A,A,A,A,A,A,A,A,A
+science_0041,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",A,A,A,A,A,A,A,A,A
+science_0041,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,B,B,B,B,B,B,B,B,B
+science_0041,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",C,C,C,C,C,C,C,C,C
+science_0041,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",A,A,A,A,B,A,A,A,B
+science_0041,Q14,Does this participant express concern about AI displacing their job or profession?,A,A,A,A,A,A,A,A,A
+science_0041,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",B,B,B,B,B,B,A,A,B
+science_0041,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,A,A,B,A,B,B,A,B,B
+science_0041,Q17,How does this participant envision their personal use of AI evolving in the next few years?,A,A,A,A,A,A,A,A,A
+science_0041,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",C,C,C,C,C,C,C,C,C
+science_0041,Q19,What AI capabilities does this participant wish existed but don't yet?,A,A,A,A,A,A,A,A,A
+science_0041,Q20,"What is this participant's overall stance toward AI in their work â enthusiastic, cautious, conflicted, resistant, or other?",A,A,A,A,A,B,A,A,A
+science_0041,Q21,What is this participant's occupation or job role?,B,B,B,B,B,B,B,B,B
+science_0041,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",A,A,A,A,A,A,A,A,A
+science_0041,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",C,C,C,C,C,C,C,C,C
+science_0041,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",C,C,C,C,C,C,C,C,C
+science_0041,Q25,How has this participant's way of using AI changed from when they first started until now?,C,C,C,C,C,C,C,C,C
+science_0046,Q01,What specific AI tools does this participant mention using in their work?,C,C,C,C,C,C,C,C,C
+science_0046,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+science_0046,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,A,A,A,A,A,A,A
+science_0046,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",A,A,A,A,A,A,A,A,A
+science_0046,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",A,A,A,A,A,A,A,A,A
+science_0046,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",A,A,A,A,A,A,A,A,A
+science_0046,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,B,B,B,B,B,B,B,B,B
+science_0046,Q09,"What concerns does this participant raise about how AI performs on their work tasks — its accuracy, reliability, or the quality of its output?",A,A,A,A,A,A,A,A,A
+science_0046,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",B,B,A,A,A,A,A,A,A
+science_0046,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,B,B,B,A,B,B,B,B,B
+science_0046,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",C,C,C,C,C,C,C,C,C
+science_0046,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+science_0046,Q14,Does this participant express concern about AI displacing their job or profession?,C,C,C,C,C,C,C,C,C
+science_0046,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",B,B,B,B,B,B,B,B,B
+science_0046,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,C,C,C,C,C,C,C,C,C
+science_0046,Q17,How does this participant envision their personal use of AI evolving in the next few years?,C,C,C,C,C,C,C,C,C
+science_0046,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",B,B,B,B,B,B,B,B,B
+science_0046,Q19,What AI capabilities does this participant wish existed but don't yet?,A,A,A,A,A,A,A,A,A
+science_0046,Q20,"What is this participant's overall stance toward AI in their work — enthusiastic, cautious, conflicted, resistant, or other?",A,A,A,A,A,A,A,A,A
+science_0046,Q21,What is this participant's occupation or job role?,B,B,A,B,B,B,B,B,B
+science_0046,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",A,A,A,A,A,A,A,A,A
+science_0046,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",C,C,C,C,C,C,C,C,C
+science_0046,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",C,C,C,C,C,C,C,C,C
+science_0046,Q25,How has this participant's way of using AI changed from when they first started until now?,C,C,C,C,C,C,C,C,C
+science_0065,Q01,What specific AI tools does this participant mention using in their work?,B,B,C,B,B,C,B,C,C
+science_0065,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+science_0065,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",B,B,B,B,B,B,B,B,A
+science_0065,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",B,A,B,A,B,B,A,A,A
+science_0065,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",A,A,A,A,A,A,A,A,A
+science_0065,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",A,A,A,A,A,A,A,A,A
+science_0065,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+science_0065,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,B,B,C,B,B,C,B,B,B
+science_0065,Q09,"What concerns does this participant raise about how AI performs on their work tasks â its accuracy, reliability, or the quality of its output?",A,A,A,A,A,A,A,A,A
+science_0065,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",B,B,B,B,B,B,B,B,B
+science_0065,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,C,C,C,C,C,C,C,C,C
+science_0065,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",C,C,C,C,C,C,C,C,C
+science_0065,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+science_0065,Q14,Does this participant express concern about AI displacing their job or profession?,C,C,C,C,C,C,C,C,C
+science_0065,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",C,B,C,B,C,C,B,B,B
+science_0065,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,C,C,C,C,C,C,C,C,C
+science_0065,Q17,How does this participant envision their personal use of AI evolving in the next few years?,C,C,C,C,C,C,C,C,C
+science_0065,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",C,C,C,C,C,C,C,C,C
+science_0065,Q19,What AI capabilities does this participant wish existed but don't yet?,A,A,A,A,A,A,A,A,A
+science_0065,Q20,"What is this participant's overall stance toward AI in their work â enthusiastic, cautious, conflicted, resistant, or other?",B,B,B,B,B,B,B,B,B
+science_0065,Q21,What is this participant's occupation or job role?,A,A,A,A,A,A,A,A,A
+science_0065,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",C,C,C,C,C,C,C,C,C
+science_0065,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",B,B,B,B,B,C,B,C,B
+science_0065,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",C,C,C,C,C,C,C,C,C
+science_0065,Q25,How has this participant's way of using AI changed from when they first started until now?,C,C,C,C,C,C,C,C,C
+science_0066,Q01,What specific AI tools does this participant mention using in their work?,C,C,C,C,C,C,C,C,C
+science_0066,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+science_0066,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",A,B,B,B,B,A,B,B,B
+science_0066,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,A,A,A,A,A,A,A
+science_0066,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",B,B,B,B,B,B,B,B,B
+science_0066,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",A,A,A,A,A,A,A,A,A
+science_0066,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+science_0066,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,B,B,B,B,B,A,A,A,B
+science_0066,Q09,"What concerns does this participant raise about how AI performs on their work tasks — its accuracy, reliability, or the quality of its output?",B,A,A,B,A,A,B,A,A
+science_0066,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",C,C,C,C,C,C,C,B,C
+science_0066,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,C,C,C,C,C,C,C,C,C
+science_0066,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",C,C,C,C,C,C,C,C,C
+science_0066,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+science_0066,Q14,Does this participant express concern about AI displacing their job or profession?,C,C,C,C,C,C,C,C,C
+science_0066,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",C,C,C,C,B,C,C,C,B
+science_0066,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,C,C,C,C,C,C,C,C,C
+science_0066,Q17,How does this participant envision their personal use of AI evolving in the next few years?,C,C,C,C,C,C,C,C,C
+science_0066,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",C,C,C,C,C,C,C,C,C
+science_0066,Q19,What AI capabilities does this participant wish existed but don't yet?,A,A,A,A,A,A,A,A,A
+science_0066,Q20,"What is this participant's overall stance toward AI in their work — enthusiastic, cautious, conflicted, resistant, or other?",A,B,B,B,B,B,B,B,B
+science_0066,Q21,What is this participant's occupation or job role?,A,A,A,A,A,A,B,A,B
+science_0066,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",A,A,A,A,A,A,A,A,A
+science_0066,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",C,C,C,C,C,C,C,C,C
+science_0066,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",C,C,C,C,C,C,C,C,C
+science_0066,Q25,How has this participant's way of using AI changed from when they first started until now?,C,C,C,C,C,C,C,C,C
+science_0069,Q01,What specific AI tools does this participant mention using in their work?,A,A,A,A,A,A,A,A,A
+science_0069,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+science_0069,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",B,B,B,B,B,B,B,B,B
+science_0069,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,B,A,B,A,A,A,A
+science_0069,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",B,C,B,B,B,B,B,C,C
+science_0069,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",A,A,A,A,A,A,A,A,A
+science_0069,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+science_0069,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,C,C,C,C,C,B,B,C,B
+science_0069,Q09,"What concerns does this participant raise about how AI performs on their work tasks â its accuracy, reliability, or the quality of its output?",B,B,B,B,B,B,A,B,B
+science_0069,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",C,C,C,C,C,C,C,C,C
+science_0069,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,B,B,B,B,B,B,A,B,B
+science_0069,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",C,C,C,C,C,C,C,C,C
+science_0069,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+science_0069,Q14,Does this participant express concern about AI displacing their job or profession?,B,B,B,B,B,B,B,B,B
+science_0069,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",A,B,B,A,B,B,A,A,A
+science_0069,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,C,C,C,C,C,C,C,C,C
+science_0069,Q17,How does this participant envision their personal use of AI evolving in the next few years?,C,C,C,C,C,C,B,C,C
+science_0069,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",B,B,B,B,B,B,A,B,B
+science_0069,Q19,What AI capabilities does this participant wish existed but don't yet?,A,A,A,A,A,A,A,A,A
+science_0069,Q20,"What is this participant's overall stance toward AI in their work â enthusiastic, cautious, conflicted, resistant, or other?",B,B,B,B,B,B,B,B,B
+science_0069,Q21,What is this participant's occupation or job role?,A,A,A,A,A,A,A,A,A
+science_0069,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",C,C,C,C,C,C,C,C,C
+science_0069,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",C,C,C,C,C,C,C,C,C
+science_0069,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",C,C,C,C,C,C,C,C,C
+science_0069,Q25,How has this participant's way of using AI changed from when they first started until now?,C,C,B,C,C,B,B,C,C
+science_0109,Q01,What specific AI tools does this participant mention using in their work?,C,C,B,B,B,C,C,C,C
+science_0109,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+science_0109,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",A,A,A,A,A,A,A,A,A
+science_0109,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,A,A,A,A,A,A,A
+science_0109,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",A,A,A,A,A,A,A,A,A
+science_0109,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",A,A,A,A,A,A,A,A,A
+science_0109,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+science_0109,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,B,B,B,B,A,B,A,B,B
+science_0109,Q09,"What concerns does this participant raise about how AI performs on their work tasks — its accuracy, reliability, or the quality of its output?",A,A,A,A,A,A,A,A,A
+science_0109,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",C,C,C,C,C,C,C,C,C
+science_0109,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,C,C,C,C,C,C,C,C,C
+science_0109,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",C,C,C,C,C,C,C,C,C
+science_0109,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+science_0109,Q14,Does this participant express concern about AI displacing their job or profession?,C,C,C,C,C,C,C,C,C
+science_0109,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",B,B,A,A,B,B,B,B,A
+science_0109,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,C,C,C,C,C,C,C,C,C
+science_0109,Q17,How does this participant envision their personal use of AI evolving in the next few years?,B,C,C,B,B,C,C,B,B
+science_0109,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",C,C,C,C,C,C,C,C,C
+science_0109,Q19,What AI capabilities does this participant wish existed but don't yet?,A,A,A,A,A,A,A,A,A
+science_0109,Q20,"What is this participant's overall stance toward AI in their work — enthusiastic, cautious, conflicted, resistant, or other?",B,B,B,B,A,B,B,B,B
+science_0109,Q21,What is this participant's occupation or job role?,A,B,A,A,A,B,B,B,A
+science_0109,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",C,C,C,C,C,C,C,C,C
+science_0109,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",C,C,C,C,C,C,C,C,C
+science_0109,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",C,C,C,C,C,C,C,C,C
+science_0109,Q25,How has this participant's way of using AI changed from when they first started until now?,C,C,C,C,C,C,C,C,C
+work_0089,Q01,What specific AI tools does this participant mention using in their work?,A,A,A,A,A,A,A,A,A
+work_0089,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+work_0089,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",A,A,A,A,A,A,A,A,A
+work_0089,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,A,A,A,A,A,A,A
+work_0089,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",B,B,B,B,B,C,B,B,B
+work_0089,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",B,B,B,B,B,B,B,B,C
+work_0089,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+work_0089,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,A,A,A,A,A,A,A,A,A
+work_0089,Q09,"What concerns does this participant raise about how AI performs on their work tasks â its accuracy, reliability, or the quality of its output?",A,A,A,A,A,A,A,A,A
+work_0089,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",A,A,A,A,A,A,A,A,A
+work_0089,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,A,A,A,A,A,A,A,A,A
+work_0089,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",C,C,C,C,C,C,C,C,C
+work_0089,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+work_0089,Q14,Does this participant express concern about AI displacing their job or profession?,A,A,A,A,A,A,A,A,A
+work_0089,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",B,B,B,B,B,B,B,B,B
+work_0089,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,C,C,C,C,C,C,C,C,C
+work_0089,Q17,How does this participant envision their personal use of AI evolving in the next few years?,A,A,A,A,A,A,A,A,A
+work_0089,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",C,C,C,C,C,C,C,C,C
+work_0089,Q19,What AI capabilities does this participant wish existed but don't yet?,C,C,C,C,C,B,C,C,C
+work_0089,Q20,"What is this participant's overall stance toward AI in their work â enthusiastic, cautious, conflicted, resistant, or other?",A,A,A,A,A,A,A,A,A
+work_0089,Q21,What is this participant's occupation or job role?,A,A,A,A,A,A,A,A,A
+work_0089,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",A,A,A,A,A,A,A,A,A
+work_0089,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",C,C,C,C,C,C,C,C,C
+work_0089,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",B,B,B,B,B,B,B,B,B
+work_0089,Q25,How has this participant's way of using AI changed from when they first started until now?,C,C,C,C,C,C,C,C,C
+work_0106,Q01,What specific AI tools does this participant mention using in their work?,C,B,C,C,C,C,B,B,C
+work_0106,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+work_0106,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",A,A,A,A,A,A,A,A,A
+work_0106,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,B,A,B,A,A,A,B
+work_0106,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",C,C,C,C,C,C,C,C,C
+work_0106,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",C,C,C,C,C,C,C,C,C
+work_0106,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+work_0106,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,A,A,A,A,A,A,A,A,A
+work_0106,Q09,"What concerns does this participant raise about how AI performs on their work tasks â its accuracy, reliability, or the quality of its output?",C,C,C,C,C,C,C,C,C
+work_0106,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",C,C,C,C,C,C,C,C,C
+work_0106,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,A,A,A,A,A,A,A,A,A
+work_0106,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",C,C,C,C,C,C,C,C,C
+work_0106,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+work_0106,Q14,Does this participant express concern about AI displacing their job or profession?,C,B,B,C,C,B,C,B,C
+work_0106,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",B,B,C,C,B,C,C,C,B
+work_0106,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,C,C,C,C,C,C,C,C,C
+work_0106,Q17,How does this participant envision their personal use of AI evolving in the next few years?,A,A,A,A,A,A,A,A,A
+work_0106,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",C,C,C,C,C,C,C,C,C
+work_0106,Q19,What AI capabilities does this participant wish existed but don't yet?,B,C,C,C,C,C,C,C,C
+work_0106,Q20,"What is this participant's overall stance toward AI in their work â enthusiastic, cautious, conflicted, resistant, or other?",A,A,A,A,B,B,A,A,B
+work_0106,Q21,What is this participant's occupation or job role?,A,A,A,A,A,A,A,A,A
+work_0106,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",A,A,A,A,A,A,A,A,A
+work_0106,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",C,C,C,C,C,C,C,C,C
+work_0106,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",C,C,C,C,C,C,C,C,C
+work_0106,Q25,How has this participant's way of using AI changed from when they first started until now?,C,C,C,C,C,C,C,C,C
+work_0160,Q01,What specific AI tools does this participant mention using in their work?,A,A,A,A,A,A,A,A,A
+work_0160,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+work_0160,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",A,A,A,A,A,A,A,A,A
+work_0160,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,A,A,A,A,A,A,A
+work_0160,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",B,A,A,A,B,B,B,A,B
+work_0160,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",C,B,B,B,B,B,B,B,B
+work_0160,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",A,A,A,B,A,A,A,A,A
+work_0160,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,A,A,A,A,A,A,A,A,A
+work_0160,Q09,"What concerns does this participant raise about how AI performs on their work tasks — its accuracy, reliability, or the quality of its output?",A,A,A,A,A,A,A,A,A
+work_0160,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",A,A,A,A,A,A,A,A,A
+work_0160,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,C,C,A,C,A,C,A,A,A
+work_0160,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",C,C,C,C,C,C,C,C,C
+work_0160,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+work_0160,Q14,Does this participant express concern about AI displacing their job or profession?,A,A,A,A,A,A,A,A,A
+work_0160,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",C,C,C,C,C,B,C,B,C
+work_0160,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,C,C,C,C,C,C,C,C,C
+work_0160,Q17,How does this participant envision their personal use of AI evolving in the next few years?,A,A,A,A,A,A,A,A,A
+work_0160,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",C,C,C,C,C,C,C,C,C
+work_0160,Q19,What AI capabilities does this participant wish existed but don't yet?,A,A,A,A,A,A,A,A,A
+work_0160,Q20,"What is this participant's overall stance toward AI in their work â€” enthusiastic, cautious, conflicted, resistant, or other?",B,B,B,B,B,B,B,B,B
+work_0160,Q21,What is this participant's occupation or job role?,A,A,A,A,A,A,A,A,A
+work_0160,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",A,A,A,A,A,A,A,A,A
+work_0160,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",B,B,B,B,B,B,B,A,B
+work_0160,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",B,B,B,B,B,C,B,B,B
+work_0160,Q25,How has this participant's way of using AI changed from when they first started until now?,C,C,C,C,C,C,C,C,C
+work_0161,Q01,What specific AI tools does this participant mention using in their work?,A,A,A,A,A,A,A,A,A
+work_0161,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+work_0161,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",A,A,A,A,A,A,A,A,A
+work_0161,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,A,A,A,A,A,A,A
+work_0161,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",A,A,A,A,A,A,A,A,A
+work_0161,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",A,A,A,A,A,A,A,A,A
+work_0161,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",A,B,B,B,B,B,B,B,B
+work_0161,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,C,C,C,C,C,C,C,C,C
+work_0161,Q09,"What concerns does this participant raise about how AI performs on their work tasks â its accuracy, reliability, or the quality of its output?",A,A,A,A,A,A,A,A,A
+work_0161,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",A,A,A,A,A,A,A,A,A
+work_0161,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,A,A,A,A,A,A,A,A,A
+work_0161,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",C,C,C,C,C,C,C,C,C
+work_0161,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+work_0161,Q14,Does this participant express concern about AI displacing their job or profession?,A,A,A,A,A,A,A,A,A
+work_0161,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",B,B,B,B,B,B,B,B,B
+work_0161,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,C,C,C,C,C,C,C,C,C
+work_0161,Q17,How does this participant envision their personal use of AI evolving in the next few years?,A,A,A,A,A,A,A,A,A
+work_0161,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",C,C,C,C,C,C,C,C,C
+work_0161,Q19,What AI capabilities does this participant wish existed but don't yet?,C,C,C,C,C,C,C,C,C
+work_0161,Q20,"What is this participant's overall stance toward AI in their work â enthusiastic, cautious, conflicted, resistant, or other?",A,A,A,A,A,A,A,A,A
+work_0161,Q21,What is this participant's occupation or job role?,A,A,A,A,A,A,A,A,A
+work_0161,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",A,A,A,A,A,A,A,A,A
+work_0161,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",C,C,C,C,C,C,C,C,C
+work_0161,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",B,B,B,B,B,B,B,B,B
+work_0161,Q25,How has this participant's way of using AI changed from when they first started until now?,B,B,B,B,B,B,B,B,B
+work_0166,Q01,What specific AI tools does this participant mention using in their work?,C,C,C,C,C,C,C,C,C
+work_0166,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+work_0166,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",A,A,A,A,A,A,A,A,A
+work_0166,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,A,A,A,A,A,A,A
+work_0166,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",B,B,B,B,B,B,B,B,B
+work_0166,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",C,B,B,B,B,C,B,C,B
+work_0166,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+work_0166,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,A,A,A,A,A,B,A,A,A
+work_0166,Q09,"What concerns does this participant raise about how AI performs on their work tasks â its accuracy, reliability, or the quality of its output?",A,A,A,A,A,A,A,A,A
+work_0166,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",A,A,A,A,A,A,A,A,A
+work_0166,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,A,A,A,A,A,A,A,A,A
+work_0166,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",C,C,C,C,C,C,C,C,C
+work_0166,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+work_0166,Q14,Does this participant express concern about AI displacing their job or profession?,C,C,C,C,C,C,C,C,C
+work_0166,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",A,A,A,A,A,A,A,A,A
+work_0166,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,C,C,C,C,C,C,C,C,C
+work_0166,Q17,How does this participant envision their personal use of AI evolving in the next few years?,A,A,A,A,A,A,A,A,A
+work_0166,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",C,C,C,C,C,C,C,C,C
+work_0166,Q19,What AI capabilities does this participant wish existed but don't yet?,A,A,A,A,A,A,A,A,A
+work_0166,Q20,"What is this participant's overall stance toward AI in their work â enthusiastic, cautious, conflicted, resistant, or other?",B,B,B,B,B,B,A,A,B
+work_0166,Q21,What is this participant's occupation or job role?,A,A,A,A,A,A,A,A,A
+work_0166,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",B,A,A,A,A,A,A,A,A
+work_0166,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",B,C,C,C,B,B,B,C,C
+work_0166,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",C,C,C,C,C,C,C,C,C
+work_0166,Q25,How has this participant's way of using AI changed from when they first started until now?,C,C,C,C,C,C,C,C,C
+work_0182,Q01,What specific AI tools does this participant mention using in their work?,C,C,C,C,C,C,C,C,C
+work_0182,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+work_0182,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",A,A,A,A,A,A,A,A,A
+work_0182,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",B,C,C,B,B,C,B,B,B
+work_0182,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",A,A,A,A,A,A,A,A,A
+work_0182,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",A,A,A,A,A,A,A,A,A
+work_0182,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+work_0182,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,A,A,A,A,A,A,A,A,A
+work_0182,Q09,"What concerns does this participant raise about how AI performs on their work tasks — its accuracy, reliability, or the quality of its output?",A,A,A,A,A,A,A,A,A
+work_0182,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",A,A,A,A,A,A,A,A,A
+work_0182,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,C,C,C,C,C,C,C,C,C
+work_0182,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",C,C,C,C,C,C,C,C,C
+work_0182,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+work_0182,Q14,Does this participant express concern about AI displacing their job or profession?,C,C,C,C,C,C,C,C,C
+work_0182,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",C,C,C,C,C,C,C,C,C
+work_0182,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,B,B,B,B,B,B,B,B,B
+work_0182,Q17,How does this participant envision their personal use of AI evolving in the next few years?,A,A,A,A,A,A,A,A,A
+work_0182,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",C,C,C,C,C,C,C,C,C
+work_0182,Q19,What AI capabilities does this participant wish existed but don't yet?,C,C,C,C,C,C,C,C,C
+work_0182,Q20,"What is this participant's overall stance toward AI in their work — enthusiastic, cautious, conflicted, resistant, or other?",A,A,B,A,A,B,A,B,A
+work_0182,Q21,What is this participant's occupation or job role?,A,A,A,A,A,A,A,A,A
+work_0182,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",A,A,C,B,A,C,B,B,B
+work_0182,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",B,C,C,B,C,C,B,B,C
+work_0182,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",C,C,C,B,C,C,C,B,C
+work_0182,Q25,How has this participant's way of using AI changed from when they first started until now?,B,B,B,B,B,B,B,C,B
+work_0243,Q01,What specific AI tools does this participant mention using in their work?,A,A,A,A,A,A,A,A,A
+work_0243,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+work_0243,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",A,A,A,A,A,A,A,A,A
+work_0243,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,A,A,A,A,A,A,A
+work_0243,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",B,B,B,B,B,B,B,B,B
+work_0243,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",B,B,B,B,B,B,B,B,B
+work_0243,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+work_0243,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,A,A,A,A,A,A,A,A,A
+work_0243,Q09,"What concerns does this participant raise about how AI performs on their work tasks â its accuracy, reliability, or the quality of its output?",B,B,B,B,B,B,A,B,A
+work_0243,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",B,B,B,B,B,B,B,B,A
+work_0243,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,A,A,A,A,A,A,A,A,A
+work_0243,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",A,A,A,A,A,A,A,A,A
+work_0243,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+work_0243,Q14,Does this participant express concern about AI displacing their job or profession?,A,A,A,A,A,A,A,A,A
+work_0243,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",A,A,A,A,A,A,A,A,A
+work_0243,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,B,B,B,B,B,B,B,B,B
+work_0243,Q17,How does this participant envision their personal use of AI evolving in the next few years?,A,A,A,A,A,A,A,A,A
+work_0243,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",C,C,C,C,C,C,C,C,C
+work_0243,Q19,What AI capabilities does this participant wish existed but don't yet?,B,C,B,B,B,B,C,C,B
+work_0243,Q20,"What is this participant's overall stance toward AI in their work â enthusiastic, cautious, conflicted, resistant, or other?",A,B,A,A,A,A,A,A,A
+work_0243,Q21,What is this participant's occupation or job role?,A,A,A,A,A,A,A,A,A
+work_0243,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",A,A,A,A,A,A,A,A,A
+work_0243,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",B,B,B,B,B,B,B,B,B
+work_0243,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",B,B,B,B,B,B,B,B,B
+work_0243,Q25,How has this participant's way of using AI changed from when they first started until now?,C,C,B,B,C,B,B,B,B
+work_0245,Q01,What specific AI tools does this participant mention using in their work?,B,B,B,B,B,C,B,B,B
+work_0245,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+work_0245,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",A,A,A,A,A,A,A,A,A
+work_0245,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,A,A,A,A,A,A,A
+work_0245,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",A,A,A,A,A,A,A,A,A
+work_0245,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",A,A,A,A,A,A,A,A,A
+work_0245,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+work_0245,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,A,A,A,A,A,A,A,A,A
+work_0245,Q09,"What concerns does this participant raise about how AI performs on their work tasks — its accuracy, reliability, or the quality of its output?",A,A,A,A,A,A,A,A,A
+work_0245,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",A,A,A,A,A,A,A,A,A
+work_0245,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,A,A,A,A,A,A,A,A,A
+work_0245,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",A,A,A,A,A,A,A,A,A
+work_0245,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",A,A,A,A,A,A,A,A,A
+work_0245,Q14,Does this participant express concern about AI displacing their job or profession?,B,B,C,B,C,C,B,B,C
+work_0245,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",A,C,C,A,C,C,C,C,C
+work_0245,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,C,C,C,C,C,C,C,C,C
+work_0245,Q17,How does this participant envision their personal use of AI evolving in the next few years?,A,A,A,A,A,A,A,A,A
+work_0245,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",B,B,C,B,C,C,C,B,C
+work_0245,Q19,What AI capabilities does this participant wish existed but don't yet?,C,C,C,C,C,C,C,C,C
+work_0245,Q20,"What is this participant's overall stance toward AI in their work — enthusiastic, cautious, conflicted, resistant, or other?",A,A,A,A,A,B,A,A,A
+work_0245,Q21,What is this participant's occupation or job role?,A,A,A,A,A,A,A,A,A
+work_0245,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",A,A,A,A,A,A,A,A,A
+work_0245,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",B,B,B,B,B,B,B,B,B
+work_0245,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",B,B,B,B,B,C,B,B,B
+work_0245,Q25,How has this participant's way of using AI changed from when they first started until now?,B,B,B,B,B,B,C,B,B
+work_0359,Q01,What specific AI tools does this participant mention using in their work?,A,A,A,A,A,A,A,A,A
+work_0359,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+work_0359,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",A,A,A,A,A,A,A,A,A
+work_0359,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,A,A,A,A,A,A,A
+work_0359,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",C,C,C,C,C,C,C,C,C
+work_0359,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",A,A,B,B,B,B,B,A,B
+work_0359,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+work_0359,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,A,A,A,A,A,A,A,A,A
+work_0359,Q09,"What concerns does this participant raise about how AI performs on their work tasks â its accuracy, reliability, or the quality of its output?",A,A,A,A,A,B,A,A,A
+work_0359,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",C,A,C,A,A,C,C,A,C
+work_0359,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,A,A,A,A,A,A,A,A,A
+work_0359,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",C,C,C,C,C,C,C,C,C
+work_0359,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+work_0359,Q14,Does this participant express concern about AI displacing their job or profession?,C,C,C,C,C,C,C,C,C
+work_0359,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",A,A,A,A,A,A,A,A,A
+work_0359,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,C,C,C,C,C,C,C,C,C
+work_0359,Q17,How does this participant envision their personal use of AI evolving in the next few years?,A,A,A,A,A,A,A,A,A
+work_0359,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",B,B,C,C,B,C,C,B,C
+work_0359,Q19,What AI capabilities does this participant wish existed but don't yet?,C,C,C,C,C,C,C,C,C
+work_0359,Q20,"What is this participant's overall stance toward AI in their work â enthusiastic, cautious, conflicted, resistant, or other?",A,A,A,A,A,B,A,A,B
+work_0359,Q21,What is this participant's occupation or job role?,A,A,A,A,A,A,A,A,A
+work_0359,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",B,B,B,B,B,C,B,B,B
+work_0359,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",C,C,C,C,C,C,C,C,C
+work_0359,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",B,C,B,B,B,C,B,B,B
+work_0359,Q25,How has this participant's way of using AI changed from when they first started until now?,C,C,C,C,C,C,C,C,C
+work_0392,Q01,What specific AI tools does this participant mention using in their work?,C,C,C,C,C,C,C,C,C
+work_0392,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+work_0392,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",A,A,A,A,A,A,A,A,A
+work_0392,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,B,A,A,B,B,B,B,B
+work_0392,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",A,A,A,A,A,A,A,A,A
+work_0392,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",A,A,A,A,A,A,A,A,A
+work_0392,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+work_0392,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,A,A,A,A,A,B,A,A,A
+work_0392,Q09,"What concerns does this participant raise about how AI performs on their work tasks â its accuracy, reliability, or the quality of its output?",A,A,A,A,A,A,A,A,A
+work_0392,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",A,A,A,A,A,A,A,A,A
+work_0392,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,A,A,A,A,A,A,A,A,A
+work_0392,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",A,A,A,A,A,A,A,A,B
+work_0392,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+work_0392,Q14,Does this participant express concern about AI displacing their job or profession?,A,A,A,A,A,A,A,B,A
+work_0392,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",B,B,B,B,B,B,B,B,B
+work_0392,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,B,A,B,B,B,B,B,B,B
+work_0392,Q17,How does this participant envision their personal use of AI evolving in the next few years?,A,A,A,A,A,A,A,A,A
+work_0392,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",B,B,B,C,B,B,B,B,B
+work_0392,Q19,What AI capabilities does this participant wish existed but don't yet?,B,B,C,B,B,B,B,C,B
+work_0392,Q20,"What is this participant's overall stance toward AI in their work â enthusiastic, cautious, conflicted, resistant, or other?",A,A,A,A,A,A,A,A,A
+work_0392,Q21,What is this participant's occupation or job role?,A,A,A,A,A,A,A,A,A
+work_0392,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",A,A,A,A,A,A,A,A,A
+work_0392,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",C,C,C,B,C,C,B,C,B
+work_0392,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",B,B,B,B,B,C,B,B,B
+work_0392,Q25,How has this participant's way of using AI changed from when they first started until now?,A,A,A,A,A,A,A,A,A
+work_0444,A22,How does this participant instruct AI to achieve the desired outcome?,A,A,A,A,A,A,A,A,A
+work_0444,Q01,What specific AI tools does this participant mention using in their work?,C,C,C,C,C,C,C,C,C
+work_0444,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+work_0444,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",A,A,A,A,A,A,A,A,A
+work_0444,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,A,A,A,A,A,A,A
+work_0444,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",A,A,A,A,A,A,A,A,A
+work_0444,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",A,A,A,A,A,A,A,A,A
+work_0444,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+work_0444,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,B,B,B,B,B,B,B,B,B
+work_0444,Q09,"What concerns does this participant raise about how AI performs on their work tasks — its accuracy, reliability, or the quality of its output?",A,A,A,A,A,A,A,A,A
+work_0444,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",A,A,A,A,A,A,A,A,A
+work_0444,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,A,A,A,A,A,A,A,A,A
+work_0444,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",B,C,C,C,B,B,C,B,C
+work_0444,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+work_0444,Q14,Does this participant express concern about AI displacing their job or profession?,A,A,A,A,A,A,A,A,A
+work_0444,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",B,B,B,B,B,B,B,B,B
+work_0444,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,A,A,A,A,A,A,A,A,A
+work_0444,Q17,How does this participant envision their personal use of AI evolving in the next few years?,A,A,A,A,A,A,A,A,A
+work_0444,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",C,C,C,C,C,C,C,C,C
+work_0444,Q19,What AI capabilities does this participant wish existed but don't yet?,C,C,C,C,C,C,C,C,C
+work_0444,Q20,"What is this participant's overall stance toward AI in their work — enthusiastic, cautious, conflicted, resistant, or other?",B,B,B,B,B,B,A,B,B
+work_0444,Q21,What is this participant's occupation or job role?,B,B,A,B,A,A,B,B,B
+work_0444,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",A,A,A,A,A,A,A,A,A
+work_0444,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",A,A,A,A,A,A,A,A,A
+work_0444,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",A,B,B,B,B,B,B,A,B
+work_0444,Q25,How has this participant's way of using AI changed from when they first started until now?,C,C,C,C,C,C,C,C,C
+work_0466,Q01,What specific AI tools does this participant mention using in their work?,A,A,A,A,A,A,A,A,A
+work_0466,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+work_0466,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",A,B,A,A,A,B,A,A,B
+work_0466,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,A,A,A,A,A,A,A
+work_0466,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",A,A,A,A,A,A,A,A,A
+work_0466,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",C,C,C,C,C,C,C,C,C
+work_0466,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+work_0466,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,B,B,B,B,A,B,B,B,B
+work_0466,Q09,"What concerns does this participant raise about how AI performs on their work tasks — its accuracy, reliability, or the quality of its output?",A,A,A,A,A,A,A,A,A
+work_0466,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",A,A,A,A,A,A,A,A,A
+work_0466,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,A,A,A,A,A,A,A,A,A
+work_0466,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",C,C,C,C,C,C,C,C,C
+work_0466,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+work_0466,Q14,Does this participant express concern about AI displacing their job or profession?,B,A,B,A,A,B,A,A,B
+work_0466,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",A,B,B,B,B,B,B,B,B
+work_0466,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,C,C,C,C,C,C,C,C,C
+work_0466,Q17,How does this participant envision their personal use of AI evolving in the next few years?,A,A,A,A,A,A,A,A,A
+work_0466,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",C,C,C,C,C,C,C,C,C
+work_0466,Q19,What AI capabilities does this participant wish existed but don't yet?,B,B,B,B,B,A,B,B,A
+work_0466,Q20,"What is this participant's overall stance toward AI in their work — enthusiastic, cautious, conflicted, resistant, or other?",B,B,B,A,A,B,A,A,B
+work_0466,Q21,What is this participant's occupation or job role?,A,A,A,A,A,A,A,A,A
+work_0466,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",A,A,A,A,A,A,A,A,A
+work_0466,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",C,C,C,C,C,C,C,C,C
+work_0466,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",A,A,A,A,B,A,A,A,A
+work_0466,Q25,How has this participant's way of using AI changed from when they first started until now?,C,C,C,C,C,C,C,C,C
+work_0511,Q01,What specific AI tools does this participant mention using in their work?,C,B,B,B,B,C,B,C,B
+work_0511,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+work_0511,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",A,A,A,A,A,A,A,A,A
+work_0511,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,A,A,A,A,A,A,A
+work_0511,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",C,C,C,C,C,C,C,C,C
+work_0511,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",C,C,C,C,C,C,C,C,C
+work_0511,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+work_0511,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,B,B,A,A,A,B,A,B,A
+work_0511,Q09,"What concerns does this participant raise about how AI performs on their work tasks â its accuracy, reliability, or the quality of its output?",A,A,A,A,A,A,A,A,A
+work_0511,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",A,A,A,A,A,A,A,A,A
+work_0511,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,A,A,A,A,A,A,A,A,A
+work_0511,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",C,C,C,C,C,C,C,C,C
+work_0511,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+work_0511,Q14,Does this participant express concern about AI displacing their job or profession?,A,A,A,A,A,A,A,A,A
+work_0511,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",A,A,A,A,A,A,A,A,A
+work_0511,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,C,C,C,C,C,C,C,C,C
+work_0511,Q17,How does this participant envision their personal use of AI evolving in the next few years?,A,A,A,A,A,A,A,A,A
+work_0511,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",C,C,C,C,C,C,C,C,C
+work_0511,Q19,What AI capabilities does this participant wish existed but don't yet?,C,C,C,C,C,C,C,C,C
+work_0511,Q20,"What is this participant's overall stance toward AI in their work â enthusiastic, cautious, conflicted, resistant, or other?",A,A,A,A,A,B,A,B,A
+work_0511,Q21,What is this participant's occupation or job role?,A,B,B,B,A,A,A,B,A
+work_0511,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",A,A,A,A,A,A,A,A,A
+work_0511,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",C,C,C,C,C,C,B,B,C
+work_0511,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",C,C,C,C,C,C,B,B,C
+work_0511,Q25,How has this participant's way of using AI changed from when they first started until now?,B,B,B,B,B,B,B,B,B
+work_0536,Q01,What specific AI tools does this participant mention using in their work?,B,B,C,B,B,C,B,B,C
+work_0536,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+work_0536,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",A,A,A,A,A,A,A,A,A
+work_0536,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",B,B,B,B,B,B,B,B,B
+work_0536,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",B,B,B,B,B,B,B,B,B
+work_0536,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",B,B,B,B,B,B,B,B,B
+work_0536,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+work_0536,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,A,A,A,A,A,A,A,A,A
+work_0536,Q09,"What concerns does this participant raise about how AI performs on their work tasks â its accuracy, reliability, or the quality of its output?",C,B,C,B,B,C,B,B,B
+work_0536,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",A,A,A,A,A,A,A,A,B
+work_0536,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,A,A,A,A,A,A,A,A,A
+work_0536,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",C,C,C,C,C,C,C,C,C
+work_0536,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+work_0536,Q14,Does this participant express concern about AI displacing their job or profession?,A,A,A,A,A,A,A,A,A
+work_0536,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",B,C,B,C,B,C,B,B,B
+work_0536,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,A,A,A,A,A,B,A,A,A
+work_0536,Q17,How does this participant envision their personal use of AI evolving in the next few years?,A,A,A,A,A,A,A,A,A
+work_0536,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",C,B,C,B,B,C,B,B,C
+work_0536,Q19,What AI capabilities does this participant wish existed but don't yet?,C,C,C,C,C,C,C,C,C
+work_0536,Q20,"What is this participant's overall stance toward AI in their work â enthusiastic, cautious, conflicted, resistant, or other?",A,A,B,A,A,B,A,A,B
+work_0536,Q21,What is this participant's occupation or job role?,A,A,B,A,A,A,A,A,B
+work_0536,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",A,A,A,A,A,A,A,A,A
+work_0536,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",B,B,B,B,B,B,B,B,C
+work_0536,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",C,B,C,C,B,C,B,C,C
+work_0536,Q25,How has this participant's way of using AI changed from when they first started until now?,C,C,C,C,C,C,C,C,C
+work_0543,A22,How does this participant instruct AI to achieve the desired outcome?,A,A,A,A,A,A,A,A,A
+work_0543,A23,Does this participant describe encountering social stigma or judgment around not using AI at work?,B,C,C,C,C,B,B,C,C
+work_0543,Q01,What specific AI tools does this participant mention using in their work?,C,C,C,C,C,C,C,C,C
+work_0543,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+work_0543,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",A,A,A,A,A,A,A,A,A
+work_0543,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,A,A,A,A,A,A,A
+work_0543,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",C,C,C,C,C,C,C,C,C
+work_0543,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",A,B,B,A,B,B,B,B,B
+work_0543,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+work_0543,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,A,A,A,A,A,A,A,A,A
+work_0543,Q09,"What concerns does this participant raise about how AI performs on their work tasks — its accuracy, reliability, or the quality of its output?",A,B,B,B,B,B,B,B,B
+work_0543,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",B,C,C,B,C,C,C,B,B
+work_0543,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,A,A,A,A,A,A,A,A,A
+work_0543,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",B,B,B,B,A,B,B,B,B
+work_0543,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",A,A,A,A,A,A,A,A,A
+work_0543,Q14,Does this participant express concern about AI displacing their job or profession?,A,A,A,A,A,A,A,A,A
+work_0543,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",A,A,A,A,A,A,A,A,A
+work_0543,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,C,C,C,C,C,C,C,C,C
+work_0543,Q17,How does this participant envision their personal use of AI evolving in the next few years?,A,A,A,A,A,A,A,A,A
+work_0543,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",B,B,B,B,B,B,B,B,B
+work_0543,Q19,What AI capabilities does this participant wish existed but don't yet?,B,C,C,B,C,B,B,B,B
+work_0543,Q20,"What is this participant's overall stance toward AI in their work — enthusiastic, cautious, conflicted, resistant, or other?",B,B,B,B,B,B,B,B,B
+work_0543,Q21,What is this participant's occupation or job role?,A,A,A,A,A,A,A,A,A
+work_0543,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",A,A,A,A,A,A,A,A,A
+work_0543,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",C,C,C,C,C,C,C,C,C
+work_0543,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",B,C,C,B,B,C,C,C,B
+work_0543,Q25,How has this participant's way of using AI changed from when they first started until now?,C,C,C,C,C,C,C,C,C
+work_0611,Q01,What specific AI tools does this participant mention using in their work?,C,C,C,C,C,C,B,B,C
+work_0611,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+work_0611,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",A,A,A,A,A,A,A,A,A
+work_0611,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,A,A,A,A,A,A,A
+work_0611,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",C,C,C,C,C,C,C,C,C
+work_0611,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",C,C,C,C,C,C,C,C,C
+work_0611,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+work_0611,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,A,A,A,A,A,A,A,A,A
+work_0611,Q09,"What concerns does this participant raise about how AI performs on their work tasks â its accuracy, reliability, or the quality of its output?",C,C,C,C,C,C,C,C,C
+work_0611,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",A,C,A,A,A,C,C,A,A
+work_0611,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,A,A,A,A,A,A,A,A,A
+work_0611,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",A,A,A,A,A,A,A,A,A
+work_0611,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+work_0611,Q14,Does this participant express concern about AI displacing their job or profession?,C,C,C,C,C,C,C,C,C
+work_0611,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",C,C,C,C,C,C,C,C,C
+work_0611,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,C,C,C,C,C,C,C,C,C
+work_0611,Q17,How does this participant envision their personal use of AI evolving in the next few years?,A,A,A,A,A,A,A,A,A
+work_0611,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",C,C,C,C,C,C,C,C,C
+work_0611,Q19,What AI capabilities does this participant wish existed but don't yet?,C,C,C,C,C,C,C,C,C
+work_0611,Q20,"What is this participant's overall stance toward AI in their work â enthusiastic, cautious, conflicted, resistant, or other?",A,A,A,A,B,A,A,A,A
+work_0611,Q21,What is this participant's occupation or job role?,A,A,A,A,A,A,A,A,A
+work_0611,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",A,A,A,A,A,B,A,A,A
+work_0611,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",C,C,C,C,C,C,C,C,C
+work_0611,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",B,A,B,B,B,B,A,B,A
+work_0611,Q25,How has this participant's way of using AI changed from when they first started until now?,C,C,C,C,C,C,C,C,C
+work_0624,A22,What does this participant want to improve regarding how they use AI in their work?,A,A,A,A,A,A,A,B,B
+work_0624,Q01,What specific AI tools does this participant mention using in their work?,B,A,B,A,A,A,B,B,B
+work_0624,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+work_0624,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",A,A,A,A,A,A,A,A,A
+work_0624,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,A,A,A,A,A,A,A
+work_0624,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",B,B,B,B,B,B,B,B,B
+work_0624,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",A,A,A,A,A,A,A,A,A
+work_0624,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+work_0624,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,A,A,A,A,A,B,A,A,A
+work_0624,Q09,"What concerns does this participant raise about how AI performs on their work tasks — its accuracy, reliability, or the quality of its output?",A,A,A,A,A,A,A,A,A
+work_0624,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",A,A,A,A,A,A,A,A,A
+work_0624,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,A,A,A,A,A,B,A,A,A
+work_0624,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",C,C,C,C,C,C,C,C,C
+work_0624,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+work_0624,Q14,Does this participant express concern about AI displacing their job or profession?,A,A,A,A,A,A,A,A,A
+work_0624,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",A,A,A,A,A,A,A,A,A
+work_0624,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,C,C,C,C,C,C,C,C,C
+work_0624,Q17,How does this participant envision their personal use of AI evolving in the next few years?,A,A,A,A,A,A,A,A,A
+work_0624,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",B,B,B,B,B,B,B,C,B
+work_0624,Q19,What AI capabilities does this participant wish existed but don't yet?,B,B,B,B,C,B,B,B,B
+work_0624,Q20,"What is this participant's overall stance toward AI in their work — enthusiastic, cautious, conflicted, resistant, or other?",A,A,A,A,A,A,A,A,A
+work_0624,Q21,What is this participant's occupation or job role?,A,A,A,A,A,A,A,A,A
+work_0624,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",C,C,C,C,C,C,C,C,C
+work_0624,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",C,C,C,C,C,C,C,C,C
+work_0624,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",C,C,C,C,C,C,C,C,C
+work_0624,Q25,How has this participant's way of using AI changed from when they first started until now?,A,A,A,B,B,A,A,A,A
+work_0644,Q01,What specific AI tools does this participant mention using in their work?,C,B,C,C,B,C,B,B,C
+work_0644,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+work_0644,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",B,A,A,A,A,A,A,A,A
+work_0644,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,A,A,A,A,A,A,A
+work_0644,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",A,A,A,A,A,A,A,A,A
+work_0644,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",C,B,B,B,B,C,B,B,B
+work_0644,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+work_0644,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,A,A,A,A,A,A,A,A,A
+work_0644,Q09,"What concerns does this participant raise about how AI performs on their work tasks â its accuracy, reliability, or the quality of its output?",B,A,B,A,A,A,A,A,A
+work_0644,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",A,A,A,A,A,A,A,A,A
+work_0644,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,A,A,A,A,A,A,A,A,A
+work_0644,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",C,C,C,C,C,C,C,C,C
+work_0644,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",A,A,A,A,A,A,A,A,A
+work_0644,Q14,Does this participant express concern about AI displacing their job or profession?,A,A,A,A,A,A,A,A,A
+work_0644,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",A,A,A,A,B,A,B,A,A
+work_0644,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,B,B,B,B,B,B,B,B,B
+work_0644,Q17,How does this participant envision their personal use of AI evolving in the next few years?,B,A,B,B,A,B,A,A,B
+work_0644,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",B,B,B,B,B,B,B,B,B
+work_0644,Q19,What AI capabilities does this participant wish existed but don't yet?,C,C,C,C,C,C,C,C,C
+work_0644,Q20,"What is this participant's overall stance toward AI in their work â enthusiastic, cautious, conflicted, resistant, or other?",B,A,A,A,A,A,A,A,A
+work_0644,Q21,What is this participant's occupation or job role?,A,A,A,A,A,A,A,A,A
+work_0644,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",A,A,A,A,A,A,A,A,A
+work_0644,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",C,C,C,C,C,C,C,C,C
+work_0644,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",B,B,B,B,B,B,B,B,B
+work_0644,Q25,How has this participant's way of using AI changed from when they first started until now?,B,B,B,B,B,B,B,B,B
+work_0731,Q01,What specific AI tools does this participant mention using in their work?,B,C,B,C,C,B,C,C,B
+work_0731,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+work_0731,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,A,A,A,A,A,A,A
+work_0731,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",C,C,C,C,C,C,C,C,C
+work_0731,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",C,C,C,C,C,C,C,C,C
+work_0731,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+work_0731,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,A,A,A,A,A,A,A,A,A
+work_0731,Q09,"What concerns does this participant raise about how AI performs on their work tasks â its accuracy, reliability, or the quality of its output?",A,A,A,B,A,A,A,B,A
+work_0731,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",A,B,B,B,B,B,A,B,A
+work_0731,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,A,A,A,A,A,A,A,A,A
+work_0731,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",B,B,B,B,B,B,B,B,B
+work_0731,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",A,A,A,A,A,A,A,A,A
+work_0731,Q14,Does this participant express concern about AI displacing their job or profession?,A,A,A,A,A,A,A,A,A
+work_0731,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",A,B,A,B,B,A,A,B,A
+work_0731,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,C,C,C,C,C,C,C,C,C
+work_0731,Q17,How does this participant envision their personal use of AI evolving in the next few years?,A,A,A,A,A,A,A,A,A
+work_0731,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",C,C,C,C,C,C,C,C,C
+work_0731,Q19,What AI capabilities does this participant wish existed but don't yet?,B,B,B,C,C,B,B,B,B
+work_0731,Q20,"What is this participant's overall stance toward AI in their work â enthusiastic, cautious, conflicted, resistant, or other?",A,A,A,A,A,A,A,A,A
+work_0731,Q21,What is this participant's occupation or job role?,A,A,A,A,A,A,A,A,A
+work_0731,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",A,A,A,A,A,A,A,A,A
+work_0731,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",C,C,C,C,C,C,C,C,C
+work_0731,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",C,B,B,C,C,C,C,C,C
+work_0731,Q25,How has this participant's way of using AI changed from when they first started until now?,C,C,C,C,C,C,C,C,C
+work_0745,Q01,What specific AI tools does this participant mention using in their work?,B,B,B,B,B,B,B,B,B
+work_0745,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+work_0745,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,A,A,A,A,A,A,A
+work_0745,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",C,C,C,C,C,C,C,C,C
+work_0745,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",C,C,C,C,C,C,C,C,C
+work_0745,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+work_0745,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,A,A,A,A,A,A,A,A,A
+work_0745,Q09,"What concerns does this participant raise about how AI performs on their work tasks â its accuracy, reliability, or the quality of its output?",C,C,C,C,C,C,C,C,C
+work_0745,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",A,A,A,A,A,A,A,A,A
+work_0745,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,A,A,A,A,A,A,A,A,A
+work_0745,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",B,B,B,B,C,B,C,C,C
+work_0745,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+work_0745,Q14,Does this participant express concern about AI displacing their job or profession?,B,B,C,B,B,C,B,B,C
+work_0745,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",A,A,A,A,A,A,A,A,B
+work_0745,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,C,C,B,B,B,C,B,B,C
+work_0745,Q17,How does this participant envision their personal use of AI evolving in the next few years?,A,A,A,A,A,A,A,A,A
+work_0745,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",C,C,C,C,B,C,C,C,C
+work_0745,Q19,What AI capabilities does this participant wish existed but don't yet?,C,C,C,C,C,C,C,C,C
+work_0745,Q20,"What is this participant's overall stance toward AI in their work â enthusiastic, cautious, conflicted, resistant, or other?",A,A,A,A,A,A,A,A,A
+work_0745,Q21,What is this participant's occupation or job role?,A,A,A,A,A,A,A,A,A
+work_0745,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",B,B,B,B,B,B,B,B,B
+work_0745,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",C,C,C,C,C,C,C,C,C
+work_0745,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",B,B,A,B,B,B,B,B,B
+work_0745,Q25,How has this participant's way of using AI changed from when they first started until now?,C,C,C,C,C,C,C,C,C
+work_0755,Q01,What specific AI tools does this participant mention using in their work?,A,A,A,A,A,A,A,A,A
+work_0755,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+work_0755,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",A,A,A,A,A,A,A,A,A
+work_0755,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,B,A,A,A,A,A,B
+work_0755,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",A,A,A,A,A,A,A,A,A
+work_0755,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",C,C,B,C,C,C,C,C,C
+work_0755,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+work_0755,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,B,B,C,B,B,B,B,B,B
+work_0755,Q09,"What concerns does this participant raise about how AI performs on their work tasks — its accuracy, reliability, or the quality of its output?",A,A,A,A,A,A,A,A,A
+work_0755,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",A,A,A,A,A,A,A,A,A
+work_0755,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,A,A,A,A,A,A,A,A,A
+work_0755,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",C,C,C,C,C,C,C,C,C
+work_0755,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+work_0755,Q14,Does this participant express concern about AI displacing their job or profession?,B,B,B,B,B,B,B,B,B
+work_0755,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",C,C,C,C,C,C,C,C,C
+work_0755,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,A,A,B,B,A,B,B,A,B
+work_0755,Q17,How does this participant envision their personal use of AI evolving in the next few years?,A,A,A,A,A,A,A,A,A
+work_0755,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",C,C,C,C,C,C,C,C,C
+work_0755,Q19,What AI capabilities does this participant wish existed but don't yet?,C,C,B,C,C,C,C,B,B
+work_0755,Q20,"What is this participant's overall stance toward AI in their work — enthusiastic, cautious, conflicted, resistant, or other?",A,A,A,A,A,A,A,A,A
+work_0755,Q21,What is this participant's occupation or job role?,A,A,A,A,A,A,A,A,A
+work_0755,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",A,A,A,A,A,A,A,A,A
+work_0755,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",C,C,C,C,C,C,C,C,C
+work_0755,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",C,C,C,C,C,C,C,B,C
+work_0755,Q25,How has this participant's way of using AI changed from when they first started until now?,B,B,C,B,C,B,B,B,C
+work_0785,Q01,What specific AI tools does this participant mention using in their work?,B,B,B,B,B,B,B,B,B
+work_0785,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+work_0785,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,A,A,A,A,A,A,A
+work_0785,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",A,A,A,A,A,A,A,A,A
+work_0785,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",A,A,A,A,A,A,A,A,A
+work_0785,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+work_0785,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,A,A,A,A,A,A,A,A,A
+work_0785,Q09,"What concerns does this participant raise about how AI performs on their work tasks — its accuracy, reliability, or the quality of its output?",A,A,A,A,A,A,A,A,A
+work_0785,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",B,B,B,B,A,B,B,B,B
+work_0785,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,B,B,B,B,B,B,B,B,B
+work_0785,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",C,C,C,C,C,C,C,C,C
+work_0785,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+work_0785,Q14,Does this participant express concern about AI displacing their job or profession?,A,A,A,A,A,A,A,A,A
+work_0785,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",A,A,A,A,A,A,A,A,A
+work_0785,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,B,B,B,B,B,B,B,B,B
+work_0785,Q17,How does this participant envision their personal use of AI evolving in the next few years?,A,A,A,A,A,A,A,A,A
+work_0785,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",B,B,B,B,B,B,B,B,B
+work_0785,Q19,What AI capabilities does this participant wish existed but don't yet?,B,B,B,B,B,B,B,B,B
+work_0785,Q20,"What is this participant's overall stance toward AI in their work â€” enthusiastic, cautious, conflicted, resistant, or other?",A,A,A,A,A,A,A,A,A
+work_0785,Q21,What is this participant's occupation or job role?,A,A,A,A,A,A,A,A,A
+work_0785,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",A,A,A,A,A,A,A,A,A
+work_0785,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",A,B,B,A,B,A,A,B,B
+work_0785,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",B,A,A,A,A,A,A,A,A
+work_0785,Q25,How has this participant's way of using AI changed from when they first started until now?,C,C,C,C,C,C,C,C,C
+work_0799,Q01,What specific AI tools does this participant mention using in their work?,C,B,C,C,C,C,C,C,C
+work_0799,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+work_0799,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",A,A,A,A,A,A,A,A,A
+work_0799,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,A,A,A,A,A,A,A
+work_0799,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",C,C,C,C,C,C,C,C,C
+work_0799,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",C,C,C,C,C,C,C,C,C
+work_0799,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+work_0799,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,B,B,B,B,B,B,B,B,B
+work_0799,Q09,"What concerns does this participant raise about how AI performs on their work tasks â its accuracy, reliability, or the quality of its output?",A,A,B,A,A,A,A,A,A
+work_0799,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",A,A,A,A,A,A,A,A,A
+work_0799,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,A,A,A,A,A,A,A,A,A
+work_0799,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",C,C,C,B,C,C,C,C,C
+work_0799,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+work_0799,Q14,Does this participant express concern about AI displacing their job or profession?,C,C,C,C,C,C,C,C,C
+work_0799,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",A,A,A,A,A,A,B,A,A
+work_0799,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,C,C,C,C,C,C,C,C,C
+work_0799,Q17,How does this participant envision their personal use of AI evolving in the next few years?,A,A,A,A,A,A,A,A,A
+work_0799,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",C,C,C,C,C,C,C,C,C
+work_0799,Q19,What AI capabilities does this participant wish existed but don't yet?,C,C,C,C,C,C,C,C,C
+work_0799,Q20,"What is this participant's overall stance toward AI in their work â enthusiastic, cautious, conflicted, resistant, or other?",A,A,B,A,A,A,A,A,A
+work_0799,Q21,What is this participant's occupation or job role?,A,A,A,A,A,A,A,A,A
+work_0799,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",A,A,A,A,A,A,A,A,A
+work_0799,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",C,C,C,C,C,C,C,C,C
+work_0799,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",B,B,C,B,B,B,C,B,B
+work_0799,Q25,How has this participant's way of using AI changed from when they first started until now?,C,C,C,C,C,C,C,C,C
+work_0804,Q01,What specific AI tools does this participant mention using in their work?,C,B,C,C,B,C,B,B,C
+work_0804,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+work_0804,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",A,A,A,A,A,A,A,A,A
+work_0804,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,A,A,A,A,A,A,A
+work_0804,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",A,A,A,A,A,A,A,A,A
+work_0804,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",A,A,A,A,A,A,A,A,A
+work_0804,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+work_0804,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,A,A,A,A,A,A,A,A,A
+work_0804,Q09,"What concerns does this participant raise about how AI performs on their work tasks â its accuracy, reliability, or the quality of its output?",A,A,A,A,A,A,A,A,A
+work_0804,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",A,A,A,A,A,A,A,A,A
+work_0804,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,A,A,A,A,A,A,A,A,A
+work_0804,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",C,C,C,C,C,C,C,C,C
+work_0804,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",B,B,B,B,B,B,B,B,B
+work_0804,Q14,Does this participant express concern about AI displacing their job or profession?,A,A,A,A,A,A,A,A,A
+work_0804,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",B,B,C,C,C,B,B,C,C
+work_0804,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,C,C,C,C,C,C,C,C,C
+work_0804,Q17,How does this participant envision their personal use of AI evolving in the next few years?,A,A,A,A,A,A,A,A,A
+work_0804,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",C,C,C,C,C,C,C,C,C
+work_0804,Q19,What AI capabilities does this participant wish existed but don't yet?,A,A,B,A,A,A,A,A,A
+work_0804,Q20,"What is this participant's overall stance toward AI in their work â enthusiastic, cautious, conflicted, resistant, or other?",B,A,B,B,A,B,A,A,B
+work_0804,Q21,What is this participant's occupation or job role?,A,A,A,A,A,A,A,A,A
+work_0804,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",A,A,A,A,A,A,A,A,A
+work_0804,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",C,C,C,C,C,C,C,C,C
+work_0804,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",C,C,C,C,C,C,C,C,C
+work_0804,Q25,How has this participant's way of using AI changed from when they first started until now?,C,C,C,C,C,C,C,C,C
+work_0841,Q01,What specific AI tools does this participant mention using in their work?,A,A,A,A,A,A,A,A,A
+work_0841,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+work_0841,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",A,A,A,A,A,A,A,A,A
+work_0841,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,A,A,A,A,A,A,A
+work_0841,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",A,A,A,A,A,A,A,A,A
+work_0841,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",A,B,B,A,A,A,B,A,B
+work_0841,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+work_0841,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,A,A,A,A,A,A,A,A,A
+work_0841,Q09,"What concerns does this participant raise about how AI performs on their work tasks â its accuracy, reliability, or the quality of its output?",B,B,A,B,B,A,B,B,B
+work_0841,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",A,A,A,A,A,A,A,A,A
+work_0841,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,A,A,A,A,A,A,A,A,A
+work_0841,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",B,C,C,C,C,C,B,B,C
+work_0841,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+work_0841,Q14,Does this participant express concern about AI displacing their job or profession?,A,A,A,A,A,A,A,A,A
+work_0841,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",A,A,A,A,A,A,A,A,A
+work_0841,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,C,C,C,C,C,C,C,C,C
+work_0841,Q17,How does this participant envision their personal use of AI evolving in the next few years?,A,A,A,A,A,A,A,A,A
+work_0841,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",B,B,B,A,A,A,B,B,B
+work_0841,Q19,What AI capabilities does this participant wish existed but don't yet?,A,A,A,A,A,A,A,A,A
+work_0841,Q20,"What is this participant's overall stance toward AI in their work â enthusiastic, cautious, conflicted, resistant, or other?",A,A,A,A,A,A,A,A,A
+work_0841,Q21,What is this participant's occupation or job role?,A,A,A,A,A,A,A,A,A
+work_0841,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",A,A,A,A,A,A,A,A,A
+work_0841,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",A,A,B,A,A,A,A,A,A
+work_0841,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",C,B,C,B,C,B,B,B,C
+work_0841,Q25,How has this participant's way of using AI changed from when they first started until now?,A,B,B,A,A,B,A,B,B
+work_0844,Q01,What specific AI tools does this participant mention using in their work?,B,B,C,B,B,C,B,B,C
+work_0844,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+work_0844,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",A,A,A,A,A,A,A,A,A
+work_0844,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,A,A,A,A,A,A,A
+work_0844,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",C,C,C,C,C,C,C,C,C
+work_0844,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",B,B,B,B,B,B,B,B,B
+work_0844,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+work_0844,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,A,A,A,A,A,A,A,A,A
+work_0844,Q09,"What concerns does this participant raise about how AI performs on their work tasks â its accuracy, reliability, or the quality of its output?",C,C,C,C,C,C,B,C,C
+work_0844,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",A,A,A,A,A,B,A,A,A
+work_0844,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,A,B,A,A,A,B,A,A,A
+work_0844,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",C,C,C,C,C,C,C,C,C
+work_0844,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",A,A,A,A,A,A,A,A,A
+work_0844,Q14,Does this participant express concern about AI displacing their job or profession?,B,A,A,A,A,A,A,B,A
+work_0844,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",B,A,A,A,A,A,A,A,B
+work_0844,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,C,C,C,C,C,C,C,C,C
+work_0844,Q17,How does this participant envision their personal use of AI evolving in the next few years?,A,A,A,A,A,A,A,A,A
+work_0844,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",C,C,C,C,C,C,C,C,C
+work_0844,Q19,What AI capabilities does this participant wish existed but don't yet?,C,C,C,C,C,C,C,C,C
+work_0844,Q20,"What is this participant's overall stance toward AI in their work â enthusiastic, cautious, conflicted, resistant, or other?",B,A,B,B,B,B,B,A,B
+work_0844,Q21,What is this participant's occupation or job role?,A,A,A,A,A,A,A,A,A
+work_0844,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",B,B,B,A,A,B,A,A,B
+work_0844,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",C,B,C,C,C,C,C,C,C
+work_0844,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",C,C,C,C,C,C,C,C,C
+work_0844,Q25,How has this participant's way of using AI changed from when they first started until now?,C,C,C,B,C,C,B,C,B
+work_0931,Q01,What specific AI tools does this participant mention using in their work?,A,A,A,A,A,A,A,A,A
+work_0931,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+work_0931,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",A,A,A,A,A,A,A,A,A
+work_0931,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,A,A,A,A,A,A,A
+work_0931,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",B,A,B,B,B,B,A,A,A
+work_0931,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",B,B,B,A,B,C,B,B,B
+work_0931,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+work_0931,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,B,B,B,B,B,B,B,B,B
+work_0931,Q09,"What concerns does this participant raise about how AI performs on their work tasks â its accuracy, reliability, or the quality of its output?",A,A,A,A,A,A,A,A,A
+work_0931,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",A,A,A,A,A,A,A,A,A
+work_0931,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,A,A,A,A,A,A,A,A,A
+work_0931,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",C,C,C,C,C,C,C,C,C
+work_0931,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+work_0931,Q14,Does this participant express concern about AI displacing their job or profession?,A,A,A,A,A,A,A,A,A
+work_0931,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",B,B,B,B,B,B,B,B,B
+work_0931,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,A,A,A,A,A,A,A,A,A
+work_0931,Q17,How does this participant envision their personal use of AI evolving in the next few years?,A,A,A,A,A,A,A,A,A
+work_0931,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",A,A,A,A,A,A,A,A,A
+work_0931,Q19,What AI capabilities does this participant wish existed but don't yet?,A,A,A,A,A,A,A,A,A
+work_0931,Q20,"What is this participant's overall stance toward AI in their work â enthusiastic, cautious, conflicted, resistant, or other?",B,A,A,A,A,B,A,A,A
+work_0931,Q21,What is this participant's occupation or job role?,A,A,A,A,A,A,A,A,A
+work_0931,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",A,A,A,A,A,A,A,A,A
+work_0931,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",C,C,C,C,C,C,C,C,C
+work_0931,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",B,B,B,B,B,C,B,B,B
+work_0931,Q25,How has this participant's way of using AI changed from when they first started until now?,C,C,C,C,C,C,C,C,C
+work_0958,Q01,What specific AI tools does this participant mention using in their work?,C,B,B,B,B,C,C,C,C
+work_0958,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+work_0958,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",A,A,A,A,A,A,A,A,A
+work_0958,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,A,A,A,A,A,A,A
+work_0958,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",C,C,C,C,C,C,C,C,C
+work_0958,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",C,B,B,B,B,B,C,B,B
+work_0958,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+work_0958,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,A,A,A,A,A,A,A,A,A
+work_0958,Q09,"What concerns does this participant raise about how AI performs on their work tasks — its accuracy, reliability, or the quality of its output?",C,C,C,C,C,C,C,C,C
+work_0958,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",C,C,B,A,C,C,C,C,A
+work_0958,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,B,B,B,B,B,B,B,B,B
+work_0958,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",C,C,C,C,C,C,C,C,C
+work_0958,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+work_0958,Q14,Does this participant express concern about AI displacing their job or profession?,B,A,A,A,A,A,A,B,B
+work_0958,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",A,A,A,A,A,A,A,A,A
+work_0958,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,C,C,C,C,C,C,C,C,C
+work_0958,Q17,How does this participant envision their personal use of AI evolving in the next few years?,A,A,A,A,A,A,A,A,A
+work_0958,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",B,B,B,B,B,B,B,B,B
+work_0958,Q19,What AI capabilities does this participant wish existed but don't yet?,C,C,C,C,C,C,C,C,C
+work_0958,Q20,"What is this participant's overall stance toward AI in their work — enthusiastic, cautious, conflicted, resistant, or other?",B,A,B,A,A,B,A,B,A
+work_0958,Q21,What is this participant's occupation or job role?,A,A,A,A,A,A,A,A,A
+work_0958,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",A,A,A,A,A,A,A,A,A
+work_0958,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",C,C,C,C,C,C,C,C,C
+work_0958,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",C,C,C,B,C,C,C,C,C
+work_0958,Q25,How has this participant's way of using AI changed from when they first started until now?,C,C,C,C,C,C,C,C,C
+work_0986,Q01,What specific AI tools does this participant mention using in their work?,A,A,A,A,A,A,A,A,A
+work_0986,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+work_0986,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",A,A,A,A,A,A,A,A,A
+work_0986,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,A,A,A,A,A,A,A
+work_0986,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",C,C,C,C,C,C,C,C,C
+work_0986,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",C,C,C,C,B,C,C,C,C
+work_0986,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+work_0986,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,A,A,A,A,A,A,A,A,A
+work_0986,Q09,"What concerns does this participant raise about how AI performs on their work tasks â its accuracy, reliability, or the quality of its output?",C,B,C,B,B,B,B,B,B
+work_0986,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",A,A,A,A,A,A,A,A,A
+work_0986,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,A,A,A,A,A,A,A,A,A
+work_0986,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",C,C,C,C,C,C,C,C,C
+work_0986,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+work_0986,Q14,Does this participant express concern about AI displacing their job or profession?,A,A,A,A,A,A,A,A,A
+work_0986,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",B,B,B,C,C,B,C,C,B
+work_0986,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,A,A,B,A,A,B,A,A,B
+work_0986,Q17,How does this participant envision their personal use of AI evolving in the next few years?,A,A,A,A,A,A,A,A,A
+work_0986,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",C,C,C,C,C,C,C,C,C
+work_0986,Q19,What AI capabilities does this participant wish existed but don't yet?,C,C,C,C,C,C,C,C,C
+work_0986,Q20,"What is this participant's overall stance toward AI in their work â enthusiastic, cautious, conflicted, resistant, or other?",A,A,A,A,A,A,A,A,A
+work_0986,Q21,What is this participant's occupation or job role?,B,B,B,B,B,B,B,B,A
+work_0986,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",A,A,A,A,A,A,A,A,A
+work_0986,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",C,C,C,C,C,C,C,C,C
+work_0986,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",B,B,B,B,B,B,B,B,B
+work_0986,Q25,How has this participant's way of using AI changed from when they first started until now?,C,C,C,C,C,C,C,C,C
+science_0111,Q01,What specific AI tools does this participant mention using in their work?,C,C,C,C,C,C,C,B,C
+science_0111,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+science_0111,Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?",A,A,A,A,A,B,A,A,A
+science_0111,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,A,A,A,A,A,A,A
+science_0111,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",A,A,A,A,A,A,A,A,A
+science_0111,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",A,A,A,A,A,A,A,A,A
+science_0111,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",C,C,C,C,C,C,C,C,C
+science_0111,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,B,B,A,B,A,B,A,A,B
+science_0111,Q09,"What concerns does this participant raise about how AI performs on their work tasks â its accuracy, reliability, or the quality of its output?",A,A,A,A,A,B,A,A,A
+science_0111,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",B,B,B,B,B,C,B,B,B
+science_0111,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,C,C,C,C,C,C,C,C,C
+science_0111,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",C,C,C,C,C,C,C,C,C
+science_0111,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+science_0111,Q14,Does this participant express concern about AI displacing their job or profession?,C,C,C,C,C,C,C,C,C
+science_0111,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",B,B,A,A,B,B,B,A,B
+science_0111,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,C,C,C,C,C,C,C,C,C
+science_0111,Q17,How does this participant envision their personal use of AI evolving in the next few years?,B,C,C,C,B,B,C,B,B
+science_0111,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",C,C,C,C,C,C,C,C,C
+science_0111,Q19,What AI capabilities does this participant wish existed but don't yet?,A,A,A,A,A,A,A,A,A
+science_0111,Q20,"What is this participant's overall stance toward AI in their work â enthusiastic, cautious, conflicted, resistant, or other?",A,B,B,B,A,B,B,A,B
+science_0111,Q21,What is this participant's occupation or job role?,A,B,B,A,B,A,A,B,B
+science_0111,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",C,C,C,C,C,C,C,B,C
+science_0111,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",C,C,C,C,C,C,C,B,C
+science_0111,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",C,C,C,C,C,C,C,C,C
+science_0111,Q25,How has this participant's way of using AI changed from when they first started until now?,C,C,C,C,C,C,C,C,C
+work_0494,Q01,What specific AI tools does this participant mention using in their work?,B,B,B,B,B,B,B,B,B
+work_0494,Q02,What kinds of work tasks does this participant use AI for?,A,A,A,A,A,A,A,A,A
+work_0494,Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?",A,A,A,A,A,A,A,A,A
+work_0494,Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?",A,A,A,A,B,A,A,B,A
+work_0494,Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?",A,A,A,A,A,A,A,A,A
+work_0494,Q07,"Has this participant noticed AI giving inconsistent answers or changing its response based on how a question is phrased? If so, what did they observe?",A,A,A,A,A,A,A,A,A
+work_0494,Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?,C,C,C,C,C,C,C,C,C
+work_0494,Q09,"What concerns does this participant raise about how AI performs on their work tasks â its accuracy, reliability, or the quality of its output?",A,A,A,A,A,A,A,A,A
+work_0494,Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?",A,A,A,A,A,A,A,A,A
+work_0494,Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?,A,A,A,A,A,A,A,A,A
+work_0494,Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?",C,C,C,C,C,C,C,C,C
+work_0494,Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?",C,C,C,C,C,C,C,C,C
+work_0494,Q14,Does this participant express concern about AI displacing their job or profession?,C,C,C,C,C,C,C,C,C
+work_0494,Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?",C,B,C,C,C,C,C,C,C
+work_0494,Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?,C,C,C,C,C,C,C,C,C
+work_0494,Q17,How does this participant envision their personal use of AI evolving in the next few years?,A,A,A,A,A,A,A,A,A
+work_0494,Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?",C,C,C,C,C,C,C,C,C
+work_0494,Q19,What AI capabilities does this participant wish existed but don't yet?,C,C,C,C,C,C,C,C,C
+work_0494,Q20,"What is this participant's overall stance toward AI in their work â enthusiastic, cautious, conflicted, resistant, or other?",B,B,B,B,B,B,B,B,B
+work_0494,Q21,What is this participant's occupation or job role?,A,A,A,A,A,A,A,A,A
+work_0494,Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?",A,A,A,A,A,A,A,A,A
+work_0494,Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?",A,A,A,A,A,A,A,A,A
+work_0494,Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?",A,A,A,A,A,A,A,A,A
+work_0494,Q25,How has this participant's way of using AI changed from when they first started until now?,C,C,C,C,C,C,C,C,C
