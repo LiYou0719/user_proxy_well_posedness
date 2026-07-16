@@ -26,6 +26,15 @@ class AnalysisTests(unittest.TestCase):
         self.assertEqual(len(questions), 23)
         self.assertEqual(len(ranking), 23)
         self.assertFalse(questions["qid"].str.startswith("A").any())
+        participant_counts = ranking.set_index("qid")["n_participants"].to_dict()
+        self.assertEqual(participant_counts["Q03"], 43)
+        self.assertTrue(
+            all(
+                count == 50
+                for qid, count in participant_counts.items()
+                if qid != "Q03"
+            )
+        )
         for column in ["well_posedness", "ci_lo", "ci_hi", "human_pass_rate"]:
             self.assertTrue(ranking[column].between(0, 1).all())
 
@@ -80,6 +89,55 @@ class AnalysisTests(unittest.TestCase):
             pd.DataFrame(rows).to_csv(path, index=False)
             with self.assertRaisesRegex(ValueError, "duplicate"):
                 load_cells(path, questions)
+
+    def test_missing_run_label_is_rejected(self) -> None:
+        questions = load_questions()
+        rows = [
+            {
+                "bundle_id": "participant-1",
+                "qid": qid,
+                "run01": "C",
+                "run02": "C",
+            }
+            for qid in questions["qid"]
+        ]
+        rows[0]["run02"] = None
+
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "runs.csv"
+            pd.DataFrame(rows).to_csv(path, index=False)
+            with self.assertRaisesRegex(ValueError, "missing identifiers or labels"):
+                load_cells(path, questions)
+
+    def test_unexpected_question_is_rejected(self) -> None:
+        questions = load_questions()
+        rows = [
+            {"bundle_id": "participant-1", "qid": qid, "run01": "C"}
+            for qid in questions["qid"]
+        ]
+        rows[-1]["qid"] = "A22"
+
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "runs.csv"
+            pd.DataFrame(rows).to_csv(path, index=False)
+            with self.assertRaisesRegex(ValueError, "qids do not match"):
+                load_cells(path, questions)
+
+    def test_out_of_range_human_pass_rate_is_rejected(self) -> None:
+        questions = load_questions()
+        rates = pd.DataFrame(
+            {
+                "qid": questions["qid"],
+                "human_pass_rate": [0.5] * len(questions),
+            }
+        )
+        rates.loc[0, "human_pass_rate"] = 1.1
+
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "human.csv"
+            rates.to_csv(path, index=False)
+            with self.assertRaisesRegex(ValueError, "between 0 and 1"):
+                load_human_pass_rates(path, questions)
 
 
 if __name__ == "__main__":

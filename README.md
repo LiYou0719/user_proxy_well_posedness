@@ -79,14 +79,14 @@ This is **within-participant** instability. It is intentionally separate from
 `pct_answerable`, the proportion of transcripts that address the topic. A rare
 but clear question should not be confused with an ambiguous question.
 
-### Historical estimator note
+### Correction history
 
-An earlier chart-generation script applied a `9/8` finite-sample correction to
-the nine-run variance. The article's conceptual definition and this repository
-use the bounded empirical variance without that correction. Consequently this
-release does not claim to reproduce every plotted historical score exactly.
-The bounded version is the canonical estimator for future replication because
-it preserves the stated `[0, 1]` interpretation.
+An earlier version of the article's interactive chart applied a `9/8`
+finite-sample correction to the nine-run variance even though the appendix
+specified the bounded empirical estimator above. The chart was corrected in
+July 2026. The current article, appendix, reference output, and analysis code
+now use the same bounded estimator. This history is disclosed because the
+pre-correction chart showed slightly lower well-posedness values.
 
 ## Run the analysis
 
