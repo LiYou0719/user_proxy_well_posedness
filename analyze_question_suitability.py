@@ -93,24 +93,38 @@ def load_cells(
     return cells
 
 
-def load_human_pass_rates(
+def load_human_summary(
     path: Path = HUMAN_PATH,
     questions: pd.DataFrame | None = None,
-) -> pd.Series:
+) -> pd.DataFrame:
     questions = load_questions() if questions is None else questions
     expected_qids = set(questions["qid"])
     human = pd.read_csv(path)
-    if set(human.columns) != {"qid", "human_pass_rate"}:
-        raise ValueError("human pass-rate file must contain qid and human_pass_rate")
+    required = {"qid", "n_passed", "n_evaluated", "human_pass_rate"}
+    if set(human.columns) != required:
+        raise ValueError(f"human summary file must contain exactly {sorted(required)}")
     if human["qid"].duplicated().any():
-        raise ValueError("human pass-rate file contains duplicate qids")
+        raise ValueError("human summary file contains duplicate qids")
     if set(human["qid"]) != expected_qids:
-        raise ValueError("human pass-rate qids do not match canonical questions")
+        raise ValueError("human summary qids do not match canonical questions")
     if human["human_pass_rate"].isna().any() or not human[
         "human_pass_rate"
     ].between(0, 1).all():
         raise ValueError("human pass rates must be between 0 and 1")
-    return human.set_index("qid")["human_pass_rate"]
+    for column in ["n_passed", "n_evaluated"]:
+        if human[column].isna().any() or not (human[column] % 1 == 0).all():
+            raise ValueError(f"{column} must contain whole numbers")
+    if (human["n_evaluated"] <= 0).any():
+        raise ValueError("n_evaluated must be positive")
+    if (human["n_passed"] < 0).any() or (
+        human["n_passed"] > human["n_evaluated"]
+    ).any():
+        raise ValueError("n_passed must be between 0 and n_evaluated")
+
+    calculated_rates = human["n_passed"] / human["n_evaluated"]
+    if not np.allclose(human["human_pass_rate"], calculated_rates):
+        raise ValueError("human pass rates do not match n_passed / n_evaluated")
+    return human.set_index("qid")
 
 
 def bootstrap_ci(
@@ -134,9 +148,16 @@ def bootstrap_ci(
 def build_ranking(
     cells: pd.DataFrame,
     questions: pd.DataFrame,
-    human_pass_rates: pd.Series,
+    human_summary: pd.DataFrame,
     bootstrap_repetitions: int = BOOTSTRAP_REPETITIONS,
 ) -> pd.DataFrame:
+    answerability_counts = cells.groupby("qid").size().sort_index()
+    human_counts = human_summary["n_evaluated"].sort_index()
+    if not answerability_counts.equals(human_counts):
+        raise ValueError(
+            "answerability and human-summary participant counts do not match"
+        )
+
     rows = []
     for qid, group in cells.groupby("qid"):
         within_values = group["within_variance"].to_numpy()
@@ -153,7 +174,9 @@ def build_ranking(
                 "ci_lo": round(ci_lo, 3),
                 "ci_hi": round(ci_hi, 3),
                 "within_participant_var": round(within, 4),
-                "human_pass_rate": round(float(human_pass_rates.loc[qid]), 2),
+                "human_pass_rate": round(
+                    float(human_summary.loc[qid, "human_pass_rate"]), 2
+                ),
                 "pct_answerable": round(float(group["p_answerable"].mean()), 2),
                 "between_participant_var": round(
                     float(group["p_answerable"].var(ddof=0)), 3
@@ -178,8 +201,8 @@ def build_ranking(
 def main() -> None:
     questions = load_questions()
     cells = load_cells(questions=questions)
-    human_pass_rates = load_human_pass_rates(questions=questions)
-    ranking = build_ranking(cells, questions, human_pass_rates)
+    human_summary = load_human_summary(questions=questions)
+    ranking = build_ranking(cells, questions, human_summary)
 
     OUTPUT_PATH.parent.mkdir(exist_ok=True)
     ranking.to_csv(OUTPUT_PATH, index=False)

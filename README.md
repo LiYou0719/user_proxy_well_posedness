@@ -22,7 +22,7 @@ analyze_question_suitability.py
 data/
   questions.csv                       canonical 23-question instrument
   answerability_runs.csv              repeated A/B/C judgments
-  human_pass_rate_per_question.csv    23 published aggregate human pass rates
+  human_pass_rate_per_question.csv    aggregate pass counts, denominators, and rates
 outputs/
   question_ranking.csv                generated reference output
 tests/
@@ -115,7 +115,7 @@ To replicate the method:
 4. export one row per pair with `bundle_id`, `qid`, and `run01`, `run02`, ...
    columns containing A/B/C labels;
 5. construct an independent human reference point appropriate to the product
-   decision and record only its per-question pass rate in the analysis input;
+   decision and record its aggregate pass count and evaluated count per question;
 6. run this analysis and inspect individual questions, uncertainty intervals,
    and base rates rather than only an overall average.
 
@@ -134,18 +134,21 @@ their own construct boundaries and human calibration.
 - Q07 and Q25 were excluded because their topics appeared in only about 2 of 50
   transcripts in the historical sample. A replicator should make exclusions
   based on coverage in their own sample.
-- The released historical input contains 50 participants for each canonical
-  question except Q03, which contains 43 valid participant rows. The analysis
-  reports `n_participants` explicitly and does not fabricate missing cells.
-- Experimental records whose IDs began with `A` were not part of the final
-  23-question study and have been removed from the curated analysis input.
+- The researcher abstained on Q03 for seven participant-question pairs because
+  the human answerability decision remained genuinely borderline. Those seven
+  pairs were excluded before proxy generation and grading; they were not coded
+  as unanswered questions or model failures. Q03 therefore uses 35 passes from
+  43 evaluated pairs for its human pass rate, and the same 43 pairs for its
+  well-posedness estimate. Every other canonical question uses 50 pairs. The
+  analysis validates that the two denominators match and reports
+  `n_participants` explicitly.
 
 ## Human annotation boundary
 
-The public file contains only the 23 aggregate human pass rates. Completed
-prior readings, expected participant answers, evidence selections, absence
-checks, researcher notes, and exploratory adjudication are intentionally not
-published.
+The public file contains only per-question aggregate pass counts, evaluated
+counts, and rates. Completed prior readings, expected participant answers,
+evidence selections, absence checks, researcher notes, and exploratory
+adjudication are intentionally not published.
 
 Those private annotations encode researcher judgment and are not necessary for
 applying the method to a new study. A replication should create its own human

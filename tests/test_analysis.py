@@ -9,7 +9,7 @@ import pandas as pd
 from analyze_question_suitability import (
     build_ranking,
     load_cells,
-    load_human_pass_rates,
+    load_human_summary,
     load_questions,
 )
 
@@ -18,7 +18,7 @@ class AnalysisTests(unittest.TestCase):
     def test_public_data_is_canonical_and_bounded(self) -> None:
         questions = load_questions()
         cells = load_cells(questions=questions)
-        human = load_human_pass_rates(questions=questions)
+        human = load_human_summary(questions=questions)
         ranking = build_ranking(
             cells, questions, human, bootstrap_repetitions=100
         )
@@ -115,7 +115,7 @@ class AnalysisTests(unittest.TestCase):
             {"bundle_id": "participant-1", "qid": qid, "run01": "C"}
             for qid in questions["qid"]
         ]
-        rows[-1]["qid"] = "A22"
+        rows[-1]["qid"] = "Q99"
 
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "runs.csv"
@@ -128,6 +128,8 @@ class AnalysisTests(unittest.TestCase):
         rates = pd.DataFrame(
             {
                 "qid": questions["qid"],
+                "n_passed": [1] * len(questions),
+                "n_evaluated": [2] * len(questions),
                 "human_pass_rate": [0.5] * len(questions),
             }
         )
@@ -137,7 +139,16 @@ class AnalysisTests(unittest.TestCase):
             path = Path(directory) / "human.csv"
             rates.to_csv(path, index=False)
             with self.assertRaisesRegex(ValueError, "between 0 and 1"):
-                load_human_pass_rates(path, questions)
+                load_human_summary(path, questions)
+
+    def test_human_and_answerability_denominators_must_match(self) -> None:
+        questions = load_questions()
+        cells = load_cells(questions=questions)
+        human = load_human_summary(questions=questions)
+        human.loc["Q03", "n_evaluated"] = 50
+
+        with self.assertRaisesRegex(ValueError, "participant counts do not match"):
+            build_ranking(cells, questions, human, bootstrap_repetitions=10)
 
 
 if __name__ == "__main__":
