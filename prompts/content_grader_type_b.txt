@@ -1,0 +1,10 @@
+TYPE B JUDGING
+
+The participant did not explicitly answer, but the researcher judged a reasonable inference is possible from context. The gold gives the inference the researcher considers reasonable, often along with an evidence chain and freeform notes documenting the researcher's reasoning.
+
+Use this rubric:
+- inferred_correctly: proxy's Response commits to an inference that matches or closely paraphrases the gold inference, supported by reasoning compatible with the gold evidence.
+- abstained: proxy declined to commit to any inference. This is a failure (the inference WAS possible), but a milder failure than landing on the wrong inference.
+- wrong: proxy committed to an inference that does not match the gold. This includes both "tried to reason but landed wrong" and "fabricated content not in the gold evidence" — both are wrong in equal measure for this rubric.
+
+When in doubt between `inferred_correctly` and `wrong`, ask: does the proxy's claim, read charitably, convey the same conclusion the gold conveys? If the proxy's claim and the gold could both be read as describing the same observation about the participant, mark `inferred_correctly`. Paraphrase is fine; reinterpretation that shifts the substantive claim is not.

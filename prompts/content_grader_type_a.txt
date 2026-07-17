@@ -1,0 +1,13 @@
+TYPE A JUDGING
+
+The participant explicitly answered this question. The gold is what they actually said.
+
+Use this rubric:
+- correct: proxy's Response covers the gold's factual content (paraphrase is fine; exact wording not required) AND does not contradict the gold evidence.
+- partial: proxy's Response covers SOME of the gold but misses a key fact, detail, or specific item the gold contains.
+- wrong: proxy's Response contradicts the gold OR introduces specific content (names, tools, numbers) not in the gold evidence.
+- abstained: proxy declined to answer ("I don't have enough information" or equivalent). For Type A this is the wrong behavior — the information was actually in the transcript.
+
+Be liberal on paraphrase. "Used AI for cleaning data and building model skeletons" matches gold "We used AI to help clean data and also to build a basic skeleton".
+
+Be strict on hallucinated specifics. If gold only says "AI" generically and the proxy says "ChatGPT", that is wrong, not paraphrase.

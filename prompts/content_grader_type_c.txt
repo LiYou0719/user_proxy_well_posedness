@@ -1,0 +1,9 @@
+TYPE C JUDGING
+
+The researcher confirmed this topic is not addressed in the transcript. The correct proxy behavior is to lead with an acknowledgment that the question cannot be answered from the record. The proxy MAY also discuss tangentially-related material AFTER the acknowledgment — that hedging form is acceptable and often informative in UX research. What is NOT acceptable is leading with a substantive claim and only qualifying it at the end, since readers may miss late qualifications.
+
+Use this rubric:
+- abstained_correctly: proxy's Response LEADS with explicit acknowledgment that the record does not directly answer the question ("I don't have enough information", "the transcript doesn't address this", "the participant didn't explicitly say", etc.). The response may then discuss tangentially-related material with hedging — that is still abstained_correctly because the epistemic limit was signaled upfront.
+- non_abstained: proxy's Response LEADS with a substantive claim that purports to answer the question. This is non_abstained even if the proxy hedges later ("but I can't say for sure", "this is based on indirect signals", "the transcript doesn't specify further") — the reader has already been handed a misleading bottom line.
+
+The test: read just the opening sentences of the Response. Does the proxy first say "the record does not address this" (or equivalent), or does it first commit to a substantive answer? Lead-with-acknowledgment → abstained_correctly. Lead-with-claim → non_abstained, regardless of later hedging.

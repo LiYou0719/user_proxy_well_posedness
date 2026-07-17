@@ -14,19 +14,35 @@ user proxy.
 
 ## What is included
 
-This analysis-only release contains no transcript text, proxy responses, or
+This repository has two layers. Layer 1 reruns the published analysis without
+API credentials or transcript downloads. The optional Layer 2 replication kit
+prepares a new public transcript sample, runs repeated answerability judgments,
+and documents how to construct the independent human reference axis.
+
+The repository itself contains no transcript text, proxy responses, or
 participant-level researcher annotations.
 
 ```text
 analyze_question_suitability.py
+requirements-replication.txt
 data/
   questions.csv                       canonical 23-question instrument
   answerability_runs.csv              repeated A/B/C judgments
   human_pass_rate_per_question.csv    aggregate pass counts, denominators, and rates
 outputs/
   question_ranking.csv                generated reference output
+prompts/                              historical prompt artifacts and schemas
+scripts/
+  prepare_dataset.py                  pinned public dataset download
+  sample_cohort.py                    deterministic stratified sampling
+  run_answerability.py                resumable repeated classifier runner
+  aggregate_human_reference.py        strict per-question aggregation
+templates/
+  human_reference_template.csv        blank private-work template
+docs/
+  human_reference_protocol.md         minimal annotation protocol
 tests/
-  test_analysis.py                    validation and estimator tests
+  ...                                 analysis and replication-kit tests
 ```
 
 The `bundle_id` values refer to participants in Anthropic's public
@@ -103,6 +119,126 @@ python -m unittest discover -s tests
 The analysis validates the input schemas before calculating the output. It
 rejects unexpected question IDs, invalid or missing A/B/C labels, duplicate
 participant-question rows, and out-of-range normalized metrics.
+
+## Prepare a new transcript sample
+
+The dataset preparation utilities are optional. They are not needed to rerun
+the released Layer 1 analysis, but they provide the first part of the Layer 2
+replication kit.
+
+```bash
+pip install -r requirements-replication.txt
+python scripts/prepare_dataset.py
+python scripts/sample_cohort.py --seed 42
+```
+
+`prepare_dataset.py` downloads all 1,250 public AnthropicInterviewer
+transcripts and writes a local Parquet file plus a provenance manifest. The
+historical dataset revision is pinned in the script; callers may explicitly
+select another revision. Transcript text and generated cohorts remain under
+the ignored `local_data/` directory.
+
+`sample_cohort.py` draws a deterministic sample without replacement. Its
+default 30/10/10 split mirrors the historical study's workforce, creative, and
+scientist composition, but the seed is intentionally user-selectable. The
+historical participant IDs remain auditable in `answerability_runs.csv`; using
+the identical cohort is not required for a methodological replication.
+
+## Run repeated answerability judgments
+
+Set the API key for your provider (`ANTHROPIC_API_KEY` or `OPENAI_API_KEY`),
+choose an exact model identifier, and start with a small smoke test:
+
+```bash
+python scripts/run_answerability.py \
+  --provider anthropic \
+  --model YOUR_MODEL_ID \
+  --max-pairs 2 \
+  --runs 2 \
+  --ledger local_data/smoke_calls.jsonl \
+  --output local_data/smoke_runs.csv
+```
+
+The runner appends every call to `local_data/answerability_calls.jsonl`, so an
+interrupted run can resume without repeating successful calls. It exports the
+Layer 1 compatible `local_data/answerability_runs.csv` only after every
+requested call succeeds.
+
+The runner supports Anthropic tool use and OpenAI Structured Outputs while
+keeping the classifier instructions, transcript, question, and output fields
+the same. Each ledger has an immutable manifest containing hashes of the
+transcript, cohort, question, and prompt inputs plus the provider, model, and
+run settings. A changed condition must use a new ledger, preventing accidental
+mixing across models or harness configurations.
+
+API-call count is a design choice, not a fixed requirement:
+
+```text
+calls = evaluated transcript-question pairs x repeated runs
+```
+
+A complete 50-transcript, 23-question matrix repeated nine times would make
+10,350 calls. The historical study made **10,287 calls** because seven Q03
+pairs were explicitly skipped: `(22 x 50 + 43) x 9`. A smaller replication
+might use 10 transcripts and five runs (up to 1,150 calls); a larger one might
+use 100 transcripts and five runs (up to 11,500 calls). Report the evaluated
+pair count, per-question exclusions, and repeat count so readers can interpret
+the resulting uncertainty and compare conditions. Estimate cost and rate
+limits before launching any substantial run.
+
+The most robust way to omit researcher abstentions is to pass the frozen local
+human-reference CSV directly with `--eligibility`. The runner requires exactly
+one row for every cohort-question pair, includes every A/B/C row, and omits only
+rows whose `type` is `skip`. It never sends the human type or any other
+annotation field to the model. This keeps the answerability and human-content
+denominators aligned without manually copying IDs or leaking an answer into the
+prompt.
+
+```bash
+python scripts/run_answerability.py \
+  --provider openai \
+  --model YOUR_MODEL_ID \
+  --eligibility local_data/human_reference.csv
+```
+
+For workflows that do not use the supplied human-reference template, a local
+CSV containing only `bundle_id,qid` can instead be passed with `--exclusions`.
+Both modes reject unknown or duplicate pairs, are mutually exclusive, and add
+the input file hash to the run manifest. These private files can remain under
+`local_data/`; the public report needs only the resulting evaluated count for
+each question.
+
+The runner requires an explicit provider and model rather than silently
+substituting whichever model is current. For example, an OpenAI smoke test can
+use `--provider openai --model gpt-5-nano --reasoning-effort minimal`;
+substantive replications should choose a model appropriate to their validation
+goal rather than optimizing only for minimum cost. You may pass a local key
+file with `--env-file .env`; the key and file path are not written to the run
+manifest or ledger.
+
+The exact classifier and user-proxy prompts are stored under `prompts/`. The
+answerability classifier sees only the transcript and question; it does not see
+the proxy response or any researcher annotation.
+
+## Build the human reference axis
+
+Use `templates/human_reference_template.csv` and
+`docs/human_reference_protocol.md` to create a study-specific reference before
+running the user proxy. The template contains only the fields required by the
+final method and includes an explicit researcher `skip` option.
+
+After grading proxy responses with the published content-grader prompts,
+aggregate a private grader-output file into a shareable per-question summary:
+
+```bash
+python scripts/aggregate_human_reference.py \
+  --input local_data/content_grader_results.csv \
+  --output local_data/human_pass_rate_per_question.csv
+```
+
+The public summary contains only `qid`, pass count, evaluated count, and pass
+rate. Type A `partial` judgments remain failures under the published strict
+metric. Completed annotations, evidence, and proxy prose remain local.
 
 ## Reusing the method
 

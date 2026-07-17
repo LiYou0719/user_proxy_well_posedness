@@ -6,6 +6,10 @@ __pycache__/
 *.egg-info/
 .pytest_cache/
 .mypy_cache/
+.env
+
+# Locally downloaded public transcripts and generated cohorts
+local_data/
 
 # OS / editor
 .DS_Store

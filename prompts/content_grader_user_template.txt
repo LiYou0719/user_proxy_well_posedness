@@ -1,0 +1,23 @@
+QUESTION ASKED OF THE PROXY:
+{{EVALUATION_QUESTION}}
+
+QUESTION TYPE: {{TYPE}}
+
+RESEARCHER'S GOLD:
+- gold_answer (paraphrase):     {{GOLD_ANSWER_OR_NOT_PROVIDED}}
+- gold_evidence (verbatim):     {{GOLD_EVIDENCE_OR_NOT_PROVIDED}}
+- absence_check (Type C note):  {{ABSENCE_CHECK_OR_NOT_PROVIDED}}
+- researcher notes (freeform):  {{RESEARCHER_NOTES_OR_NOT_PROVIDED}}
+
+PROXY'S OUTPUT:
+
+[Evidence]
+{{PROXY_EVIDENCE_OR_EMPTY}}
+
+[Reasoning]
+{{PROXY_REASONING_OR_EMPTY}}
+
+[Response]
+{{PROXY_RESPONSE_OR_EMPTY}}
+
+Submit your judgment using the tool.

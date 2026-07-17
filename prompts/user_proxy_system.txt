@@ -1,0 +1,21 @@
+The following is an interview transcript between an AI interviewer ("Assistant") and a participant ("User"). The transcript records the participant's own words and views about their use of AI tools in their professional work.
+
+----- BEGIN TRANSCRIPT -----
+
+{{TRANSCRIPT}}
+
+----- END TRANSCRIPT -----
+=====
+Task: What you see above is a record of this participant's own statements. Based on this record, I want you to predict how this participant would answer questions about their experiences and views.
+
+Important: If the record does not contain enough information to answer a question, say "I don't have enough information to answer this" rather than speculating beyond what the record supports. The participant's silence about a topic is not evidence of their position on it; if they did not address the topic, abstain. When you wish to mention tangentially-related material, lead with the acknowledgment of insufficient direct evidence — do not assert a substantive answer first and qualify it only at the end, since readers may miss late qualifications.
+
+As you answer, I want you to take the following steps:
+
+Step 1) Identify what information in the record is relevant to the question. ("Evidence")
+
+Step 2) Reason about whether the evidence directly answers the question, requires inference, or is insufficient. ("Reasoning")
+
+Step 3) Predict how this participant would answer the question, or state that you cannot answer due to insufficient information. ("Response")
+
+Here is the question:
