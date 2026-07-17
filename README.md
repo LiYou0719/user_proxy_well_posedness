@@ -60,8 +60,8 @@ prose.
 
 The study asks two different questions.
 
-1. **Is answerability stable?** Repeated LLM grader runs classify whether each
-   transcript answers each research question.
+1. **Is the answerability judgment stable?** Repeated LLM grader runs classify
+   whether each transcript answers each research question.
 2. **Is the resulting content right?** A separate content pass rate compares
    the proxy response with the researcher's reading made before the LLM run.
 
@@ -81,6 +81,16 @@ Each grader run assigns one of three labels:
 The analysis collapses A and B to **answerable** and C to **not answerable**.
 The A/B/C distinction follows the answerability scheme introduced by Park et
 al. (2024), [*Generative Agent Simulations of 1,000 People*](https://arxiv.org/abs/2411.10109).
+
+These terms refer to different levels of the measurement:
+
+- an **answerability judgment** is one A/B/C label from one grader run;
+- `pct_answerable` is the prevalence of A/B judgments across the sample;
+- `well_posedness` measures whether repeated judgments are stable for the same
+  transcript-question pair, whether they consistently say answerable or not.
+
+A question can therefore have low `pct_answerable` but high `well_posedness` if
+the grader consistently labels most transcripts C.
 
 ## Bounded well-posedness estimator
 
@@ -197,8 +207,10 @@ The default sample contains 30 workforce, 10 creative, and 10 scientist
 transcripts, selected without replacement. It writes `local_data/cohort.csv`
 with the split and sampling seed for each of the 50 participants. Choose and
 report another seed if the replication is intended to test a different cohort.
+The sample size is not fixed: change `--workforce`, `--creatives`, and
+`--scientists`, and every downstream script will use the resulting cohort size.
 
-### 3. Generate 50 x 23 human-reference rows
+### 3. Generate one human-reference file per sampled transcript
 
 ```bash
 python scripts/generate_human_reference_templates.py
@@ -211,9 +223,10 @@ existing annotation file.
 ### 4. Manually complete and freeze the human reference
 
 **This is the manual step.** Read one transcript end to end, then complete its
-23-row CSV according to `docs/human_reference_protocol.md`. Repeat for all 50
-files. Each annotation filename is the participant's `transcript_id`; use that
-ID to open the matching row in `local_data/anthropic_interviewer.parquet` with
+23-row CSV according to `docs/human_reference_protocol.md`. Repeat for every
+sampled transcript. Each annotation filename is the participant's
+`transcript_id`; use that ID to open the matching row in
+`local_data/anthropic_interviewer.parquet` with
 your preferred Parquet viewer or analysis environment. For Type A or B, at
 least one of `gold_answer`, `gold_evidence`, or `notes` must contain the
 researcher's reference. For Type C, the C decision is sufficient;
@@ -225,10 +238,10 @@ After annotation, validate and merge the files:
 python scripts/merge_human_references.py
 ```
 
-The merger requires exactly the sampled 50 files and all 23 canonical rows in
-each file. It writes `local_data/human_reference.csv`. Freeze this file before
-running any model-facing stage: later edits would contaminate the independent
-reference point.
+The merger requires exactly one file per sampled transcript and all 23
+canonical rows in each file. It writes `local_data/human_reference.csv`.
+Freeze this file before running any model-facing stage: later edits would
+contaminate the independent reference point.
 
 ### 5. Run repeated answerability classification
 
@@ -251,8 +264,8 @@ evaluated participant-question pair.
 ```bash
 python analyze_question_suitability.py \
   --runs local_data/answerability_runs.csv \
-  --answerability-only \
-  --output local_data/answerability_summary.csv
+  --well-posedness-only \
+  --output local_data/well_posedness_summary.csv
 ```
 
 This produces 23 rows containing `well_posedness`, the 90% participant-bootstrap
@@ -335,16 +348,6 @@ A complete 50-transcript run with no skips makes 10,350 answerability calls,
 rate limits before launching it. Both `anthropic` and `openai` are supported
 reference adapters; their SDK behavior and inference infrastructure are not
 standardized by this repository.
-
-A complete 50-transcript run with no skips makes 10,350 answerability calls,
-1,150 proxy calls, and 1,150 content-grader calls. Estimate provider cost and
-rate limits before launching it. `--max-pairs` is available on every runner for
-small integration tests after the corresponding annotation rows exist.
-
-A real two-transcript OpenAI integration test has also exercised this complete
-path. See [`docs/integration_test.md`](docs/integration_test.md) for the frozen
-selection rule, call counts, aggregate results, resumability check, and the
-privacy boundary for what is and is not published.
 
 ## Run repeated answerability judgments
 

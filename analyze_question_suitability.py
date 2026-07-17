@@ -152,7 +152,7 @@ def build_ranking(
     human_summary: pd.DataFrame,
     bootstrap_repetitions: int = BOOTSTRAP_REPETITIONS,
 ) -> pd.DataFrame:
-    ranking = build_answerability_summary(
+    ranking = build_well_posedness_summary(
         cells,
         questions,
         bootstrap_repetitions=bootstrap_repetitions,
@@ -175,12 +175,12 @@ def build_ranking(
     return ranking
 
 
-def build_answerability_summary(
+def build_well_posedness_summary(
     cells: pd.DataFrame,
     questions: pd.DataFrame,
     bootstrap_repetitions: int = BOOTSTRAP_REPETITIONS,
 ) -> pd.DataFrame:
-    """Build the 23-row answerability axis before content grading exists."""
+    """Build the 23-row well-posedness axis before content grading exists."""
 
     rows = []
     for qid, group in cells.groupby("qid"):
@@ -226,7 +226,7 @@ def main() -> None:
     parser.add_argument("--human-summary", type=Path, default=HUMAN_PATH)
     parser.add_argument("--output", type=Path, default=OUTPUT_PATH)
     parser.add_argument(
-        "--answerability-only",
+        "--well-posedness-only",
         action="store_true",
         help=(
             "Write well-posedness, confidence intervals, and answerability rates "
@@ -242,8 +242,8 @@ def main() -> None:
 
     questions = load_questions(args.questions)
     cells = load_cells(args.runs, questions=questions)
-    if args.answerability_only:
-        ranking = build_answerability_summary(
+    if args.well_posedness_only:
+        ranking = build_well_posedness_summary(
             cells,
             questions,
             bootstrap_repetitions=args.bootstrap_repetitions,

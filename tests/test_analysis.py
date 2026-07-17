@@ -7,7 +7,7 @@ from pathlib import Path
 import pandas as pd
 
 from analyze_question_suitability import (
-    build_answerability_summary,
+    build_well_posedness_summary,
     build_ranking,
     load_cells,
     load_human_summary,
@@ -63,10 +63,10 @@ class AnalysisTests(unittest.TestCase):
         for value in cells["within_variance"]:
             self.assertAlmostEqual(value, 2 / 9)
 
-    def test_answerability_summary_does_not_require_human_results(self) -> None:
+    def test_well_posedness_summary_does_not_require_human_results(self) -> None:
         questions = load_questions()
         cells = load_cells(questions=questions)
-        summary = build_answerability_summary(
+        summary = build_well_posedness_summary(
             cells, questions, bootstrap_repetitions=10
         )
 
