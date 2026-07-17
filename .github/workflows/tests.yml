@@ -13,7 +13,7 @@ jobs:
         with:
           python-version: "3.12"
           cache: pip
-      - run: pip install -r requirements.txt
+      - run: pip install -r requirements-replication.txt
       - run: python analyze_question_suitability.py
       - run: git diff --exit-code outputs/question_ranking.csv
       - run: python -m unittest discover -s tests
