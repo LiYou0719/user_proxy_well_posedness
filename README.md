@@ -104,6 +104,30 @@ The analysis validates the input schemas before calculating the output. It
 rejects unexpected question IDs, invalid or missing A/B/C labels, duplicate
 participant-question rows, and out-of-range normalized metrics.
 
+## Prepare a new transcript sample
+
+The dataset preparation utilities are optional. They are not needed to rerun
+the released Layer 1 analysis, but they provide the first part of the Layer 2
+replication kit.
+
+```bash
+pip install -r requirements-replication.txt
+python scripts/prepare_dataset.py
+python scripts/sample_cohort.py --seed 42
+```
+
+`prepare_dataset.py` downloads all 1,250 public AnthropicInterviewer
+transcripts and writes a local Parquet file plus a provenance manifest. The
+historical dataset revision is pinned in the script; callers may explicitly
+select another revision. Transcript text and generated cohorts remain under
+the ignored `local_data/` directory.
+
+`sample_cohort.py` draws a deterministic sample without replacement. Its
+default 30/10/10 split mirrors the historical study's workforce, creative, and
+scientist composition, but the seed is intentionally user-selectable. The
+historical participant IDs remain auditable in `answerability_runs.csv`; using
+the identical cohort is not required for a methodological replication.
+
 ## Reusing the method
 
 To replicate the method:

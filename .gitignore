@@ -7,6 +7,9 @@ __pycache__/
 .pytest_cache/
 .mypy_cache/
 
+# Locally downloaded public transcripts and generated cohorts
+local_data/
+
 # OS / editor
 .DS_Store
 Thumbs.db
