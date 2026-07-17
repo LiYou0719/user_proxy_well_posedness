@@ -1,1 +1,1 @@
-bundle_id,qid,type,gold_answer,gold_evidence,absence_check,skip_reason
+bundle_id,qid,question,type,gold_answer,gold_evidence,absence_check,skip_reason,notes

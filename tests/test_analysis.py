@@ -7,6 +7,7 @@ from pathlib import Path
 import pandas as pd
 
 from analyze_question_suitability import (
+    build_well_posedness_summary,
     build_ranking,
     load_cells,
     load_human_summary,
@@ -61,6 +62,18 @@ class AnalysisTests(unittest.TestCase):
         self.assertTrue((cells["p_answerable"] == 2 / 3).all())
         for value in cells["within_variance"]:
             self.assertAlmostEqual(value, 2 / 9)
+
+    def test_well_posedness_summary_does_not_require_human_results(self) -> None:
+        questions = load_questions()
+        cells = load_cells(questions=questions)
+        summary = build_well_posedness_summary(
+            cells, questions, bootstrap_repetitions=10
+        )
+
+        self.assertEqual(len(summary), 23)
+        self.assertNotIn("human_pass_rate", summary.columns)
+        for column in ["well_posedness", "ci_lo", "ci_hi", "pct_answerable"]:
+            self.assertTrue(summary[column].between(0, 1).all())
 
     def test_invalid_label_is_rejected(self) -> None:
         questions = load_questions()

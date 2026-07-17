@@ -16,8 +16,9 @@ user proxy.
 
 This repository has two layers. Layer 1 reruns the published analysis without
 API credentials or transcript downloads. The optional Layer 2 replication kit
-prepares a new public transcript sample, runs repeated answerability judgments,
-and documents how to construct the independent human reference axis.
+prepares a new public transcript sample and provides an executable reference
+path through human annotation, repeated answerability judgments, user-proxy
+generation, gold-based content grading, and final analysis.
 
 The repository itself contains no transcript text, proxy responses, or
 participant-level researcher annotations.
@@ -35,10 +36,15 @@ prompts/                              historical prompt artifacts and schemas
 scripts/
   prepare_dataset.py                  pinned public dataset download
   sample_cohort.py                    deterministic stratified sampling
+  generate_human_reference_templates.py
+                                      one 23-row annotation file per transcript
+  merge_human_references.py           strict validation and long-table export
   run_answerability.py                resumable repeated classifier runner
+  run_user_proxy.py                   resumable full-context proxy runner
+  run_content_grader.py               resumable gold-based content grader
   aggregate_human_reference.py        strict per-question aggregation
 templates/
-  human_reference_template.csv        blank private-work template
+  human_reference_template.csv        canonical annotation columns
 docs/
   human_reference_protocol.md         minimal annotation protocol
 tests/
@@ -54,8 +60,8 @@ prose.
 
 The study asks two different questions.
 
-1. **Is answerability stable?** Repeated LLM grader runs classify whether each
-   transcript answers each research question.
+1. **Is the answerability judgment stable?** Repeated LLM grader runs classify
+   whether each transcript answers each research question.
 2. **Is the resulting content right?** A separate content pass rate compares
    the proxy response with the researcher's reading made before the LLM run.
 
@@ -75,6 +81,16 @@ Each grader run assigns one of three labels:
 The analysis collapses A and B to **answerable** and C to **not answerable**.
 The A/B/C distinction follows the answerability scheme introduced by Park et
 al. (2024), [*Generative Agent Simulations of 1,000 People*](https://arxiv.org/abs/2411.10109).
+
+These terms refer to different levels of the measurement:
+
+- an **answerability judgment** is one A/B/C label from one grader run;
+- `pct_answerable` is the prevalence of A/B judgments across the sample;
+- `well_posedness` measures whether repeated judgments are stable for the same
+  transcript-question pair, whether they consistently say answerable or not.
+
+A question can therefore have low `pct_answerable` but high `well_posedness` if
+the grader consistently labels most transcripts C.
 
 ## Bounded well-posedness estimator
 
@@ -123,8 +139,7 @@ participant-question rows, and out-of-range normalized metrics.
 ## Prepare a new transcript sample
 
 The dataset preparation utilities are optional. They are not needed to rerun
-the released Layer 1 analysis, but they provide the first part of the Layer 2
-replication kit.
+the released Layer 1 analysis, but they begin the Layer 2 replication workflow.
 
 ```bash
 pip install -r requirements-replication.txt
@@ -143,6 +158,196 @@ default 30/10/10 split mirrors the historical study's workforce, creative, and
 scientist composition, but the seed is intentionally user-selectable. The
 historical participant IDs remain auditable in `answerability_runs.csv`; using
 the identical cohort is not required for a methodological replication.
+
+## End-to-end replication
+
+The reference workflow runs from the pinned public Hugging Face dataset to a
+new 23-row question ranking. The only substantive manual step is Step 4: a
+researcher reads each transcript and creates an independent human reference
+before any proxy answers are generated. Run all commands from the repository
+root with Python 3.10 or newer.
+
+### One-time setup
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements-replication.txt
+export OPENAI_API_KEY="YOUR_KEY"
+```
+
+The commands below use OpenAI as one concrete reference path. To use Anthropic,
+set `ANTHROPIC_API_KEY` and replace the provider and model arguments. Always
+record the exact model identifiers used; do not treat a moving alias as a
+frozen experimental condition. As an alternative to exporting a key, add
+`--env-file .env` to each model-runner command; key values and the file path are
+not written to manifests or ledgers.
+
+### 1. Download the pinned AnthropicInterviewer revision
+
+```bash
+python scripts/prepare_dataset.py
+```
+
+This downloads revision `c9e1ec1e6b093712b9c42235c7303ece647490e9`, validates
+the expected 1,250 rows, and writes:
+
+- `local_data/anthropic_interviewer.parquet`
+- `local_data/anthropic_interviewer.manifest.json`
+
+Both files stay under the git-ignored `local_data/` directory.
+
+### 2. Draw the deterministic 30/10/10 cohort
+
+```bash
+python scripts/sample_cohort.py --seed 42
+```
+
+The default sample contains 30 workforce, 10 creative, and 10 scientist
+transcripts, selected without replacement. It writes `local_data/cohort.csv`
+with the split and sampling seed for each of the 50 participants. Choose and
+report another seed if the replication is intended to test a different cohort.
+The sample size is not fixed: change `--workforce`, `--creatives`, and
+`--scientists`, and every downstream script will use the resulting cohort size.
+
+### 3. Generate one human-reference file per sampled transcript
+
+```bash
+python scripts/generate_human_reference_templates.py
+```
+
+This creates one 23-row file per participant under
+`local_data/human_reference/by_transcript/`. It refuses to overwrite an
+existing annotation file.
+
+### 4. Manually complete and freeze the human reference
+
+**This is the manual step.** Read one transcript end to end, then complete its
+23-row CSV according to `docs/human_reference_protocol.md`. Repeat for every
+sampled transcript. Each annotation filename is the participant's
+`transcript_id`; use that ID to open the matching row in
+`local_data/anthropic_interviewer.parquet` with
+your preferred Parquet viewer or analysis environment. For Type A or B, at
+least one of `gold_answer`, `gold_evidence`, or `notes` must contain the
+researcher's reference. For Type C, the C decision is sufficient;
+`absence_check` is optional. A `skip` requires `skip_reason`.
+
+After annotation, validate and merge the files:
+
+```bash
+python scripts/merge_human_references.py
+```
+
+The merger requires exactly one file per sampled transcript and all 23
+canonical rows in each file. It writes `local_data/human_reference.csv`.
+Freeze this file before running any model-facing stage: later edits would
+contaminate the independent reference point.
+
+### 5. Run repeated answerability classification
+
+```bash
+python scripts/run_answerability.py \
+  --provider openai \
+  --model YOUR_ANSWERABILITY_MODEL_ID \
+  --runs 9 \
+  --eligibility local_data/human_reference.csv
+```
+
+The answerability grader sees only one transcript and one question. The
+eligibility file is used solely to omit researcher `skip` rows; human labels and
+reference prose are never sent in this stage. The output is
+`local_data/answerability_runs.csv`, with nine A/B/C judgments for each
+evaluated participant-question pair.
+
+### 6. Calculate well-posedness, confidence intervals, and answerable rate
+
+```bash
+python analyze_question_suitability.py \
+  --runs local_data/answerability_runs.csv \
+  --well-posedness-only \
+  --output local_data/well_posedness_summary.csv
+```
+
+This produces 23 rows containing `well_posedness`, the 90% participant-bootstrap
+interval (`ci_lo`, `ci_hi`), and `pct_answerable`. It deliberately does not use
+the human reference or content-grader results.
+
+### 7. Run the user proxy
+
+```bash
+python scripts/run_user_proxy.py \
+  --provider openai \
+  --model YOUR_USER_PROXY_MODEL_ID \
+  --eligibility local_data/human_reference.csv
+```
+
+The proxy sees the full transcript and one research question, but no human
+type, gold field, or notes. It writes `local_data/proxy_answers.csv`.
+
+### 8. Grade proxy content against the human reference
+
+```bash
+python scripts/run_content_grader.py \
+  --provider openai \
+  --model YOUR_CONTENT_GRADER_MODEL_ID
+```
+
+The grader joins `local_data/proxy_answers.csv` with the frozen
+`local_data/human_reference.csv`, applies the appropriate Type A/B/C rubric,
+and writes `local_data/content_grader_results.csv`.
+
+### 9. Calculate per-question content correctness
+
+```bash
+python scripts/aggregate_human_reference.py \
+  --input local_data/content_grader_results.csv \
+  --output local_data/human_pass_rate_per_question.csv
+```
+
+This writes one strict content pass count, evaluated count, and pass rate for
+each of the 23 questions. Type A `partial` judgments remain failures under the
+published strict metric.
+
+### 10. Build the final 23-row question ranking
+
+```bash
+python analyze_question_suitability.py \
+  --runs local_data/answerability_runs.csv \
+  --human-summary local_data/human_pass_rate_per_question.csv \
+  --output local_data/question_ranking.csv
+```
+
+The final file joins well-posedness, its bootstrap interval, answerability base
+rate, and strict content pass rate. The analysis verifies that the answerability
+and content denominators agree for every question. `skip` pairs are removed
+from the answerability, proxy, and content-grader universes together.
+
+### Running cost, smoke tests, and resume behavior
+
+Every model runner uses an append-only JSONL ledger and immutable manifest.
+Rerunning an interrupted command with the same condition skips successful
+calls and attempts only missing ones. A changed model, prompt, input, repeat
+count, or run setting requires a new ledger path; the runner refuses to mix
+conditions.
+
+Before a full run, use `--max-pairs` with separate smoke-test ledger and output
+paths. Do not reuse those smoke-test paths for the full condition. For example:
+
+```bash
+python scripts/run_user_proxy.py \
+  --provider openai \
+  --model YOUR_USER_PROXY_MODEL_ID \
+  --eligibility local_data/human_reference.csv \
+  --max-pairs 2 \
+  --ledger local_data/proxy_smoke_calls.jsonl \
+  --output local_data/proxy_smoke_answers.csv
+```
+
+A complete 50-transcript run with no skips makes 10,350 answerability calls,
+1,150 proxy calls, and 1,150 content-grader calls. Estimate provider cost and
+rate limits before launching it. Both `anthropic` and `openai` are supported
+reference adapters; their SDK behavior and inference infrastructure are not
+standardized by this repository.
 
 ## Run repeated answerability judgments
 
@@ -218,14 +423,18 @@ manifest or ledger.
 
 The exact classifier and user-proxy prompts are stored under `prompts/`. The
 answerability classifier sees only the transcript and question; it does not see
-the proxy response or any researcher annotation.
+the proxy response or any researcher annotation. The user-proxy runner may use
+the frozen human reference to omit `skip` pairs, but human types and gold fields
+are discarded before any model request is constructed.
 
 ## Build the human reference axis
 
-Use `templates/human_reference_template.csv` and
+Use `scripts/generate_human_reference_templates.py` and
 `docs/human_reference_protocol.md` to create a study-specific reference before
-running the user proxy. The template contains only the fields required by the
-final method and includes an explicit researcher `skip` option.
+running the user proxy. The generator writes one file per sampled transcript,
+using the column contract shown in `templates/human_reference_template.csv`,
+and includes an explicit researcher `skip` option. After annotation,
+`scripts/merge_human_references.py` validates and combines the files.
 
 After grading proxy responses with the published content-grader prompts,
 aggregate a private grader-output file into a shareable per-question summary:
@@ -290,9 +499,10 @@ adjudication are intentionally not published.
 
 Those private annotations encode researcher judgment and are not necessary for
 applying the method to a new study. A replication should create its own human
-reference point under a documented, use-case-specific protocol. A simplified
-blank template and protocol may be added later as part of a broader replication
-kit.
+reference point under the documented, use-case-specific protocol. The supplied
+generator creates one blank 23-question annotation file per sampled transcript;
+the strict merger converts completed files into the private long-table input
+used by the reference runners.
 
 ## Limits
 
