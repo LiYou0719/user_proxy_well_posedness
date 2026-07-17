@@ -8,7 +8,6 @@ from __future__ import annotations
 
 import argparse
 import asyncio
-import csv
 import hashlib
 import json
 from datetime import datetime, timezone
@@ -56,6 +55,9 @@ def ensure_run_manifest(args: argparse.Namespace, prompt: str) -> Path:
         "questions_sha256": file_sha256(args.questions),
         "exclusions_sha256": (
             file_sha256(args.exclusions) if args.exclusions is not None else None
+        ),
+        "eligibility_sha256": (
+            file_sha256(args.eligibility) if args.eligibility is not None else None
         ),
     }
     if manifest_path.exists():
@@ -233,25 +235,92 @@ def apply_exclusions(
     missing = required - set(exclusions.columns)
     if missing:
         raise ValueError(f"exclusions missing columns: {sorted(missing)}")
-    exclusions = exclusions[["bundle_id", "qid"]]
+    exclusions = exclusions[["bundle_id", "qid"]].copy()
     if exclusions.isna().any().any():
+        raise ValueError("exclusions contain blank bundle_id or qid values")
+    for column in ["bundle_id", "qid"]:
+        exclusions[column] = exclusions[column].str.strip()
+    if exclusions.eq("").any().any():
         raise ValueError("exclusions contain blank bundle_id or qid values")
     if exclusions.duplicated().any():
         raise ValueError("exclusions contain duplicate bundle_id/qid pairs")
+    pair_keys = set(
+        map(tuple, pairs[["bundle_id", "qid"]].itertuples(index=False, name=None))
+    )
+    exclusion_keys = set(
+        map(tuple, exclusions[["bundle_id", "qid"]].itertuples(index=False, name=None))
+    )
+    unknown = sorted(exclusion_keys - pair_keys)
+    if unknown:
+        raise ValueError(
+            f"exclusions contain pairs outside the run universe: {unknown[:5]}"
+        )
     marked = pairs.merge(exclusions.assign(_excluded=True), how="left")
     return marked.loc[marked["_excluded"].isna(), pairs.columns].reset_index(drop=True)
 
 
+def apply_eligibility(
+    pairs: pd.DataFrame, eligibility_path: Path | None
+) -> pd.DataFrame:
+    """Use a frozen human-reference file to omit only explicit skip rows.
+
+    Human A/B/C labels determine no model input or prediction. They are checked
+    only to distinguish evaluated rows from researcher abstentions.
+    """
+    if eligibility_path is None:
+        return pairs
+    eligibility = pd.read_csv(eligibility_path, dtype=str)
+    required = {"bundle_id", "qid", "type"}
+    missing = required - set(eligibility.columns)
+    if missing:
+        raise ValueError(f"eligibility file missing columns: {sorted(missing)}")
+    eligibility = eligibility[["bundle_id", "qid", "type"]].copy()
+    if eligibility.isna().any().any():
+        raise ValueError("eligibility file contains blank bundle_id, qid, or type")
+    for column in ["bundle_id", "qid", "type"]:
+        eligibility[column] = eligibility[column].str.strip()
+    eligibility["type"] = eligibility["type"].str.upper()
+    if eligibility.eq("").any().any():
+        raise ValueError("eligibility file contains blank bundle_id, qid, or type")
+    if eligibility.duplicated(["bundle_id", "qid"]).any():
+        raise ValueError("eligibility file contains duplicate bundle_id/qid pairs")
+    invalid_types = sorted(set(eligibility["type"]) - VALID_LABELS - {"SKIP"})
+    if invalid_types:
+        raise ValueError(f"eligibility file contains invalid types: {invalid_types}")
+
+    pair_keys = set(
+        map(tuple, pairs[["bundle_id", "qid"]].itertuples(index=False, name=None))
+    )
+    eligibility_keys = set(
+        map(tuple, eligibility[["bundle_id", "qid"]].itertuples(index=False, name=None))
+    )
+    missing_pairs = sorted(pair_keys - eligibility_keys)
+    extra_pairs = sorted(eligibility_keys - pair_keys)
+    if missing_pairs or extra_pairs:
+        raise ValueError(
+            "eligibility file must match the run universe exactly; "
+            f"missing={missing_pairs[:5]}, extra={extra_pairs[:5]}"
+        )
+
+    planned = pairs.merge(
+        eligibility, on=["bundle_id", "qid"], how="left", validate="one_to_one"
+    )
+    return planned.loc[planned["type"] != "SKIP", pairs.columns].reset_index(drop=True)
+
+
 async def run_calls(args: argparse.Namespace) -> tuple[list[dict[str, Any]], pd.DataFrame]:
     prompt = PROMPT_PATH.read_text(encoding="utf-8").strip()
-    ensure_run_manifest(args, prompt)
     transcripts = pd.read_parquet(args.transcripts)
     cohort = pd.read_csv(args.cohort)
     questions = pd.read_csv(args.questions)
     pairs = build_pairs(transcripts, cohort, questions)
-    pairs = apply_exclusions(pairs, args.exclusions)
+    if args.eligibility is not None:
+        pairs = apply_eligibility(pairs, args.eligibility)
+    else:
+        pairs = apply_exclusions(pairs, args.exclusions)
     if args.max_pairs is not None:
         pairs = pairs.head(args.max_pairs).copy()
+    ensure_run_manifest(args, prompt)
 
     text_by_id = transcripts.set_index("transcript_id")["text"].to_dict()
     records = read_ledger(args.ledger)
@@ -379,11 +448,21 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--cohort", type=Path, default=Path("local_data/cohort.csv"))
     parser.add_argument("--questions", type=Path, default=Path("data/questions.csv"))
-    parser.add_argument(
+    pair_filter = parser.add_mutually_exclusive_group()
+    pair_filter.add_argument(
         "--exclusions",
         type=Path,
         default=None,
         help="Optional CSV of bundle_id,qid pairs to omit (for example, skips).",
+    )
+    pair_filter.add_argument(
+        "--eligibility",
+        type=Path,
+        default=None,
+        help=(
+            "Optional frozen human-reference CSV; A/B/C rows run and skip rows "
+            "are omitted without exposing labels to the model."
+        ),
     )
     parser.add_argument(
         "--ledger",

@@ -186,10 +186,27 @@ pair count, per-question exclusions, and repeat count so readers can interpret
 the resulting uncertainty and compare conditions. Estimate cost and rate
 limits before launching any substantial run.
 
-To omit researcher abstentions before API calls, provide a local CSV containing
-only `bundle_id,qid` and pass it with `--exclusions`. Its hash becomes part of
-the run manifest. The file can remain private under `local_data/`; the public
-report needs only the resulting evaluated count for each question.
+The most robust way to omit researcher abstentions is to pass the frozen local
+human-reference CSV directly with `--eligibility`. The runner requires exactly
+one row for every cohort-question pair, includes every A/B/C row, and omits only
+rows whose `type` is `skip`. It never sends the human type or any other
+annotation field to the model. This keeps the answerability and human-content
+denominators aligned without manually copying IDs or leaking an answer into the
+prompt.
+
+```bash
+python scripts/run_answerability.py \
+  --provider openai \
+  --model YOUR_MODEL_ID \
+  --eligibility local_data/human_reference.csv
+```
+
+For workflows that do not use the supplied human-reference template, a local
+CSV containing only `bundle_id,qid` can instead be passed with `--exclusions`.
+Both modes reject unknown or duplicate pairs, are mutually exclusive, and add
+the input file hash to the run manifest. These private files can remain under
+`local_data/`; the public report needs only the resulting evaluated count for
+each question.
 
 The runner requires an explicit provider and model rather than silently
 substituting whichever model is current. For example, an OpenAI smoke test can

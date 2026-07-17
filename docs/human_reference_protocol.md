@@ -33,5 +33,12 @@ Annotate one `bundle_id` and `qid` pair per row in
    abstention into Type C or a model failure.
 5. Report evaluated counts per question so exclusions remain visible.
 
+The answerability runner can apply this decision directly with
+`--eligibility PATH_TO_FROZEN_REFERENCE.csv`. It validates that the reference
+contains exactly one row for every cohort-question pair, runs all A/B/C rows,
+and omits only `skip` rows. Human types, answers, evidence, and notes are never
+included in model input. This filtering step fixes the evaluation universe; it
+does not provide the model with a correct answer.
+
 This minimal protocol includes only the fields and decisions required by the
 final study.
