@@ -11,6 +11,7 @@ therefore always in [0, 1].
 """
 from __future__ import annotations
 
+import argparse
 from pathlib import Path
 
 import numpy as np
@@ -151,12 +152,35 @@ def build_ranking(
     human_summary: pd.DataFrame,
     bootstrap_repetitions: int = BOOTSTRAP_REPETITIONS,
 ) -> pd.DataFrame:
+    ranking = build_answerability_summary(
+        cells,
+        questions,
+        bootstrap_repetitions=bootstrap_repetitions,
+    )
     answerability_counts = cells.groupby("qid").size().sort_index()
     human_counts = human_summary["n_evaluated"].sort_index()
     if not answerability_counts.equals(human_counts):
         raise ValueError(
             "answerability and human-summary participant counts do not match"
         )
+
+    human_rates = ranking["qid"].map(human_summary["human_pass_rate"])
+    ranking.insert(
+        ranking.columns.get_loc("pct_answerable"),
+        "human_pass_rate",
+        human_rates.round(2),
+    )
+    if not ranking["human_pass_rate"].between(0, 1).all():
+        raise ValueError("a normalized metric fell outside [0, 1]")
+    return ranking
+
+
+def build_answerability_summary(
+    cells: pd.DataFrame,
+    questions: pd.DataFrame,
+    bootstrap_repetitions: int = BOOTSTRAP_REPETITIONS,
+) -> pd.DataFrame:
+    """Build the 23-row answerability axis before content grading exists."""
 
     rows = []
     for qid, group in cells.groupby("qid"):
@@ -174,9 +198,6 @@ def build_ranking(
                 "ci_lo": round(ci_lo, 3),
                 "ci_hi": round(ci_hi, 3),
                 "within_participant_var": round(within, 4),
-                "human_pass_rate": round(
-                    float(human_summary.loc[qid, "human_pass_rate"]), 2
-                ),
                 "pct_answerable": round(float(group["p_answerable"].mean()), 2),
                 "between_participant_var": round(
                     float(group["p_answerable"].var(ddof=0)), 3
@@ -192,21 +213,57 @@ def build_ranking(
     question_lookup = questions.set_index("qid")["question"]
     ranking["question"] = ranking["qid"].map(question_lookup)
 
-    bounded_columns = ["well_posedness", "ci_lo", "ci_hi", "human_pass_rate"]
+    bounded_columns = ["well_posedness", "ci_lo", "ci_hi"]
     if not ranking[bounded_columns].apply(lambda column: column.between(0, 1)).all().all():
         raise ValueError("a normalized metric fell outside [0, 1]")
     return ranking
 
 
 def main() -> None:
-    questions = load_questions()
-    cells = load_cells(questions=questions)
-    human_summary = load_human_summary(questions=questions)
-    ranking = build_ranking(cells, questions, human_summary)
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--runs", type=Path, default=RUNS_PATH)
+    parser.add_argument("--questions", type=Path, default=QUESTIONS_PATH)
+    parser.add_argument("--human-summary", type=Path, default=HUMAN_PATH)
+    parser.add_argument("--output", type=Path, default=OUTPUT_PATH)
+    parser.add_argument(
+        "--answerability-only",
+        action="store_true",
+        help=(
+            "Write well-posedness, confidence intervals, and answerability rates "
+            "without requiring a content-grader summary."
+        ),
+    )
+    parser.add_argument(
+        "--bootstrap-repetitions", type=int, default=BOOTSTRAP_REPETITIONS
+    )
+    args = parser.parse_args()
+    if args.bootstrap_repetitions < 1:
+        parser.error("--bootstrap-repetitions must be positive")
 
-    OUTPUT_PATH.parent.mkdir(exist_ok=True)
-    ranking.to_csv(OUTPUT_PATH, index=False)
-    print(f"wrote {OUTPUT_PATH.relative_to(HERE)} ({len(ranking)} questions)")
+    questions = load_questions(args.questions)
+    cells = load_cells(args.runs, questions=questions)
+    if args.answerability_only:
+        ranking = build_answerability_summary(
+            cells,
+            questions,
+            bootstrap_repetitions=args.bootstrap_repetitions,
+        )
+    else:
+        human_summary = load_human_summary(args.human_summary, questions=questions)
+        ranking = build_ranking(
+            cells,
+            questions,
+            human_summary,
+            bootstrap_repetitions=args.bootstrap_repetitions,
+        )
+
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    ranking.to_csv(args.output, index=False)
+    try:
+        shown_path = args.output.relative_to(HERE)
+    except ValueError:
+        shown_path = args.output
+    print(f"wrote {shown_path} ({len(ranking)} questions)")
     print(ranking.drop(columns="question").to_string(index=False))
 
 

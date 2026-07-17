@@ -1,7 +1,9 @@
 # Prompt artifacts
 
 These files preserve the final prompt text relevant to the published study
-without preserving the legacy experiment harness.
+without preserving the legacy experiment harness. The scripts directory now
+contains small executable reference runners for the same message flow; those
+runners deliberately omit unrelated historical experiment modes.
 
 ## Answerability classifier
 
@@ -57,4 +59,6 @@ human annotations.
 Model provider, model version, reasoning or sampling settings, concurrency,
 retry policy, and structured-output implementation remain experimental
 conditions. A replication should hold them constant within a run and report
-them. Exact scores are not expected to transfer across harnesses.
+them. `run_user_proxy.py` and `run_content_grader.py` demonstrate one portable
+implementation of the published data contracts, not a mandatory provider
+harness. Exact scores are not expected to transfer across harnesses.

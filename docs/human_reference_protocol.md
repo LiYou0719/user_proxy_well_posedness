@@ -6,21 +6,50 @@ user proxy for the same transcript-question pairs.
 
 ## Unit of annotation
 
-Annotate one `bundle_id` and `qid` pair per row in
-`templates/human_reference_template.csv`.
+The reference interface uses one CSV per sampled transcript, with one row for
+each of the 23 canonical questions. Generate the files after sampling:
+
+```bash
+python scripts/generate_human_reference_templates.py
+```
+
+Read one transcript end to end, then complete its 23-row file under
+`local_data/human_reference/by_transcript/`. This batching is an annotation
+convenience, not a required research design: another interface is acceptable
+if it exports the same fields and preserves one `bundle_id,qid` pair per row.
 
 ## Answerability type
 
 - **A — explicitly stated:** The participant directly answers the question or
-  an essentially equivalent interviewer question. Record the relevant
-  `gold_evidence`; add a concise `gold_answer` when useful.
+  an essentially equivalent interviewer question. Record at least one usable
+  human reference in `gold_evidence`, `gold_answer`, or `notes`.
 - **B — reasonably inferable:** No direct answer is present, but the transcript
-  supports a sufficiently clear inference. Record both the evidence chain and
-  the inferred `gold_answer`.
+  supports a sufficiently clear inference. Record the inference, its evidence
+  chain, or an equivalent explanation in at least one of the three reference
+  fields. More detail may improve grader confidence but is not mandatory.
 - **C — not answered:** The topic is not addressed and no reasonable inference
-  is available. Record a short `absence_check` describing what was checked.
+  is available. The Type C decision itself is the minimum reference. An
+  `absence_check` or `notes` entry is recommended when the boundary was not
+  obvious, but is not required.
 - **skip — researcher abstention:** The researcher cannot defend an A, B, or C
   decision. Record a `skip_reason` rather than forcing a label.
+
+Optional `notes` may record boundary decisions that will help interpret the
+content grade. Do not consult a proxy response while writing any field.
+
+## Validate and combine completed files
+
+After every cohort file is complete, run:
+
+```bash
+python scripts/merge_human_references.py
+```
+
+The merger checks the full cohort-by-question universe, exact question text,
+valid A/B/C/skip types, and that Type A/B rows contain at least one usable human
+reference field. It writes the frozen machine-facing reference to
+`local_data/human_reference.csv`. Do not edit the merged file directly; correct
+its per-transcript source and merge again.
 
 ## Freeze and exclusion rules
 
