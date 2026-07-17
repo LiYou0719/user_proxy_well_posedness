@@ -21,6 +21,7 @@ PROMPT_PATH = Path(__file__).resolve().parents[1] / "prompts/answerability_class
 SCHEMA_PATH = Path(__file__).resolve().parents[1] / "prompts/answerability_output_schema.json"
 PROMPT_VERSION = "historical-answerability-v1"
 VALID_LABELS = {"A", "B", "C"}
+VALID_PROVIDERS = {"anthropic", "openai"}
 
 CLASSIFICATION_TOOL = json.loads(SCHEMA_PATH.read_text(encoding="utf-8"))
 
@@ -41,9 +42,11 @@ def ensure_run_manifest(args: argparse.Namespace, prompt: str) -> Path:
     """Create or validate the immutable configuration for one ledger."""
     manifest_path = args.ledger.with_suffix(".manifest.json")
     configuration = {
+        "provider": args.provider,
         "model": args.model,
         "runs": args.runs,
         "max_tokens": args.max_tokens,
+        "reasoning_effort": args.reasoning_effort,
         "max_pairs": args.max_pairs,
         "prompt_version": PROMPT_VERSION,
         "prompt_sha256": text_sha256(prompt),
@@ -51,6 +54,9 @@ def ensure_run_manifest(args: argparse.Namespace, prompt: str) -> Path:
         "transcripts_sha256": file_sha256(args.transcripts),
         "cohort_sha256": file_sha256(args.cohort),
         "questions_sha256": file_sha256(args.questions),
+        "exclusions_sha256": (
+            file_sha256(args.exclusions) if args.exclusions is not None else None
+        ),
     }
     if manifest_path.exists():
         existing = json.loads(manifest_path.read_text(encoding="utf-8"))
@@ -86,22 +92,56 @@ def user_message(question: str) -> str:
     )
 
 
-def parse_tool_result(response: Any) -> dict[str, str]:
+def validate_classification(payload: dict[str, Any]) -> dict[str, str]:
+    """Normalize and validate one provider's structured classification."""
+    label = str(payload.get("type_inferred", "")).strip().upper()
+    confidence = str(payload.get("type_confidence", "")).strip().lower()
+    if label not in VALID_LABELS:
+        raise ValueError(f"invalid classifier label: {label!r}")
+    if confidence not in {"high", "medium", "low"}:
+        raise ValueError(f"invalid classifier confidence: {confidence!r}")
+    return {
+        "label": label,
+        "rationale": str(payload.get("type_rationale", "")).strip(),
+        "confidence": confidence,
+    }
+
+
+def parse_anthropic_result(response: Any) -> dict[str, str]:
     for block in response.content:
         if getattr(block, "type", None) == "tool_use":
-            payload = dict(block.input)
-            label = str(payload.get("type_inferred", "")).strip().upper()
-            confidence = str(payload.get("type_confidence", "")).strip().lower()
-            if label not in VALID_LABELS:
-                raise ValueError(f"invalid classifier label: {label!r}")
-            if confidence not in {"high", "medium", "low"}:
-                raise ValueError(f"invalid classifier confidence: {confidence!r}")
-            return {
-                "label": label,
-                "rationale": str(payload.get("type_rationale", "")).strip(),
-                "confidence": confidence,
-            }
+            return validate_classification(dict(block.input))
     raise ValueError("response did not contain the classification tool result")
+
+
+def parse_openai_result(response: Any) -> dict[str, str]:
+    output_text = getattr(response, "output_text", "")
+    if not output_text:
+        raise ValueError("response did not contain structured output text")
+    try:
+        payload = json.loads(output_text)
+    except json.JSONDecodeError as error:
+        raise ValueError("response output was not valid JSON") from error
+    if not isinstance(payload, dict):
+        raise ValueError("response output was not a JSON object")
+    return validate_classification(payload)
+
+
+# Backward-compatible name retained for downstream imports of the Layer 2 draft.
+parse_tool_result = parse_anthropic_result
+
+
+def openai_text_format() -> dict[str, Any]:
+    """Translate the shared tool schema into an OpenAI Structured Output format."""
+    schema = dict(CLASSIFICATION_TOOL["input_schema"])
+    schema["additionalProperties"] = False
+    return {
+        "type": "json_schema",
+        "name": CLASSIFICATION_TOOL["name"],
+        "description": CLASSIFICATION_TOOL["description"],
+        "strict": True,
+        "schema": schema,
+    }
 
 
 def read_ledger(path: Path) -> list[dict[str, Any]]:
@@ -182,15 +222,34 @@ def build_pairs(
     return pairs.rename(columns={"transcript_id": "bundle_id"})
 
 
-async def run_calls(args: argparse.Namespace) -> tuple[list[dict[str, Any]], pd.DataFrame]:
-    from anthropic import AsyncAnthropic
+def apply_exclusions(
+    pairs: pd.DataFrame, exclusions_path: Path | None
+) -> pd.DataFrame:
+    """Remove explicitly excluded bundle-question pairs from a run."""
+    if exclusions_path is None:
+        return pairs
+    exclusions = pd.read_csv(exclusions_path, dtype=str)
+    required = {"bundle_id", "qid"}
+    missing = required - set(exclusions.columns)
+    if missing:
+        raise ValueError(f"exclusions missing columns: {sorted(missing)}")
+    exclusions = exclusions[["bundle_id", "qid"]]
+    if exclusions.isna().any().any():
+        raise ValueError("exclusions contain blank bundle_id or qid values")
+    if exclusions.duplicated().any():
+        raise ValueError("exclusions contain duplicate bundle_id/qid pairs")
+    marked = pairs.merge(exclusions.assign(_excluded=True), how="left")
+    return marked.loc[marked["_excluded"].isna(), pairs.columns].reset_index(drop=True)
 
+
+async def run_calls(args: argparse.Namespace) -> tuple[list[dict[str, Any]], pd.DataFrame]:
     prompt = PROMPT_PATH.read_text(encoding="utf-8").strip()
     ensure_run_manifest(args, prompt)
     transcripts = pd.read_parquet(args.transcripts)
     cohort = pd.read_csv(args.cohort)
     questions = pd.read_csv(args.questions)
     pairs = build_pairs(transcripts, cohort, questions)
+    pairs = apply_exclusions(pairs, args.exclusions)
     if args.max_pairs is not None:
         pairs = pairs.head(args.max_pairs).copy()
 
@@ -199,7 +258,16 @@ async def run_calls(args: argparse.Namespace) -> tuple[list[dict[str, Any]], pd.
     done = completed_keys(records)
     ledger_lock = asyncio.Lock()
     semaphore = asyncio.Semaphore(args.concurrency)
-    client = AsyncAnthropic()
+    if args.provider == "anthropic":
+        from anthropic import AsyncAnthropic
+
+        client: Any = AsyncAnthropic()
+    elif args.provider == "openai":
+        from openai import AsyncOpenAI
+
+        client = AsyncOpenAI()
+    else:  # guarded by argparse, retained for programmatic callers
+        raise ValueError(f"unsupported provider: {args.provider!r}")
 
     async def call_one(bundle_id: str, qid: str, question: str, run: int) -> None:
         key = (bundle_id, qid, run)
@@ -209,6 +277,7 @@ async def run_calls(args: argparse.Namespace) -> tuple[list[dict[str, Any]], pd.
             "bundle_id": bundle_id,
             "qid": qid,
             "run": run,
+            "provider": args.provider,
             "model": args.model,
             "prompt_version": PROMPT_VERSION,
             "prompt_sha256": text_sha256(prompt),
@@ -220,27 +289,52 @@ async def run_calls(args: argparse.Namespace) -> tuple[list[dict[str, Any]], pd.
         }
         try:
             async with semaphore:
-                response = await client.messages.create(
-                    model=args.model,
-                    max_tokens=args.max_tokens,
-                    system=[
-                        {
-                            "type": "text",
-                            "text": prompt,
-                            "cache_control": {"type": "ephemeral"},
+                if args.provider == "anthropic":
+                    response = await client.messages.create(
+                        model=args.model,
+                        max_tokens=args.max_tokens,
+                        system=[
+                            {
+                                "type": "text",
+                                "text": prompt,
+                                "cache_control": {"type": "ephemeral"},
+                            },
+                            {
+                                "type": "text",
+                                "text": "The participant transcript follows.\n\n"
+                                + render_transcript(text_by_id[bundle_id]),
+                                "cache_control": {"type": "ephemeral"},
+                            },
+                        ],
+                        tools=[CLASSIFICATION_TOOL],
+                        tool_choice={
+                            "type": "tool",
+                            "name": CLASSIFICATION_TOOL["name"],
                         },
-                        {
-                            "type": "text",
-                            "text": "The participant transcript follows.\n\n"
-                            + render_transcript(text_by_id[bundle_id]),
-                            "cache_control": {"type": "ephemeral"},
-                        },
-                    ],
-                    tools=[CLASSIFICATION_TOOL],
-                    tool_choice={"type": "tool", "name": CLASSIFICATION_TOOL["name"]},
-                    messages=[{"role": "user", "content": user_message(question)}],
-                )
-            record.update(parse_tool_result(response))
+                        messages=[{"role": "user", "content": user_message(question)}],
+                    )
+                    record.update(parse_anthropic_result(response))
+                else:
+                    openai_request: dict[str, Any] = {
+                        "model": args.model,
+                        "input": [
+                            {
+                                "role": "system",
+                                "content": prompt
+                                + "\n\nThe participant transcript follows.\n\n"
+                                + render_transcript(text_by_id[bundle_id]),
+                            },
+                            {"role": "user", "content": user_message(question)},
+                        ],
+                        "max_output_tokens": args.max_tokens,
+                        "text": {"format": openai_text_format()},
+                    }
+                    if args.reasoning_effort is not None:
+                        openai_request["reasoning"] = {
+                            "effort": args.reasoning_effort
+                        }
+                    response = await client.responses.create(**openai_request)
+                    record.update(parse_openai_result(response))
             usage = getattr(response, "usage", None)
             if usage:
                 record["input_tokens"] = getattr(usage, "input_tokens", None)
@@ -264,10 +358,19 @@ async def run_calls(args: argparse.Namespace) -> tuple[list[dict[str, Any]], pd.
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--model", required=True, help="Exact Anthropic model identifier.")
+    parser.add_argument(
+        "--provider", required=True, choices=sorted(VALID_PROVIDERS)
+    )
+    parser.add_argument("--model", required=True, help="Exact provider model identifier.")
     parser.add_argument("--runs", type=int, default=9)
     parser.add_argument("--concurrency", type=int, default=5)
     parser.add_argument("--max-tokens", type=int, default=300)
+    parser.add_argument(
+        "--reasoning-effort",
+        choices=["none", "minimal", "low", "medium", "high", "xhigh"],
+        default=None,
+        help="Optional OpenAI reasoning effort; omit to use the model default.",
+    )
     parser.add_argument("--max-pairs", type=int, default=None)
     parser.add_argument(
         "--transcripts",
@@ -276,6 +379,12 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--cohort", type=Path, default=Path("local_data/cohort.csv"))
     parser.add_argument("--questions", type=Path, default=Path("data/questions.csv"))
+    parser.add_argument(
+        "--exclusions",
+        type=Path,
+        default=None,
+        help="Optional CSV of bundle_id,qid pairs to omit (for example, skips).",
+    )
     parser.add_argument(
         "--ledger",
         type=Path,
@@ -286,16 +395,28 @@ def parse_args() -> argparse.Namespace:
         type=Path,
         default=Path("local_data/answerability_runs.csv"),
     )
+    parser.add_argument(
+        "--env-file",
+        type=Path,
+        default=None,
+        help="Optional local .env file; values never enter the run manifest.",
+    )
     args = parser.parse_args()
     if args.runs < 2:
         parser.error("--runs must be at least 2")
     if args.concurrency < 1:
         parser.error("--concurrency must be positive")
+    if args.provider != "openai" and args.reasoning_effort is not None:
+        parser.error("--reasoning-effort is currently supported only for OpenAI")
     return args
 
 
 def main() -> None:
     args = parse_args()
+    if args.env_file is not None:
+        from dotenv import load_dotenv
+
+        load_dotenv(args.env_file, override=False)
     records, pairs = asyncio.run(run_calls(args))
     export_wide(records, pairs, args.runs, args.output)
     print(f"wrote {args.output} ({len(pairs)} pairs x {args.runs} runs)")

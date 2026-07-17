@@ -146,11 +146,12 @@ the identical cohort is not required for a methodological replication.
 
 ## Run repeated answerability judgments
 
-Set `ANTHROPIC_API_KEY`, choose an exact model identifier, and start with a
-small smoke test:
+Set the API key for your provider (`ANTHROPIC_API_KEY` or `OPENAI_API_KEY`),
+choose an exact model identifier, and start with a small smoke test:
 
 ```bash
 python scripts/run_answerability.py \
+  --provider anthropic \
   --model YOUR_MODEL_ID \
   --max-pairs 2 \
   --runs 2 \
@@ -163,16 +164,40 @@ interrupted run can resume without repeating successful calls. It exports the
 Layer 1 compatible `local_data/answerability_runs.csv` only after every
 requested call succeeds.
 
-Each ledger has an immutable manifest containing hashes of the transcript,
-cohort, question, and prompt inputs plus the model and run settings. A changed
-condition must use a new ledger, preventing accidental mixing across models or
-harness configurations.
+The runner supports Anthropic tool use and OpenAI Structured Outputs while
+keeping the classifier instructions, transcript, question, and output fields
+the same. Each ledger has an immutable manifest containing hashes of the
+transcript, cohort, question, and prompt inputs plus the provider, model, and
+run settings. A changed condition must use a new ledger, preventing accidental
+mixing across models or harness configurations.
 
-Remove `--max-pairs` and use `--runs 9` with the default ledger for the
-historical design. With the default 50-transcript cohort and 23 questions, that
-design makes **10,350 API calls**. Estimate cost and rate limits before
-launching it. The runner requires an explicit model rather than silently
-substituting whichever model is current.
+API-call count is a design choice, not a fixed requirement:
+
+```text
+calls = evaluated transcript-question pairs x repeated runs
+```
+
+A complete 50-transcript, 23-question matrix repeated nine times would make
+10,350 calls. The historical study made **10,287 calls** because seven Q03
+pairs were explicitly skipped: `(22 x 50 + 43) x 9`. A smaller replication
+might use 10 transcripts and five runs (up to 1,150 calls); a larger one might
+use 100 transcripts and five runs (up to 11,500 calls). Report the evaluated
+pair count, per-question exclusions, and repeat count so readers can interpret
+the resulting uncertainty and compare conditions. Estimate cost and rate
+limits before launching any substantial run.
+
+To omit researcher abstentions before API calls, provide a local CSV containing
+only `bundle_id,qid` and pass it with `--exclusions`. Its hash becomes part of
+the run manifest. The file can remain private under `local_data/`; the public
+report needs only the resulting evaluated count for each question.
+
+The runner requires an explicit provider and model rather than silently
+substituting whichever model is current. For example, an OpenAI smoke test can
+use `--provider openai --model gpt-5-nano --reasoning-effort minimal`;
+substantive replications should choose a model appropriate to their validation
+goal rather than optimizing only for minimum cost. You may pass a local key
+file with `--env-file .env`; the key and file path are not written to the run
+manifest or ledger.
 
 The exact classifier and user-proxy prompts are stored under `prompts/`. The
 answerability classifier sees only the transcript and question; it does not see

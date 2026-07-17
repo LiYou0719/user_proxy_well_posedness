@@ -10,9 +10,12 @@ from types import SimpleNamespace
 import pandas as pd
 
 from scripts.run_answerability import (
+    apply_exclusions,
     build_pairs,
     ensure_run_manifest,
     export_wide,
+    openai_text_format,
+    parse_openai_result,
     parse_tool_result,
     render_transcript,
 )
@@ -42,6 +45,25 @@ class AnswerabilityRunnerTests(unittest.TestCase):
         self.assertEqual(parsed["label"], "B")
         self.assertEqual(parsed["confidence"], "medium")
 
+    def test_parse_openai_result_validates_structured_output(self) -> None:
+        response = SimpleNamespace(
+            output_text=json.dumps(
+                {
+                    "type_inferred": "c",
+                    "type_rationale": "The topic is absent.",
+                    "type_confidence": "high",
+                }
+            )
+        )
+        parsed = parse_openai_result(response)
+        self.assertEqual(parsed["label"], "C")
+        self.assertEqual(parsed["confidence"], "high")
+
+    def test_openai_schema_is_strict(self) -> None:
+        output_format = openai_text_format()
+        self.assertTrue(output_format["strict"])
+        self.assertFalse(output_format["schema"]["additionalProperties"])
+
     def test_build_pairs_crosses_cohort_and_questions(self) -> None:
         transcripts = pd.DataFrame(
             {"transcript_id": ["p1", "p2"], "text": ["a", "b"]}
@@ -53,6 +75,28 @@ class AnswerabilityRunnerTests(unittest.TestCase):
         pairs = build_pairs(transcripts, cohort, questions)
         self.assertEqual(len(pairs), 2)
         self.assertEqual(set(pairs["bundle_id"]), {"p2"})
+
+    def test_apply_exclusions_removes_only_requested_pairs(self) -> None:
+        pairs = pd.DataFrame(
+            {
+                "bundle_id": ["p1", "p1", "p2"],
+                "qid": ["Q01", "Q02", "Q01"],
+                "question": ["One?", "Two?", "One?"],
+            }
+        )
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "exclusions.csv"
+            pd.DataFrame({"bundle_id": ["p1"], "qid": ["Q02"]}).to_csv(
+                path, index=False
+            )
+            kept = apply_exclusions(pairs, path)
+        self.assertEqual(
+            kept[["bundle_id", "qid"]].to_dict("records"),
+            [
+                {"bundle_id": "p1", "qid": "Q01"},
+                {"bundle_id": "p2", "qid": "Q01"},
+            ],
+        )
 
     def test_export_wide_requires_every_run(self) -> None:
         pairs = pd.DataFrame(
@@ -92,18 +136,22 @@ class AnswerabilityRunnerTests(unittest.TestCase):
                 path.write_text(name, encoding="utf-8")
                 inputs.append(path)
             args = argparse.Namespace(
+                provider="anthropic",
                 model="model-a",
                 runs=2,
                 max_tokens=100,
+                reasoning_effort=None,
                 max_pairs=1,
                 transcripts=inputs[0],
                 cohort=inputs[1],
                 questions=inputs[2],
+                exclusions=None,
                 ledger=root / "calls.jsonl",
             )
             manifest = ensure_run_manifest(args, "prompt")
+            self.assertEqual(json.loads(manifest.read_text())["provider"], "anthropic")
             self.assertEqual(json.loads(manifest.read_text())["model"], "model-a")
-            args.model = "model-b"
+            args.provider = "openai"
             with self.assertRaisesRegex(ValueError, "run configuration differs"):
                 ensure_run_manifest(args, "prompt")
 
