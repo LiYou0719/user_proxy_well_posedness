@@ -1,0 +1,70 @@
+{
+  "A": {
+    "name": "submit_type_a_judgment",
+    "description": "Submit your judgment of a Type A (explicit retrieval) proxy answer.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "judgment": {
+          "type": "string",
+          "enum": ["correct", "partial", "wrong", "abstained"],
+          "description": "The judgment label."
+        },
+        "rationale": {
+          "type": "string",
+          "description": "1-3 sentences explaining the judgment. Cite the part of the proxy's response that drove the decision."
+        },
+        "confidence": {
+          "type": "string",
+          "enum": ["high", "medium", "low"],
+          "description": "How clearly the proxy's response maps to the chosen label."
+        }
+      },
+      "required": ["judgment", "rationale", "confidence"]
+    }
+  },
+  "B": {
+    "name": "submit_type_b_judgment",
+    "description": "Submit your judgment of a Type B (inferable) proxy answer.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "judgment": {
+          "type": "string",
+          "enum": ["inferred_correctly", "abstained", "wrong"]
+        },
+        "rationale": {
+          "type": "string",
+          "description": "1-3 sentences."
+        },
+        "confidence": {
+          "type": "string",
+          "enum": ["high", "medium", "low"]
+        }
+      },
+      "required": ["judgment", "rationale", "confidence"]
+    }
+  },
+  "C": {
+    "name": "submit_type_c_judgment",
+    "description": "Submit your judgment of a Type C (topic-not-addressed) proxy answer.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "judgment": {
+          "type": "string",
+          "enum": ["abstained_correctly", "non_abstained"]
+        },
+        "rationale": {
+          "type": "string",
+          "description": "1-3 sentences."
+        },
+        "confidence": {
+          "type": "string",
+          "enum": ["high", "medium", "low"]
+        }
+      },
+      "required": ["judgment", "rationale", "confidence"]
+    }
+  }
+}

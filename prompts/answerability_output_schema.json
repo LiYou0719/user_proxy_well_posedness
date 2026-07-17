@@ -1,0 +1,24 @@
+{
+  "name": "submit_type_classification",
+  "description": "Classify the (transcript, question) relationship as Type A, B, or C.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "type_inferred": {
+        "type": "string",
+        "enum": ["A", "B", "C"],
+        "description": "Your classification of the (transcript, question) relationship."
+      },
+      "type_rationale": {
+        "type": "string",
+        "description": "1-2 sentences citing transcript content that supports the classification."
+      },
+      "type_confidence": {
+        "type": "string",
+        "enum": ["high", "medium", "low"],
+        "description": "How clearly the (transcript, question) relationship maps to the chosen type."
+      }
+    },
+    "required": ["type_inferred", "type_rationale", "type_confidence"]
+  }
+}

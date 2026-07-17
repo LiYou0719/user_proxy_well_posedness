@@ -1,3 +1,4 @@
 -r requirements.txt
 datasets>=2.18,<5
 pyarrow>=14
+anthropic>=0.40

@@ -14,19 +14,35 @@ user proxy.
 
 ## What is included
 
-This analysis-only release contains no transcript text, proxy responses, or
+This repository has two layers. Layer 1 reruns the published analysis without
+API credentials or transcript downloads. The optional Layer 2 replication kit
+prepares a new public transcript sample, runs repeated answerability judgments,
+and documents how to construct the independent human reference axis.
+
+The repository itself contains no transcript text, proxy responses, or
 participant-level researcher annotations.
 
 ```text
 analyze_question_suitability.py
+requirements-replication.txt
 data/
   questions.csv                       canonical 23-question instrument
   answerability_runs.csv              repeated A/B/C judgments
   human_pass_rate_per_question.csv    aggregate pass counts, denominators, and rates
 outputs/
   question_ranking.csv                generated reference output
+prompts/                              historical prompt artifacts and schemas
+scripts/
+  prepare_dataset.py                  pinned public dataset download
+  sample_cohort.py                    deterministic stratified sampling
+  run_answerability.py                resumable repeated classifier runner
+  aggregate_human_reference.py        strict per-question aggregation
+templates/
+  human_reference_template.csv        blank private-work template
+docs/
+  human_reference_protocol.md         minimal annotation protocol
 tests/
-  test_analysis.py                    validation and estimator tests
+  ...                                 analysis and replication-kit tests
 ```
 
 The `bundle_id` values refer to participants in Anthropic's public
@@ -127,6 +143,60 @@ default 30/10/10 split mirrors the historical study's workforce, creative, and
 scientist composition, but the seed is intentionally user-selectable. The
 historical participant IDs remain auditable in `answerability_runs.csv`; using
 the identical cohort is not required for a methodological replication.
+
+## Run repeated answerability judgments
+
+Set `ANTHROPIC_API_KEY`, choose an exact model identifier, and start with a
+small smoke test:
+
+```bash
+python scripts/run_answerability.py \
+  --model YOUR_MODEL_ID \
+  --max-pairs 2 \
+  --runs 2 \
+  --ledger local_data/smoke_calls.jsonl \
+  --output local_data/smoke_runs.csv
+```
+
+The runner appends every call to `local_data/answerability_calls.jsonl`, so an
+interrupted run can resume without repeating successful calls. It exports the
+Layer 1 compatible `local_data/answerability_runs.csv` only after every
+requested call succeeds.
+
+Each ledger has an immutable manifest containing hashes of the transcript,
+cohort, question, and prompt inputs plus the model and run settings. A changed
+condition must use a new ledger, preventing accidental mixing across models or
+harness configurations.
+
+Remove `--max-pairs` and use `--runs 9` with the default ledger for the
+historical design. With the default 50-transcript cohort and 23 questions, that
+design makes **10,350 API calls**. Estimate cost and rate limits before
+launching it. The runner requires an explicit model rather than silently
+substituting whichever model is current.
+
+The exact classifier and user-proxy prompts are stored under `prompts/`. The
+answerability classifier sees only the transcript and question; it does not see
+the proxy response or any researcher annotation.
+
+## Build the human reference axis
+
+Use `templates/human_reference_template.csv` and
+`docs/human_reference_protocol.md` to create a study-specific reference before
+running the user proxy. The template contains only the fields required by the
+final method and includes an explicit researcher `skip` option.
+
+After grading proxy responses with the published content-grader prompts,
+aggregate a private grader-output file into a shareable per-question summary:
+
+```bash
+python scripts/aggregate_human_reference.py \
+  --input local_data/content_grader_results.csv \
+  --output local_data/human_pass_rate_per_question.csv
+```
+
+The public summary contains only `qid`, pass count, evaluated count, and pass
+rate. Type A `partial` judgments remain failures under the published strict
+metric. Completed annotations, evidence, and proxy prose remain local.
 
 ## Reusing the method
 
