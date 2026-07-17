@@ -134,13 +134,15 @@ their own construct boundaries and human calibration.
 - Q07 and Q25 were excluded because their topics appeared in only about 2 of 50
   transcripts in the historical sample. A replicator should make exclusions
   based on coverage in their own sample.
-- The researcher abstained on Q03 for seven participant-question pairs because
-  the human answerability decision remained genuinely borderline. Those seven
-  pairs were excluded before proxy generation and grading; they were not coded
-  as unanswered questions or model failures. Q03 therefore uses 35 passes from
-  43 evaluated pairs for its human pass rate, and the same 43 pairs for its
-  well-posedness estimate. Every other canonical question uses 50 pairs. The
-  analysis validates that the two denominators match and reports
+- Like every other canonical question, Q03 began with 50
+  participant-question pairs. The researcher explicitly marked seven Q03 pairs
+  as `skip` because the human answerability decision remained genuinely
+  borderline. Those seven pairs were excluded before proxy generation and
+  grading; they were not coded as unanswered questions or model failures. The
+  remaining 43 pairs entered both calculations: 35 passed the human content
+  check, and all 43 contributed to the well-posedness estimate. No pairs were
+  skipped for the other questions, so all 50 entered their calculations. The
+  analysis validates that the two evaluated denominators match and reports
   `n_participants` explicitly.
 
 ## Human annotation boundary
