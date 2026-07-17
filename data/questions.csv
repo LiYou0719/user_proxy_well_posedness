@@ -1,0 +1,24 @@
+qid,question
+Q01,What specific AI tools does this participant mention using in their work?
+Q02,What kinds of work tasks does this participant use AI for?
+Q03,"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?"
+Q04,"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?"
+Q05,"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?"
+Q06,"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?"
+Q08,What positive emotions or sources of satisfaction does this participant express about working with AI?
+Q09,"What concerns does this participant raise about how AI performs on their work tasks — its accuracy, reliability, or the quality of its output?"
+Q10,"Does this participant describe being frustrated by AI tools, and if so, in what context?"
+Q11,How does this participant describe their colleagues' or workplace's attitudes toward AI use?
+Q12,"Does this participant describe encountering social stigma, judgment, or perceived ""laziness"" around using AI at work?"
+Q13,"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?"
+Q14,Does this participant express concern about AI displacing their job or profession?
+Q15,"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?"
+Q16,Has this participant considered shifting their role toward managing or overseeing AI systems?
+Q17,How does this participant envision their personal use of AI evolving in the next few years?
+Q18,"Does this participant raise broader societal, economic, or ethical concerns about generative AI?"
+Q19,What AI capabilities does this participant wish existed but don't yet?
+Q20,"What is this participant's overall stance toward AI in their work — enthusiastic, cautious, conflicted, resistant, or other?"
+Q21,What is this participant's occupation or job role?
+Q22,"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?"
+Q23,"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?"
+Q24,"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?"

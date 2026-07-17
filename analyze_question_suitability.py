@@ -1,28 +1,13 @@
-"""Well-posedness analysis for the post "What an LLM can and cannot find".
+"""Analyze question well-posedness from repeated answerability judgments.
 
-Reproduces the post's two-axis table from two small, de-identified inputs in ./data/. It does NOT
-include the user-proxy pipeline, the interview transcripts, or the proxy's generated answers; only
-per-question / per-participant labels.
+The canonical estimator is intentionally bounded:
 
-Method (matches the post):
-  The grader runs multiple times on each transcript and, on each run, makes a binary call: is this
-  question ANSWERABLE from the transcript, or not? For each (question, participant) that is a coin
-  flipped r times. The clarity signal is the WITHIN-participant variance of that coin, averaged over
-  participants, then rescaled to a bounded [0, 1] "well-posedness":
+    p = fraction of repeated runs labeled A or B
+    within_variance = mean_over_participants[p * (1 - p)]
+    well_posedness = 1 - within_variance / 0.25
 
-    p          = fraction of the r runs that called the question answerable, for one participant
-    within_var = mean_over_participants[ p (1 - p) ]          # within-participant Bernoulli variance
-    well_posedness = 1 - within_var / 0.25                    # 0.25 = max of p(1-p), at p = 0.5
-
-  WITHIN-participant (the r re-runs for one person), NOT total variance: total also carries
-  between-participant spread (some transcripts address the question, some don't), which is base rate,
-  not well-posedness. We report well-posedness, and pct_answerable separately as the base rate.
-
-The two axes of the post:
-  x = well_posedness        (grader self-consistency on "answerable or not"; human-free)
-  y = human_pass_rate       (the researcher's prior-reading content pass rate)
-
-Run: python analyze_question_suitability.py
+No finite-sample correction is applied. The resulting well-posedness score is
+therefore always in [0, 1].
 """
 from __future__ import annotations
 
@@ -32,74 +17,197 @@ import numpy as np
 import pandas as pd
 
 HERE = Path(__file__).resolve().parent
-ROW = HERE / "data/answerability_runs.csv"
-HUMAN = HERE / "data/human_pass_rate_per_question.csv"
-OUT = HERE / "outputs/question_ranking.csv"
+RUNS_PATH = HERE / "data/answerability_runs.csv"
+QUESTIONS_PATH = HERE / "data/questions.csv"
+HUMAN_PATH = HERE / "data/human_pass_rate_per_question.csv"
+OUTPUT_PATH = HERE / "outputs/question_ranking.csv"
 
-# Questions to exclude because their topic is too rare in the data to estimate a stable within-
-# participant variance (here: present in only ~2/50 transcripts). This list is SPECIFIC TO THIS
-# DATASET, not universal. If you run the analysis on your own data, inspect pct_answerable / the
-# per-question sample size and drop whatever is too rare for *you* to measure.
-DROP = {"Q25", "Q07"}
-# Each run column (run01, run02, ...) holds the grader's answerability classification for that run.
-# It has three labels (see README): A and B both mean "answerable" (directly stated / inferable),
-# C means "not answerable". We collapse to binary. The number of run columns is the r above.
 ANSWERABLE = {"A", "B"}
-MAX_VAR = 0.25                                            # theoretical max of p(1-p), at p = 0.5
-BOOT_REPS, BOOT_SEED, CI = 5000, 42, 90                  # 90% cluster bootstrap over participants
+VALID_LABELS = ANSWERABLE | {"C"}
+MAX_VARIANCE = 0.25
+BOOTSTRAP_REPETITIONS = 5000
+BOOTSTRAP_SEED = 42
+CI_PERCENT = 90
 
 
-def load_cells() -> pd.DataFrame:
-    """One row per (participant, question): the answerable fraction across the r runs."""
-    df = pd.read_csv(ROW)
-    df = df[df["qid"].str.startswith("Q") & ~df["qid"].isin(DROP)].copy()
-    runs = [c for c in df.columns if c.startswith("run")]
-    df["p"] = df[runs].isin(ANSWERABLE).mean(axis=1)        # answerable fraction over the r runs
-    df["within"] = df["p"] * (1 - df["p"])                  # within-participant Bernoulli variance
-    return df[["qid", "bundle_id", "p", "within"]]
+def load_questions(path: Path = QUESTIONS_PATH) -> pd.DataFrame:
+    questions = pd.read_csv(path, dtype=str)
+    required = {"qid", "question"}
+    if set(questions.columns) != required:
+        raise ValueError(f"questions file must contain exactly {sorted(required)}")
+    if questions.isna().any().any() or (questions == "").any().any():
+        raise ValueError("questions file contains empty values")
+    if questions["qid"].duplicated().any():
+        raise ValueError("questions file contains duplicate qids")
+    if not questions["qid"].str.fullmatch(r"Q\d{2}").all():
+        raise ValueError("canonical qids must use the Q00 format")
+    if len(questions) != 23:
+        raise ValueError(f"expected 23 canonical questions, found {len(questions)}")
+    return questions
 
 
-def human_pass() -> pd.Series:
-    return pd.read_csv(HUMAN).set_index("qid")["human_pass_rate"]
+def load_cells(
+    path: Path = RUNS_PATH,
+    questions: pd.DataFrame | None = None,
+) -> pd.DataFrame:
+    questions = load_questions() if questions is None else questions
+    expected_qids = set(questions["qid"])
+    runs = pd.read_csv(path, dtype=str)
+    required = {"bundle_id", "qid"}
+    missing = required - set(runs.columns)
+    if missing:
+        raise ValueError(f"answerability file is missing columns: {sorted(missing)}")
+
+    run_columns = sorted(c for c in runs.columns if c.startswith("run"))
+    if not run_columns:
+        raise ValueError("answerability file has no run columns")
+    unexpected_columns = set(runs.columns) - required - set(run_columns)
+    if unexpected_columns:
+        raise ValueError(
+            f"answerability file has unexpected columns: {sorted(unexpected_columns)}"
+        )
+    if runs[list(required) + run_columns].isna().any().any():
+        raise ValueError("answerability file contains missing identifiers or labels")
+    if runs.duplicated(["bundle_id", "qid"]).any():
+        raise ValueError("answerability file contains duplicate participant-question rows")
+
+    actual_qids = set(runs["qid"])
+    if actual_qids != expected_qids:
+        missing_qids = sorted(expected_qids - actual_qids)
+        extra_qids = sorted(actual_qids - expected_qids)
+        raise ValueError(
+            f"answerability qids do not match questions; missing={missing_qids}, "
+            f"extra={extra_qids}"
+        )
+
+    observed_labels = set(runs[run_columns].stack())
+    invalid_labels = sorted(observed_labels - VALID_LABELS)
+    if invalid_labels:
+        raise ValueError(f"invalid answerability labels: {invalid_labels}")
+
+    cells = runs[["bundle_id", "qid"]].copy()
+    cells["p_answerable"] = runs[run_columns].isin(ANSWERABLE).mean(axis=1)
+    cells["within_variance"] = cells["p_answerable"] * (
+        1 - cells["p_answerable"]
+    )
+    return cells
 
 
-def boot_ci(within: np.ndarray) -> tuple[float, float]:
-    """90% CI for well_posedness, resampling whole participants (clusters)."""
-    rng = np.random.default_rng(BOOT_SEED)
+def load_human_summary(
+    path: Path = HUMAN_PATH,
+    questions: pd.DataFrame | None = None,
+) -> pd.DataFrame:
+    questions = load_questions() if questions is None else questions
+    expected_qids = set(questions["qid"])
+    human = pd.read_csv(path)
+    required = {"qid", "n_passed", "n_evaluated", "human_pass_rate"}
+    if set(human.columns) != required:
+        raise ValueError(f"human summary file must contain exactly {sorted(required)}")
+    if human["qid"].duplicated().any():
+        raise ValueError("human summary file contains duplicate qids")
+    if set(human["qid"]) != expected_qids:
+        raise ValueError("human summary qids do not match canonical questions")
+    if human["human_pass_rate"].isna().any() or not human[
+        "human_pass_rate"
+    ].between(0, 1).all():
+        raise ValueError("human pass rates must be between 0 and 1")
+    for column in ["n_passed", "n_evaluated"]:
+        if human[column].isna().any() or not (human[column] % 1 == 0).all():
+            raise ValueError(f"{column} must contain whole numbers")
+    if (human["n_evaluated"] <= 0).any():
+        raise ValueError("n_evaluated must be positive")
+    if (human["n_passed"] < 0).any() or (
+        human["n_passed"] > human["n_evaluated"]
+    ).any():
+        raise ValueError("n_passed must be between 0 and n_evaluated")
+
+    calculated_rates = human["n_passed"] / human["n_evaluated"]
+    if not np.allclose(human["human_pass_rate"], calculated_rates):
+        raise ValueError("human pass rates do not match n_passed / n_evaluated")
+    return human.set_index("qid")
+
+
+def bootstrap_ci(
+    within: np.ndarray,
+    repetitions: int = BOOTSTRAP_REPETITIONS,
+    seed: int = BOOTSTRAP_SEED,
+    ci_percent: int = CI_PERCENT,
+) -> tuple[float, float]:
+    rng = np.random.default_rng(seed)
     n = len(within)
-    wp = [1 - within[rng.integers(0, n, n)].mean() / MAX_VAR for _ in range(BOOT_REPS)]
-    lo, hi = (100 - CI) / 2, 100 - (100 - CI) / 2
-    return float(np.percentile(wp, lo)), float(np.percentile(wp, hi))
+    sampled_means = np.empty(repetitions)
+    for i in range(repetitions):
+        sampled_means[i] = within[rng.integers(0, n, n)].mean()
+    scores = 1 - sampled_means / MAX_VARIANCE
+    tail = (100 - ci_percent) / 2
+    return float(np.percentile(scores, tail)), float(
+        np.percentile(scores, 100 - tail)
+    )
+
+
+def build_ranking(
+    cells: pd.DataFrame,
+    questions: pd.DataFrame,
+    human_summary: pd.DataFrame,
+    bootstrap_repetitions: int = BOOTSTRAP_REPETITIONS,
+) -> pd.DataFrame:
+    answerability_counts = cells.groupby("qid").size().sort_index()
+    human_counts = human_summary["n_evaluated"].sort_index()
+    if not answerability_counts.equals(human_counts):
+        raise ValueError(
+            "answerability and human-summary participant counts do not match"
+        )
+
+    rows = []
+    for qid, group in cells.groupby("qid"):
+        within_values = group["within_variance"].to_numpy()
+        within = float(within_values.mean())
+        well_posedness = 1 - within / MAX_VARIANCE
+        ci_lo, ci_hi = bootstrap_ci(
+            within_values, repetitions=bootstrap_repetitions
+        )
+        rows.append(
+            {
+                "qid": qid,
+                "n_participants": len(group),
+                "well_posedness": round(well_posedness, 3),
+                "ci_lo": round(ci_lo, 3),
+                "ci_hi": round(ci_hi, 3),
+                "within_participant_var": round(within, 4),
+                "human_pass_rate": round(
+                    float(human_summary.loc[qid, "human_pass_rate"]), 2
+                ),
+                "pct_answerable": round(float(group["p_answerable"].mean()), 2),
+                "between_participant_var": round(
+                    float(group["p_answerable"].var(ddof=0)), 3
+                ),
+            }
+        )
+
+    ranking = pd.DataFrame(rows).sort_values(
+        ["well_posedness", "qid"], ascending=[True, True]
+    )
+    ranking = ranking.reset_index(drop=True)
+    ranking.insert(0, "rank", ranking.index + 1)
+    question_lookup = questions.set_index("qid")["question"]
+    ranking["question"] = ranking["qid"].map(question_lookup)
+
+    bounded_columns = ["well_posedness", "ci_lo", "ci_hi", "human_pass_rate"]
+    if not ranking[bounded_columns].apply(lambda column: column.between(0, 1)).all().all():
+        raise ValueError("a normalized metric fell outside [0, 1]")
+    return ranking
 
 
 def main() -> None:
-    cells = load_cells()
-    human = human_pass()
-    rows = []
-    for qid, sub in cells.groupby("qid"):
-        within = sub["within"].mean()
-        lo, hi = boot_ci(sub["within"].values)
-        rows.append({
-            "qid": qid,
-            "well_posedness": round(1 - within / MAX_VAR, 3),
-            "ci_lo": round(lo, 3),
-            "ci_hi": round(hi, 3),
-            "within_participant_var": round(within, 4),
-            "human_pass_rate": round(float(human.get(qid, np.nan)), 2),
-            "pct_answerable": round(sub["p"].mean(), 2),
-            "between_participant_var": round(sub["p"].var(ddof=0), 3),
-        })
-    # rank 1 = least well-posed (the hardest to transmit)
-    t = pd.DataFrame(rows).sort_values(
-        ["well_posedness", "qid"], ascending=[True, True]).reset_index(drop=True)
-    t.insert(0, "rank", t.index + 1)
-    qtext = pd.read_csv(ROW).drop_duplicates("qid").set_index("qid")["evaluation_question"]
-    t["question"] = t["qid"].map(qtext)
+    questions = load_questions()
+    cells = load_cells(questions=questions)
+    human_summary = load_human_summary(questions=questions)
+    ranking = build_ranking(cells, questions, human_summary)
 
-    OUT.parent.mkdir(exist_ok=True)
-    t.to_csv(OUT, index=False)
-    print(f"wrote {OUT.relative_to(HERE)}  ({len(t)} questions)")
-    print(t.drop(columns="question").to_string(index=False))
+    OUTPUT_PATH.parent.mkdir(exist_ok=True)
+    ranking.to_csv(OUTPUT_PATH, index=False)
+    print(f"wrote {OUTPUT_PATH.relative_to(HERE)} ({len(ranking)} questions)")
+    print(ranking.drop(columns="question").to_string(index=False))
 
 
 if __name__ == "__main__":
